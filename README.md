@@ -15,6 +15,11 @@ Eligibility checks · match scores · missing papers · a dated plan · essay dr
 [![Programs](https://img.shields.io/badge/Erasmus%20Mundus%20%26%20Intra--Africa%20programs-56-F59E0B.svg)](docs/PROGRAMS.md)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
+[![GitHub stars](https://img.shields.io/github/stars/OmarZen/scholarship-navigator?style=social)](https://github.com/OmarZen/scholarship-navigator/stargazers)
+[![Contributors](https://img.shields.io/github/contributors/OmarZen/scholarship-navigator?color=0E8A16)](https://github.com/OmarZen/scholarship-navigator/graphs/contributors)
+[![Last commit](https://img.shields.io/github/last-commit/OmarZen/scholarship-navigator?color=1D76DB)](https://github.com/OmarZen/scholarship-navigator/commits/main)
+[![Good first issues](https://img.shields.io/github/issues/OmarZen/scholarship-navigator/good%20first%20issue?label=good%20first%20issues&color=7057ff)](https://github.com/OmarZen/scholarship-navigator/issues?q=is%3Aopen+label%3A%22good+first+issue%22)
+
 [**Quick start**](#-quick-start) · [**Use with AI**](#-use-it-with-your-ai-assistant) · [**Features**](#-features) · [**What's covered**](#-whats-covered) · [**Contribute**](#-contributing) · [**العربية**](#-بالعربي)
 
 <img src="docs/assets/report.png" alt="Scholarship Navigator report: shortlist with fit and readiness scores" width="900">
@@ -276,9 +281,23 @@ The most valuable contribution is **accurate data**: a new scholarship, a correc
 status. No coding needed; [CONTRIBUTING.md](CONTRIBUTING.md) walks you through your first pull request in 10
 minutes. Developers: tests, CI and JSON schemas are ready for you.
 
+<a href="https://github.com/OmarZen/scholarship-navigator/issues?q=is%3Aopen+label%3A%22good+first+issue%22"><b>🌱 Good first issues</b></a> ·
 <a href="https://github.com/OmarZen/scholarship-navigator/issues/new/choose"><b>➕ Suggest a scholarship</b></a> ·
 <a href="https://github.com/OmarZen/scholarship-navigator/issues/new/choose"><b>📅 Report an outdated deadline</b></a> ·
+<a href="https://github.com/OmarZen/scholarship-navigator/discussions"><b>💬 Ask a question</b></a> ·
 <a href="CONTRIBUTING.md"><b>🧑‍💻 Contribute code</b></a>
+
+**How contributions are reviewed:** you open a pull request from your fork → tests and data checks run
+automatically → it is labelled by area → a maintainer reviews it (every pull request is reviewed before merging)
+→ squash-merged into `main`. Nobody pushes to `main` directly. Details: [CONTRIBUTING.md](CONTRIBUTING.md#how-review-works).
+
+### 💛 Contributors
+
+Every merged pull request puts your profile here.
+
+<a href="https://github.com/OmarZen/scholarship-navigator/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=OmarZen/scholarship-navigator" alt="Contributors to Scholarship Navigator" />
+</a>
 
 ---
 
@@ -346,6 +365,10 @@ If it helped you (or could help someone you know):
 - **star the repository**, so more students find it;
 - **share it** in your university, student and scholarship groups;
 - **add one scholarship** from your country.
+
+<a href="https://star-history.com/#OmarZen/scholarship-navigator&Date">
+  <img src="https://api.star-history.com/svg?repos=OmarZen/scholarship-navigator&type=Date" alt="Star history" width="600" />
+</a>
 
 ## License
 

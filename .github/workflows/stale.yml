@@ -1,0 +1,28 @@
+name: close stale issues and pull requests
+
+on:
+  schedule:
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-issue-stale: 60
+          days-before-issue-close: 14
+          days-before-pr-stale: 14
+          days-before-pr-close: 7
+          stale-issue-label: stale
+          stale-pr-label: stale
+          exempt-issue-labels: "pinned,good first issue,help wanted,new scholarship"
+          exempt-pr-labels: "pinned"
+          stale-issue-message: "This issue has had no activity for 60 days and will close in 14 days unless someone comments. Thanks!"
+          stale-pr-message: "This pull request has had no activity for 14 days and will close in 7 days. Push a commit or comment to keep it open."
+          close-pr-message: "Closed after 3 weeks without activity. Feel free to reopen it when you continue."
