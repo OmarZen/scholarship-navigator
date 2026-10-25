@@ -1,0 +1,22 @@
+# Labels added automatically to pull requests by .github/workflows/labeler.yml, based on the files they change.
+data:
+  - changed-files:
+      - any-glob-to-any-file: ["data/**", "docs/SCHOLARSHIPS.md", "docs/PROGRAMS.md"]
+code:
+  - changed-files:
+      - any-glob-to-any-file: ["planner/**", "scraper/**", "cli.py", "mcp_server.py", "scripts/**"]
+skills:
+  - changed-files:
+      - any-glob-to-any-file: ["skills/**", ".claude/**", ".agent/**", "AGENTS.md", "CLAUDE.md", "SKILL.md"]
+documentation:
+  - changed-files:
+      - any-glob-to-any-file: ["*.md", "docs/**"]
+translation:
+  - changed-files:
+      - any-glob-to-any-file: ["docs/i18n/**"]
+tests:
+  - changed-files:
+      - any-glob-to-any-file: ["tests/**"]
+ci:
+  - changed-files:
+      - any-glob-to-any-file: [".github/**", "pyproject.toml", "requirements.txt"]

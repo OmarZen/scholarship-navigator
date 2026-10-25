@@ -172,9 +172,48 @@ description in the present tense.
 
 ## How review works
 
-A maintainer checks that sources are official and recent, that structured rules match the quoted text, and that
-tests pass. Expect friendly questions rather than silent rejections. If a pull request goes quiet for two weeks a
-maintainer may close it.
+**Every pull request is reviewed by a maintainer before it is merged.** This is enforced by GitHub settings, not just
+good intentions:
+
+```text
+ you: fork → branch → commit → open PR
+                         │
+                         ▼
+  🤖 automatic:  labels by area (data / code / skills / documentation / translation / tests / ci)
+                 welcome message on your first PR
+                 CI: tests on Python 3.11 + 3.12 · data validation · skills/catalogue/schema sync · privacy hygiene
+                 (for first-time contributors a maintainer approves the first CI run; that's a GitHub safety rule)
+                         │
+                         ▼
+  👀 maintainer review:  sources official and recent? rules match the quoted text? tests added? no personal data?
+                         → "Request changes" (you push more commits to the same branch)  or  "Approve"
+                         │
+                         ▼
+  ✅ merge:  squash-merged into main · your branch is deleted · your profile appears in the README contributors wall
+```
+
+What the `main` branch requires (GitHub ruleset "Protect main"):
+
+- a pull request: nobody, maintainers included, pushes to `main` directly;
+- **1 approving review from a code owner** (`.github/CODEOWNERS`), with stale approvals dismissed after new pushes;
+- all review conversations resolved;
+- green checks `test (3.11)`, `test (3.12)` and `hygiene`, on a branch that is up to date with `main`;
+- linear history (squash merges); no force-pushes; `main` can't be deleted.
+
+Expect friendly questions rather than silent rejections. Pull requests with no activity for 14 days are marked
+`stale` and closed 7 days later (you can always reopen them).
+
+### Labels
+
+| Label | Meaning |
+|---|---|
+| `good first issue` | small, well-defined task: a great first contribution |
+| `help wanted` | maintainers would love help with this |
+| `data` · `new scholarship` | scholarship / program data; a new record |
+| `needs source` | waiting for an official source link before it can be merged |
+| `verified` | facts checked against official sources |
+| `code` · `skills` · `documentation` · `translation` · `tests` · `ci` | the area a pull request touches (added automatically) |
+| `stale` · `pinned` | inactive (closes soon) · never marked stale |
 
 By contributing you agree that your contribution is licensed under the project's [MIT License](LICENSE) and you
 follow our [Code of Conduct](CODE_OF_CONDUCT.md).
