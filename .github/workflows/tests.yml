@@ -15,7 +15,7 @@ jobs:
       matrix:
         python-version: ["3.11", "3.12"]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
@@ -33,7 +33,7 @@ jobs:
   hygiene:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: No personal workspaces, profiles or generated reports committed
         run: |
           bad=$(git ls-files | grep -E '^output/|^[^/]+\.(xlsx|ics)$|^candidate_profile\.json$' || true)
