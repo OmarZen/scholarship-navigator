@@ -491,9 +491,9 @@
       "known_dates": {
         "2026": "2025-12-15"
       },
-      "note": "No official 2027 call found. Third-party listings give 15 Dec 2025 for the 2026-28 cohort; SRH reported 1 Sep - 15 Dec 2024 for the 2025 intake."
+      "note": "No official 2027 application deadline published as of 2026-10-25. The official CyberMACS website says application details will be announced at the end of November 2026."
     },
-    "deadline_notes": "No official 2027 call found. Third-party listings give 15 Dec 2025 for the 2026-28 cohort; SRH reported 1 Sep - 15 Dec 2024 for the 2025 intake.",
+    "deadline_notes": "No official 2027 application deadline published as of 2026-10-25. The official CyberMACS website says application details will be announced at the end of November 2026.",
     "english_requirement": null,
     "ielts_min": null,
     "eligible_backgrounds": null,
@@ -501,10 +501,10 @@
     "nationality": {
       "mode": "any"
     },
-    "source": "https://www.srh-university.de/en/extra-pages/ex-io-hidden-pages/ex-berlin/erasmus-mundus/",
+    "source": "https://cybermacs.eu/",
     "verified_on": "2026-10-25",
     "confidence": "low",
-    "notes": "Official site cybermacs.eu returned HTTP 525 during research. EU project period 1 Oct 2022 - 30 Nov 2028 (first intake Sept 2023, 15 scholarships per edition), so a Sept 2027 intake would end after the grant period; 2026 was likely the last funded intake unless renewed. Not confirmed. Year 1 Istanbul; Year 2 Berlin or Skopje (double degree)."
+    "notes": "The official CyberMACS website states that application details for the next intake will be announced at the end of November 2026. The official scholarship page describes Erasmus Mundus scholarships but does not confirm their availability for the 2027 intake. The 2027 intake and scholarship availability remain unconfirmed as of 2026-10-25."
   },
   {
     "id": "cybersure",
