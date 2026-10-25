@@ -1,0 +1,41 @@
+[
+  {
+    "category": "Zero-Application-Fee Universities & Systems",
+    "regions": [
+      {
+        "system": "German Public Universities (Direct Application)",
+        "details": "Universities that do not use Uni-Assist (e.g. RWTH Aachen, TU Munich for certain faculties, University of Stuttgart) charge €0 application fees."
+      },
+      {
+        "system": "Italian Public Universities (Universitaly)",
+        "details": "Most Italian public universities (Politecnico di Torino, University of Bologna, Sapienza) charge €0 to €30 minimal fees for international pre-enrollment."
+      },
+      {
+        "system": "KAUST & MBZUAI (Middle East)",
+        "details": "100% Free Application with zero fees. No submission charges whatsoever."
+      },
+      {
+        "system": "Central European University (CEU)",
+        "details": "Offers automatic application fee waivers to applicants from developing countries."
+      }
+    ]
+  },
+  {
+    "category": "English Test Alternatives & Waivers",
+    "options": [
+      {
+        "name": "English as Medium of Instruction (MOI) Certificate",
+        "description": "If your bachelor's degree was conducted in English, request an official 'Medium of Instruction Certificate' from your registrar. Many European, Asian, and UK universities accept this in lieu of IELTS/TOEFL."
+      },
+      {
+        "name": "Duolingo English Test (DET)",
+        "description": "Accepted by over 4,500 institutions worldwide. Cost is ~$59 USD (vs $220+ for IELTS/TOEFL). Results delivered in 48 hours."
+      },
+      {
+        "name": "Fulbright & DAAD Test Vouchers",
+        "description": "Shortlisted candidates for Fulbright receive fully sponsored TOEFL and GRE test vouchers paid for by the US Department of State."
+      }
+    ]
+  }
+]
+

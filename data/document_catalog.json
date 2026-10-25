@@ -1,0 +1,370 @@
+{
+  "version": 1,
+  "categories": {
+    "identity": {"folder": "profile/identity", "title": "Identity & civil documents"},
+    "academic": {"folder": "profile/academic", "title": "Degrees, transcripts & recognition"},
+    "language": {"folder": "profile/language", "title": "Language & standardized tests"},
+    "experience": {"folder": "profile/experience", "title": "Work & volunteer experience"},
+    "references": {"folder": "profile/references", "title": "Recommendation letters"},
+    "cv": {"folder": "profile/cv", "title": "CVs & writing samples"},
+    "certifications": {"folder": "profile/certifications", "title": "Certificates, awards & courses"},
+    "financial": {"folder": "profile/financial", "title": "Financial documents"},
+    "health_legal": {"folder": "profile/health_legal", "title": "Medical & police certificates"},
+    "essays": {"folder": "essays", "title": "Scholarship essays"},
+    "letters": {"folder": "letters", "title": "Motivation, intent & statement letters"},
+    "forms": {"folder": "forms", "title": "Application forms & portal steps"},
+    "admissions": {"folder": "admissions", "title": "Offers, supervisor & nomination letters"}
+  },
+  "documents": {
+    "passport": {
+      "name": "Passport",
+      "category": "identity",
+      "scope": "shared",
+      "lead_time_days": [7, 45],
+      "how_to_obtain": "Apply or renew at your passport office. Keep at least 2 years of validity beyond your planned start date.",
+      "tips": "Scan the photo page in colour (300 dpi PDF). Many portals reject passports expiring within 6-18 months of arrival."
+    },
+    "national_id": {
+      "name": "National ID card",
+      "category": "identity",
+      "scope": "shared",
+      "lead_time_days": [3, 21],
+      "how_to_obtain": "Civil registry office. Scan both sides."
+    },
+    "passport_photo": {
+      "name": "Passport-style photo",
+      "category": "identity",
+      "scope": "shared",
+      "lead_time_days": [1, 2],
+      "how_to_obtain": "Any photo studio. Ask for a digital copy (white background, 35x45 mm).",
+      "tips": "Keep a JPG under 1 MB; several portals have strict size limits."
+    },
+    "birth_certificate": {
+      "name": "Birth certificate (with certified translation)",
+      "category": "identity",
+      "scope": "shared",
+      "lead_time_days": [3, 21],
+      "how_to_obtain": "Civil registry office. Get a certified English translation if it is not in English."
+    },
+    "proof_of_residence": {
+      "name": "Proof of residence",
+      "category": "identity",
+      "scope": "shared",
+      "lead_time_days": [2, 14],
+      "validity_months": 6,
+      "how_to_obtain": "Residence certificate from your local authority, or a recent utility bill / bank statement in your name."
+    },
+    "family_documents": {
+      "name": "Family relationship documents",
+      "category": "identity",
+      "scope": "shared",
+      "lead_time_days": [7, 30],
+      "how_to_obtain": "Civil registry (family record / household register). Usually needs apostille or consular legalization."
+    },
+    "degree_certificate": {
+      "name": "Degree certificate / diploma",
+      "category": "academic",
+      "scope": "shared",
+      "lead_time_days": [7, 30],
+      "how_to_obtain": "University registrar. If you have not graduated yet, ask for an official 'expected graduation' letter.",
+      "tips": "Order several stamped English copies at once; certified copies are reused across applications."
+    },
+    "transcript": {
+      "name": "Official academic transcript (with grading scale)",
+      "category": "academic",
+      "scope": "shared",
+      "lead_time_days": [5, 21],
+      "how_to_obtain": "University registrar. Ask for an English version that includes the grading scale and your rank if available."
+    },
+    "secondary_certificate": {
+      "name": "Secondary / high-school certificate",
+      "category": "academic",
+      "scope": "shared",
+      "lead_time_days": [7, 30],
+      "how_to_obtain": "School or Ministry of Education. Needed mainly for Bachelor applications."
+    },
+    "course_descriptions": {
+      "name": "Course descriptions / syllabus",
+      "category": "academic",
+      "scope": "shared",
+      "lead_time_days": [7, 30],
+      "how_to_obtain": "Your department office or the university catalogue (stamped copy)."
+    },
+    "class_rank_certificate": {
+      "name": "Class rank / GPA certificate",
+      "category": "academic",
+      "scope": "shared",
+      "lead_time_days": [5, 21],
+      "how_to_obtain": "Registrar or dean's office: an official letter stating your rank or percentile."
+    },
+    "credential_evaluation": {
+      "name": "Credential recognition / evaluation",
+      "category": "academic",
+      "scope": "shared",
+      "lead_time_days": [21, 90],
+      "how_to_obtain": "Depends on the destination: CIMEA or Declaration of Value (Italy), nostrification (Czech Republic), uni-assist VPD (Germany), NEDA grade equivalence (Spain). See `cli.py credentials`."
+    },
+    "thesis_abstract": {
+      "name": "Thesis abstract",
+      "category": "academic",
+      "scope": "shared",
+      "lead_time_days": [2, 7],
+      "how_to_obtain": "Write a 1-page abstract of your graduation project or thesis."
+    },
+    "english_test": {
+      "name": "English test result (IELTS / TOEFL / Duolingo / PTE)",
+      "category": "language",
+      "scope": "shared",
+      "lead_time_days": [21, 60],
+      "validity_months": 24,
+      "how_to_obtain": "Book IELTS Academic or TOEFL iBT 6-8 weeks ahead; results arrive in 3-13 days. Results are valid for 2 years.",
+      "tips": "Check each program's minimum sub-score (e.g. no band below 6.0), not only the overall score."
+    },
+    "english_moi_letter": {
+      "name": "English medium-of-instruction letter",
+      "category": "language",
+      "scope": "shared",
+      "lead_time_days": [5, 21],
+      "how_to_obtain": "Registrar letter confirming your degree was taught in English. Some programs accept it instead of IELTS/TOEFL."
+    },
+    "other_language_test": {
+      "name": "Other language certificate (German, French, Spanish, Japanese, Korean, Chinese...)",
+      "category": "language",
+      "scope": "shared",
+      "lead_time_days": [60, 180],
+      "validity_months": 24,
+      "how_to_obtain": "Goethe/TestDaF (German), DELF/DALF (French), DELE (Spanish), JLPT (Japanese), TOPIK (Korean), HSK (Chinese)."
+    },
+    "standardized_test": {
+      "name": "GRE / GMAT / SAT score",
+      "category": "language",
+      "scope": "shared",
+      "lead_time_days": [30, 90],
+      "validity_months": 60,
+      "how_to_obtain": "Book with ETS (GRE) or GMAC (GMAT) and allow 1-3 months of preparation."
+    },
+    "employment_certificate": {
+      "name": "Employment certificate (proof of work experience)",
+      "category": "experience",
+      "scope": "shared",
+      "lead_time_days": [5, 21],
+      "how_to_obtain": "HR letter on company letterhead with start/end dates, job title, full-time hours per week, signature and stamp.",
+      "tips": "Chevening, DAAD and SI count hours: ask HR to state weekly hours explicitly."
+    },
+    "volunteer_certificate": {
+      "name": "Volunteer / internship certificates",
+      "category": "experience",
+      "scope": "shared",
+      "lead_time_days": [5, 21],
+      "how_to_obtain": "Letters from the organizations you volunteered or interned with (dates, role, hours)."
+    },
+    "lor_academic": {
+      "name": "Academic recommendation letter",
+      "category": "references",
+      "scope": "shared",
+      "countable": true,
+      "lead_time_days": [14, 42],
+      "how_to_obtain": "Ask professors who supervised your project or taught your core courses. Give them a brag sheet and at least 4 weeks.",
+      "tips": "Record each referee in documents.json (count_ready = letters you can rely on)."
+    },
+    "lor_professional": {
+      "name": "Professional / employer recommendation letter",
+      "category": "references",
+      "scope": "shared",
+      "countable": true,
+      "lead_time_days": [14, 42],
+      "how_to_obtain": "Ask your direct manager. Official letterhead, signature, stamp and contact details."
+    },
+    "lor_leadership": {
+      "name": "Leadership / character reference",
+      "category": "references",
+      "scope": "shared",
+      "countable": true,
+      "lead_time_days": [14, 42],
+      "how_to_obtain": "Someone who has seen you lead: NGO director, community leader, club advisor."
+    },
+    "lor_any": {
+      "name": "Recommendation letters (academic or professional)",
+      "category": "references",
+      "scope": "shared",
+      "countable": true,
+      "satisfied_by": ["lor_academic", "lor_professional", "lor_leadership"],
+      "lead_time_days": [14, 42],
+      "how_to_obtain": "Any mix of academic and professional referees. Record them as lor_academic / lor_professional in documents.json."
+    },
+    "cv": {
+      "name": "CV / résumé",
+      "category": "cv",
+      "scope": "shared",
+      "lead_time_days": [3, 10],
+      "how_to_obtain": "Write a 1-2 page academic CV (education, experience, research, leadership, skills). See data/document_templates.json."
+    },
+    "cv_europass": {
+      "name": "CV in Europass format",
+      "category": "cv",
+      "scope": "shared",
+      "lead_time_days": [2, 7],
+      "how_to_obtain": "Convert your CV at europass.europa.eu (free). DAAD requires it hand-signed with exact employment dates."
+    },
+    "writing_sample": {
+      "name": "Writing sample",
+      "category": "cv",
+      "scope": "shared",
+      "lead_time_days": [7, 21],
+      "how_to_obtain": "A paper, thesis chapter or report you wrote (usually 10-20 pages)."
+    },
+    "awards_certificates": {
+      "name": "Awards, course & training certificates",
+      "category": "certifications",
+      "scope": "shared",
+      "lead_time_days": [1, 7],
+      "how_to_obtain": "Collect PDFs of awards, online courses, professional certificates and competition results."
+    },
+    "income_documents": {
+      "name": "Family income & asset documents",
+      "category": "financial",
+      "scope": "shared",
+      "lead_time_days": [14, 60],
+      "how_to_obtain": "Income statements, tax records and asset declarations. Italian DSU needs them legalized by the Italian consulate (ISEE parificato)."
+    },
+    "medical_certificate": {
+      "name": "Medical certificate / health examination",
+      "category": "health_legal",
+      "scope": "shared",
+      "lead_time_days": [5, 21],
+      "validity_months": 6,
+      "how_to_obtain": "Use the program's own form when one exists (CSC, MEXT, Stipendium Hungaricum). Includes blood tests / X-ray for some programs.",
+      "tips": "Usually must be issued within 6 months of the deadline: do it late in the process."
+    },
+    "police_clearance": {
+      "name": "Police clearance certificate",
+      "category": "health_legal",
+      "scope": "shared",
+      "lead_time_days": [7, 30],
+      "validity_months": 6,
+      "how_to_obtain": "Ministry of Interior / police authority. Often needs legalization.",
+      "tips": "Usually valid for 3-6 months: request it close to the deadline."
+    },
+    "motivation_letter": {
+      "name": "Motivation letter / statement of purpose",
+      "category": "letters",
+      "scope": "per_scholarship",
+      "lead_time_days": [14, 30],
+      "how_to_obtain": "Draft in letters/ using the template. Tailor every letter to the program; never reuse one unchanged."
+    },
+    "personal_statement": {
+      "name": "Personal statement",
+      "category": "letters",
+      "scope": "per_scholarship",
+      "lead_time_days": [14, 30],
+      "how_to_obtain": "Draft in letters/: who you are, what drives you, evidence from your story bank."
+    },
+    "essay": {
+      "name": "Scholarship essays",
+      "category": "essays",
+      "scope": "per_scholarship",
+      "countable": true,
+      "lead_time_days": [21, 45],
+      "how_to_obtain": "One file per essay in essays/. Use STAR stories from profile/story_bank.md and respect the word limit."
+    },
+    "study_plan": {
+      "name": "Study plan / study objectives",
+      "category": "letters",
+      "scope": "per_scholarship",
+      "lead_time_days": [10, 21],
+      "how_to_obtain": "Draft in letters/: courses, modules, thesis focus and how they lead to your career goal."
+    },
+    "research_proposal": {
+      "name": "Research proposal",
+      "category": "letters",
+      "scope": "per_scholarship",
+      "lead_time_days": [30, 60],
+      "how_to_obtain": "Draft in letters/ using the research proposal framework (problem, gap, questions, method, timeline). Share with your prospective supervisor."
+    },
+    "development_impact_plan": {
+      "name": "Development impact / give-back statement",
+      "category": "letters",
+      "scope": "per_scholarship",
+      "lead_time_days": [10, 21],
+      "how_to_obtain": "Draft in letters/: the concrete problem at home you will work on after graduating, and how."
+    },
+    "cv_template": {
+      "name": "CV in the program's mandatory template",
+      "category": "forms",
+      "scope": "per_scholarship",
+      "lead_time_days": [3, 7],
+      "how_to_obtain": "Download the template from the official site (e.g. SI CV template, Canadian Common CV) and transfer your CV into it."
+    },
+    "portfolio": {
+      "name": "Portfolio / pre-assignment",
+      "category": "forms",
+      "scope": "per_scholarship",
+      "lead_time_days": [21, 60],
+      "how_to_obtain": "Program-specific (design, architecture, business). Check the program page for the brief."
+    },
+    "application_form": {
+      "name": "Scholarship application form",
+      "category": "forms",
+      "scope": "per_scholarship",
+      "lead_time_days": [2, 7],
+      "how_to_obtain": "Create an account on the official portal early and fill the form section by section."
+    },
+    "university_choices": {
+      "name": "Chosen university programs",
+      "category": "forms",
+      "scope": "per_scholarship",
+      "countable": true,
+      "lead_time_days": [7, 21],
+      "how_to_obtain": "Research and shortlist programs that fit your goal; record them in forms/university_choices.md."
+    },
+    "university_application": {
+      "name": "Application to the host university program",
+      "category": "forms",
+      "scope": "per_scholarship",
+      "lead_time_days": [14, 45],
+      "how_to_obtain": "Many scholarships require you to apply to the university first (or at the same time). Check its own deadline."
+    },
+    "signed_declaration": {
+      "name": "Signed declarations / applicant agreement",
+      "category": "forms",
+      "scope": "per_scholarship",
+      "lead_time_days": [1, 3],
+      "how_to_obtain": "Download from the portal, sign and scan."
+    },
+    "online_test": {
+      "name": "Online test / screening exam",
+      "category": "forms",
+      "scope": "per_scholarship",
+      "lead_time_days": [14, 45],
+      "how_to_obtain": "Program-run aptitude or technical test. Prepare with past materials if available."
+    },
+    "admission_letter": {
+      "name": "University offer / admission letter",
+      "category": "admissions",
+      "scope": "per_scholarship",
+      "lead_time_days": [30, 120],
+      "how_to_obtain": "Issued by the university after you apply. Track conditions you must meet to make it unconditional."
+    },
+    "supervisor_acceptance": {
+      "name": "Supervisor acceptance / invitation letter",
+      "category": "admissions",
+      "scope": "per_scholarship",
+      "lead_time_days": [30, 90],
+      "how_to_obtain": "Email prospective supervisors early (see `cli.py email-professor`). Allow several rounds of follow-up."
+    },
+    "host_professor_cv": {
+      "name": "Short CV of the host professor",
+      "category": "admissions",
+      "scope": "per_scholarship",
+      "lead_time_days": [3, 14],
+      "how_to_obtain": "Ask your confirmed supervisor for a 1-2 page CV."
+    },
+    "nomination_letter": {
+      "name": "Nomination / endorsement",
+      "category": "admissions",
+      "scope": "per_scholarship",
+      "lead_time_days": [21, 60],
+      "how_to_obtain": "Issued by the nominating body (university, embassy or home-country sending partner). Find its internal deadline, which is earlier than the main one."
+    }
+  }
+}

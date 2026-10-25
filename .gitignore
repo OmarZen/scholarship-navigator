@@ -1,0 +1,38 @@
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Data cache & temporary outputs
+data/cache/
+test_output.xlsx
+.DS_Store
+
+
+# Candidate workspaces (personal data: passports, transcripts, letters)
+output/
+
+# Generated reports written to the repository root by older versions / ad-hoc runs
+/*.xlsx
+/*.ics
+/scholarship_report.html
+/candidate_profile.json
+
+# Local scholarship drafts (scaffolds not ready to share)
+data/custom/drafts/
+data/cache/
+
+
+# Packaging artifacts
+build/
+dist/
+*.egg-info/
+
+# Local agent settings (per developer)
+.claude/settings.local.json

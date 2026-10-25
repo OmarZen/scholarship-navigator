@@ -1,0 +1,129 @@
+{
+  "full_name": "Ahmed Mansour",
+  "nationality": "Egypt",
+  "country_of_residence": "Egypt",
+  "date_of_birth": "1998-07-21",
+  "email": "ahmed.mansour@example.com",
+  "current_degree": "Bachelor's in Electronics Engineering",
+  "university": "Cairo University",
+  "graduation_year": 2022,
+  "thesis_title": "Low-power keyword spotting on microcontrollers",
+  "target_degree": "Master",
+  "field_of_study": "Embedded Systems and Artificial Intelligence",
+  "field_keywords": [
+    "embedded systems",
+    "machine learning",
+    "electronics",
+    "edge AI"
+  ],
+  "gpa": 3.58,
+  "gpa_scale": 4.0,
+  "class_rank_percent": 15,
+  "english_test": "IELTS Academic",
+  "english_score": 7.0,
+  "english_test_date": "2025-11-15",
+  "english_min_band": 6.5,
+  "other_languages": [
+    {
+      "language": "German",
+      "level": "A2"
+    },
+    {
+      "language": "Arabic",
+      "level": "Native"
+    }
+  ],
+  "work_experience_years": 3.0,
+  "currently_employed": true,
+  "current_job_title": "Embedded Software Engineer",
+  "current_employer": "Example Automotive Egypt",
+  "research_publications": 1,
+  "publications": [
+    "TinyML keyword spotting on Cortex-M4 (IEEE conference, 2023)"
+  ],
+  "leadership_examples": [
+    "Led a 6-person team that cut ECU firmware boot time by 40% before a customer release",
+    "Founded the university embedded-systems workshop series (300+ attendees over 2 years)"
+  ],
+  "awards": [
+    "Dean's list 2021-2023"
+  ],
+  "volunteering": [
+    "Teaching Arduino basics to high-school students"
+  ],
+  "skills": [
+    "C/C++",
+    "Embedded Linux",
+    "TensorFlow Lite Micro",
+    "AUTOSAR",
+    "Python"
+  ],
+  "career_goal": "Build energy-efficient edge-AI hardware for agriculture and water monitoring at home.",
+  "home_country_problem": "Irrigation losses in the Nile Delta caused by poor real-time soil and water monitoring.",
+  "target_funding": "Full",
+  "target_countries": [
+    "Germany",
+    "Sweden",
+    "Netherlands",
+    "Spain"
+  ],
+  "target_intake_year": 2027,
+  "budget_for_applications": "Moderate",
+  "has_leadership_experience": true,
+  "willing_to_return_home": true,
+  "documents": [
+    {
+      "doc_id": "passport",
+      "status": "have",
+      "expires": "2030-05-01",
+      "files": [
+        "profile/identity/passport.pdf"
+      ]
+    },
+    {
+      "doc_id": "national_id",
+      "status": "have"
+    },
+    {
+      "doc_id": "degree_certificate",
+      "status": "have",
+      "translated": true,
+      "certified": false,
+      "files": [
+        "profile/academic/degree_certificate_en.pdf"
+      ]
+    },
+    {
+      "doc_id": "transcript",
+      "status": "have",
+      "translated": true,
+      "files": [
+        "profile/academic/transcript_en.pdf"
+      ]
+    },
+    {
+      "doc_id": "english_test",
+      "status": "have",
+      "issued": "2025-11-15",
+      "details": "IELTS Academic 7.0 (L7.5 R7 W6.5 S7)"
+    },
+    {
+      "doc_id": "cv",
+      "status": "in_progress"
+    },
+    {
+      "doc_id": "lor_academic",
+      "status": "have",
+      "count_ready": 1,
+      "details": "Thesis supervisor agreed"
+    },
+    {
+      "doc_id": "lor_professional",
+      "status": "missing"
+    },
+    {
+      "doc_id": "employment_certificate",
+      "status": "missing"
+    }
+  ]
+}

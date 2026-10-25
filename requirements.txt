@@ -1,0 +1,18 @@
+# Global Scholarship Navigator & Application Planner Dependencies
+
+# Core Excel & Data
+openpyxl>=3.1.5
+pydantic>=2.10.0
+rich>=14.0.0
+
+# HTTP & Web Scraping Tools (Open-Source)
+httpx>=0.28.0
+beautifulsoup4>=4.15.0
+requests>=2.34.0
+scrapling>=0.5.0
+scrapy>=2.19.0
+crawlee>=1.11.0
+crawl4ai>=0.9.5
+
+# AI agent integration (MCP server)
+mcp>=1.10

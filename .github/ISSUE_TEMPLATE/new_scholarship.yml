@@ -1,0 +1,34 @@
+name: 🎓 Suggest a scholarship or program
+description: Tell us about a scholarship or Erasmus Mundus / Intra-Africa program that is missing.
+title: "add: <scholarship or program name>"
+labels: ["data", "new scholarship"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Official website
+    validations:
+      required: true
+  - type: dropdown
+    id: degree
+    attributes:
+      label: Degree levels
+      multiple: true
+      options: [Bachelor, Master, PhD, Postdoc]
+  - type: textarea
+    id: details
+    attributes:
+      label: What you know
+      description: Host country, who can apply, what it pays, deadline. Anything helps.
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Want to add it yourself?
+      options:
+        - label: Yes, I'll open a pull request (see CONTRIBUTING.md → Adding a scholarship)

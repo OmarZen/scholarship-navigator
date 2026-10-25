@@ -1,0 +1,939 @@
+{
+  "$defs": {
+    "CoverageDetails": {
+      "properties": {
+        "tuition_covered": {
+          "title": "Tuition Covered",
+          "type": "boolean"
+        },
+        "monthly_stipend": {
+          "title": "Monthly Stipend",
+          "type": "string"
+        },
+        "airfare_covered": {
+          "title": "Airfare Covered",
+          "type": "boolean"
+        },
+        "health_insurance": {
+          "title": "Health Insurance",
+          "type": "boolean"
+        },
+        "accommodation_covered": {
+          "title": "Accommodation Covered",
+          "type": "boolean"
+        },
+        "visa_fees_covered": {
+          "title": "Visa Fees Covered",
+          "type": "boolean"
+        },
+        "additional_allowances": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Additional Allowances"
+        }
+      },
+      "required": [
+        "tuition_covered",
+        "monthly_stipend",
+        "airfare_covered",
+        "health_insurance",
+        "accommodation_covered",
+        "visa_fees_covered"
+      ],
+      "title": "CoverageDetails",
+      "type": "object"
+    },
+    "DeadlineEstimate": {
+      "properties": {
+        "month": {
+          "title": "Month",
+          "type": "integer"
+        },
+        "day": {
+          "title": "Day",
+          "type": "integer"
+        },
+        "years_before_intake": {
+          "default": 0,
+          "title": "Years Before Intake",
+          "type": "integer"
+        },
+        "label": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Label"
+        },
+        "precision": {
+          "default": "approx",
+          "enum": [
+            "exact",
+            "approx",
+            "varies"
+          ],
+          "title": "Precision",
+          "type": "string"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source"
+        },
+        "verified_on": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Verified On"
+        },
+        "known_dates": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Intake year -> published ISO date",
+          "title": "Known Dates",
+          "type": "object"
+        },
+        "extra": {
+          "description": "Other dates in the same cycle (priority rounds, second steps)",
+          "items": {
+            "$ref": "#/$defs/DeadlinePattern"
+          },
+          "title": "Extra",
+          "type": "array"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        }
+      },
+      "required": [
+        "month",
+        "day"
+      ],
+      "title": "DeadlineEstimate",
+      "type": "object"
+    },
+    "DeadlinePattern": {
+      "properties": {
+        "month": {
+          "title": "Month",
+          "type": "integer"
+        },
+        "day": {
+          "title": "Day",
+          "type": "integer"
+        },
+        "years_before_intake": {
+          "default": 0,
+          "title": "Years Before Intake",
+          "type": "integer"
+        },
+        "label": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Label"
+        }
+      },
+      "required": [
+        "month",
+        "day"
+      ],
+      "title": "DeadlinePattern",
+      "type": "object"
+    },
+    "DocumentRequirement": {
+      "description": "A paper a scholarship asks for, expressed against the document catalog.",
+      "properties": {
+        "doc": {
+          "title": "Doc",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "count": {
+          "default": 1,
+          "title": "Count",
+          "type": "integer"
+        },
+        "stage": {
+          "default": "application",
+          "enum": [
+            "application",
+            "later"
+          ],
+          "title": "Stage",
+          "type": "string"
+        },
+        "optional": {
+          "default": false,
+          "title": "Optional",
+          "type": "boolean"
+        },
+        "degrees": {
+          "description": "Only for these target degrees (empty = all)",
+          "items": {
+            "enum": [
+              "Bachelor",
+              "Master",
+              "PhD",
+              "Postdoc"
+            ],
+            "type": "string"
+          },
+          "title": "Degrees",
+          "type": "array"
+        },
+        "alternatives": {
+          "description": "Catalog ids accepted instead",
+          "items": {
+            "type": "string"
+          },
+          "title": "Alternatives",
+          "type": "array"
+        },
+        "requires": {
+          "description": "certified, translated, apostille, notarized, signed, template",
+          "items": {
+            "type": "string"
+          },
+          "title": "Requires",
+          "type": "array"
+        },
+        "words": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Words"
+        },
+        "items": {
+          "description": "Essay prompts / topics, one per item",
+          "items": {
+            "type": "string"
+          },
+          "title": "Items",
+          "type": "array"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "doc",
+        "label"
+      ],
+      "title": "DocumentRequirement",
+      "type": "object"
+    },
+    "EligibilityRules": {
+      "properties": {
+        "nationality": {
+          "$ref": "#/$defs/NationalityRule"
+        },
+        "residence": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "'home_country' or a region id such as 'africa'",
+          "title": "Residence"
+        },
+        "residence_strict": {
+          "default": false,
+          "title": "Residence Strict",
+          "type": "boolean"
+        },
+        "gpa_min": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Gpa Min"
+        },
+        "gpa_competitive": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Gpa Competitive"
+        },
+        "language": {
+          "$ref": "#/$defs/LanguageRule"
+        },
+        "age_min": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Age Min"
+        },
+        "age_under": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "description": "Degree -> applicant must be younger than this",
+          "title": "Age Under",
+          "type": "object"
+        },
+        "age_under_preferred": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "description": "Soft (typical) age limits",
+          "title": "Age Under Preferred",
+          "type": "object"
+        },
+        "degree_age_max_years": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Degree Age Max Years"
+        },
+        "degree_age_strict": {
+          "default": true,
+          "title": "Degree Age Strict",
+          "type": "boolean"
+        },
+        "degree_age_applies_to": {
+          "items": {
+            "enum": [
+              "Bachelor",
+              "Master",
+              "PhD",
+              "Postdoc"
+            ],
+            "type": "string"
+          },
+          "title": "Degree Age Applies To",
+          "type": "array"
+        },
+        "work_experience_years": {
+          "default": 0.0,
+          "title": "Work Experience Years",
+          "type": "number"
+        },
+        "field": {
+          "$ref": "#/$defs/FieldRule"
+        },
+        "return_obligation_years": {
+          "default": 0.0,
+          "title": "Return Obligation Years",
+          "type": "number"
+        },
+        "return_obligation_strict": {
+          "default": false,
+          "title": "Return Obligation Strict",
+          "type": "boolean"
+        },
+        "leadership_weight": {
+          "default": "normal",
+          "enum": [
+            "normal",
+            "high"
+          ],
+          "title": "Leadership Weight",
+          "type": "string"
+        },
+        "research_weight": {
+          "default": "normal",
+          "enum": [
+            "normal",
+            "high"
+          ],
+          "title": "Research Weight",
+          "type": "string"
+        }
+      },
+      "title": "EligibilityRules",
+      "type": "object"
+    },
+    "FieldRule": {
+      "properties": {
+        "mode": {
+          "default": "any",
+          "enum": [
+            "any",
+            "priority",
+            "restricted"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "groups": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Groups",
+          "type": "array"
+        },
+        "keywords": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Keywords",
+          "type": "array"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        }
+      },
+      "title": "FieldRule",
+      "type": "object"
+    },
+    "LanguageRule": {
+      "properties": {
+        "required": {
+          "default": true,
+          "title": "Required",
+          "type": "boolean"
+        },
+        "ielts_min": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ielts Min"
+        },
+        "subscore_min": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Subscore Min"
+        },
+        "accepts_moi": {
+          "default": false,
+          "title": "Accepts Moi",
+          "type": "boolean"
+        },
+        "stage": {
+          "default": "application",
+          "enum": [
+            "application",
+            "later"
+          ],
+          "title": "Stage",
+          "type": "string"
+        },
+        "other_language": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Other Language"
+        },
+        "other_language_level": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Other Language Level"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        }
+      },
+      "title": "LanguageRule",
+      "type": "object"
+    },
+    "NationalityRule": {
+      "properties": {
+        "mode": {
+          "default": "any",
+          "enum": [
+            "any",
+            "include",
+            "exclude",
+            "verify"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "countries": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Countries",
+          "type": "array"
+        },
+        "regions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Regions",
+          "type": "array"
+        },
+        "exclude_countries": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Exclude Countries",
+          "type": "array"
+        },
+        "exclude_regions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Exclude Regions",
+          "type": "array"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source"
+        },
+        "verified_on": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Verified On"
+        }
+      },
+      "title": "NationalityRule",
+      "type": "object"
+    },
+    "ScholarshipEligibility": {
+      "properties": {
+        "eligible_nationalities": {
+          "title": "Eligible Nationalities",
+          "type": "string"
+        },
+        "gpa_requirement": {
+          "title": "Gpa Requirement",
+          "type": "string"
+        },
+        "language_requirements": {
+          "title": "Language Requirements",
+          "type": "string"
+        },
+        "work_experience_years": {
+          "default": 0.0,
+          "title": "Work Experience Years",
+          "type": "number"
+        },
+        "work_hours_required": {
+          "default": 0,
+          "title": "Work Hours Required",
+          "type": "integer"
+        },
+        "age_limit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Age Limit"
+        },
+        "field_restrictions": {
+          "title": "Field Restrictions",
+          "type": "string"
+        },
+        "return_obligation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Return Obligation"
+        },
+        "rules": {
+          "$ref": "#/$defs/EligibilityRules"
+        }
+      },
+      "required": [
+        "eligible_nationalities",
+        "gpa_requirement",
+        "language_requirements",
+        "field_restrictions"
+      ],
+      "title": "ScholarshipEligibility",
+      "type": "object"
+    },
+    "ScholarshipTimeline": {
+      "properties": {
+        "opening_month": {
+          "title": "Opening Month",
+          "type": "string"
+        },
+        "typical_deadline": {
+          "title": "Typical Deadline",
+          "type": "string"
+        },
+        "interview_period": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Interview Period"
+        },
+        "result_announcement": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Result Announcement"
+        },
+        "course_start": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Course Start"
+        },
+        "university_offer_deadline": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "University Offer Deadline"
+        },
+        "sending_partner_nomination": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sending Partner Nomination"
+        },
+        "deadline": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/DeadlineEstimate"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "opening_month",
+        "typical_deadline"
+      ],
+      "title": "ScholarshipTimeline",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "country": {
+      "title": "Country",
+      "type": "string"
+    },
+    "organization": {
+      "title": "Organization",
+      "type": "string"
+    },
+    "degrees": {
+      "items": {
+        "enum": [
+          "Bachelor",
+          "Master",
+          "PhD",
+          "Postdoc"
+        ],
+        "type": "string"
+      },
+      "title": "Degrees",
+      "type": "array"
+    },
+    "funding_type": {
+      "enum": [
+        "Full",
+        "Partial",
+        "Any"
+      ],
+      "title": "Funding Type",
+      "type": "string"
+    },
+    "coverage_details": {
+      "$ref": "#/$defs/CoverageDetails"
+    },
+    "eligibility": {
+      "$ref": "#/$defs/ScholarshipEligibility"
+    },
+    "timeline": {
+      "$ref": "#/$defs/ScholarshipTimeline"
+    },
+    "documents": {
+      "items": {
+        "$ref": "#/$defs/DocumentRequirement"
+      },
+      "title": "Documents",
+      "type": "array"
+    },
+    "official_portal": {
+      "title": "Official Portal",
+      "type": "string"
+    },
+    "application_portal_system": {
+      "title": "Application Portal System",
+      "type": "string"
+    },
+    "strategic_tips": {
+      "title": "Strategic Tips",
+      "type": "string"
+    },
+    "host_countries": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Host Countries",
+      "type": "array"
+    },
+    "host_regions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Host Regions",
+      "type": "array"
+    },
+    "tier": {
+      "default": "Target",
+      "enum": [
+        "Reach",
+        "Target",
+        "Safety"
+      ],
+      "title": "Tier",
+      "type": "string"
+    },
+    "program_status": {
+      "default": "active",
+      "enum": [
+        "active",
+        "discontinued",
+        "changed",
+        "unknown"
+      ],
+      "title": "Program Status",
+      "type": "string"
+    },
+    "program_status_note": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Program Status Note"
+    },
+    "data_last_reviewed": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Data Last Reviewed"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "country",
+    "organization",
+    "degrees",
+    "funding_type",
+    "coverage_details",
+    "eligibility",
+    "timeline",
+    "official_portal",
+    "application_portal_system",
+    "strategic_tips"
+  ],
+  "title": "Scholarship",
+  "type": "object"
+}

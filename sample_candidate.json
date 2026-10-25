@@ -1,0 +1,46 @@
+{
+  "_how_to_use": "DUMMY EXAMPLE: every value below is made up. Copy this file (e.g. my_profile.json), replace the values with your own, delete any field you don't know (never guess), then run: .venv/bin/python cli.py init --profile my_profile.json. Your real profile then lives in output/<your-name>/ (private, never uploaded). All fields: schemas/candidate_profile.schema.json. Richer example: examples/sample_candidate_full.json.",
+
+  "full_name": "Sample Student",
+  "nationality": "Kenya",
+  "country_of_residence": "Kenya",
+  "date_of_birth": "2000-01-01",
+  "email": "sample.student@example.com",
+
+  "current_degree": "Bachelor's in Computer Science",
+  "university": "Example University",
+  "graduation_year": 2024,
+  "gpa": 3.3,
+  "gpa_scale": 4.0,
+
+  "target_degree": "Master",
+  "field_of_study": "Data Science",
+  "field_keywords": ["machine learning", "statistics"],
+  "target_funding": "Full",
+  "target_countries": ["Germany", "Netherlands", "Sweden"],
+  "target_intake_year": 2027,
+
+  "english_test": "IELTS Academic",
+  "english_score": 6.5,
+  "english_test_date": "2025-06-01",
+  "english_min_band": 6.0,
+  "other_languages": [{"language": "Swahili", "level": "Native"}],
+
+  "work_experience_years": 1.0,
+  "currently_employed": true,
+  "research_publications": 0,
+
+  "has_leadership_experience": true,
+  "leadership_examples": ["Example: led a 4-person student team that built a campus app used by 500 students"],
+  "awards": [],
+  "volunteering": ["Example: weekend coding club mentor"],
+  "career_goal": "Example: work as a data scientist on public-health data in my home country.",
+  "willing_to_return_home": true,
+
+  "documents": [
+    {"doc_id": "passport", "status": "have", "expires": "2030-01-01"},
+    {"doc_id": "degree_certificate", "status": "have"},
+    {"doc_id": "transcript", "status": "in_progress"},
+    {"doc_id": "lor_academic", "status": "have", "count_ready": 1}
+  ]
+}

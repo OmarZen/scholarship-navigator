@@ -1,0 +1,335 @@
+[
+  {
+    "id": "germany",
+    "name": "Germany",
+    "name_ar": "ألمانيا",
+    "flag": "🇩🇪",
+    "study_portal": "https://www.study-in-germany.de/ and https://www.uni-assist.de/",
+    "tuition_policy": "Tuition-free at almost all public universities (except state of Baden-Württemberg: ~€1,500/semester for non-EU). Semester administrative fee: ~€200 - €350 (includes statewide public transit pass).",
+    "average_living_cost_per_year": "€11,904 - €13,000 / year (~€992 - €1,100 / month)",
+    "proof_of_funds_requirement": "Blocked Bank Account (Sperrkonto): Exactly €11,904 / year (€992/month) via Expatrio, Coracle, or Fintiba (or official DAAD/scholarship award letter).",
+    "part_time_work_rights": "140 full days or 280 half days per calendar year (recently increased from 120/240). Student assistant jobs (HiWi) at universities do not count towards this limit.",
+    "post_study_work_visa": "18-month Job Seeker Residence Permit (Aufenthaltserlaubnis nach § 20 Abs. 3 AufenthG) upon graduation. Leads directly to EU Blue Card with fast-track permanent residency (PR in 21-27 months with German B1).",
+    "primary_language": "German (national), but over 2,000 international Master's degree programs are taught 100% in English (catalogued on DAAD portal).",
+    "top_scholarships": [
+      "daad-epos",
+      "daad-helmut-schmidt",
+      "deutschlandstipendium"
+    ],
+    "key_advice": "Check whether your prospective university requires applications via Uni-Assist or directly via their own campus portal (AlmaWeb, HISinOne). Start the blocked account and visa appointment process at least 3-4 months in advance."
+  },
+  {
+    "id": "denmark",
+    "name": "Denmark",
+    "name_ar": "الدنمارك",
+    "flag": "🇩🇰",
+    "study_portal": "https://studyindenmark.dk/ and https://www.optagelse.dk/",
+    "tuition_policy": "Free for EU/EEA students. For non-EU students: €6,000 - €16,000 / year depending on the university and program.",
+    "average_living_cost_per_year": "€10,000 - €14,000 / year (approx. 7,500 - 10,000 DKK / month)",
+    "proof_of_funds_requirement": "Proof of financial solvency required for non-EU students (~6,820 DKK / month for living costs) or full Danish state scholarship waiver.",
+    "part_time_work_rights": "Up to 20 hours per week during academic semesters, and full-time (37 hours/week) during June, July, and August.",
+    "post_study_work_visa": "Establishment Card / Post-study work permit: 3-year job search permit upon graduation from a Danish Master's or PhD programme.",
+    "primary_language": "Danish (national), but vast majority of Master's and PhD programs are taught in fluent English. Nearly 90% of Danish society speaks fluent English.",
+    "top_scholarships": [
+      "denmark-state-scholarships",
+      "erasmus-mundus"
+    ],
+    "key_advice": "Non-EU application deadlines are early (typically January 15). Prepare detailed course descriptions (ECTS and syllabus content) from your Bachelor's degree, as Danish universities conduct strict prerequisite credit audits."
+  },
+  {
+    "id": "ireland",
+    "name": "Ireland",
+    "name_ar": "أيرلندا",
+    "flag": "🇮🇪",
+    "study_portal": "https://www.studyinireland.ie/ and https://hea.ie/",
+    "tuition_policy": "Non-EU tuition fees range from €10,000 to €25,000/year (humanities/business lower, STEM/medicine higher). EU students pay €3,000 student contribution charge.",
+    "average_living_cost_per_year": "€12,000 - €16,000 / year (€1,000 - €1,400 / month, higher in Dublin due to accommodation).",
+    "proof_of_funds_requirement": "Proof of €10,000 immediate access funds for visa plus evidence of ability to fund remaining study years.",
+    "part_time_work_rights": "20 hours per week during term time, and up to 40 hours per week during holiday periods (June, July, August, September, and mid-December to mid-January).",
+    "post_study_work_visa": "Third Level Graduate Scheme (Stamp 1G): 24 months (2 years) post-study work permit for Master's and PhD graduates; 12 months for Bachelor's graduates.",
+    "primary_language": "English (official national language alongside Irish).",
+    "top_scholarships": [
+      "ireland-goi-ies",
+      "erasmus-mundus"
+    ],
+    "key_advice": "Ireland is the largest native English-speaking hub in the European Union and headquarters to European tech giants (Google, Meta, Apple, Pfizer). Secure student housing very early (May/June) due to tight housing markets in Dublin and Cork."
+  },
+  {
+    "id": "finland",
+    "name": "Finland",
+    "name_ar": "فنلندا",
+    "flag": "🇫🇮",
+    "study_portal": "https://www.studyinfinland.fi/ and https://studyinfo.fi/",
+    "tuition_policy": "Free for EU/EEA students. For non-EU students: €8,000 - €18,000 / year. However, Finnish universities offer extensive 50% - 100% tuition waiver scholarships directly via Studyinfo.fi.",
+    "average_living_cost_per_year": "€9,600 - €11,000 / year (approx. €800 - €950 / month).",
+    "proof_of_funds_requirement": "Must show at least €560/month (€6,720/year) in candidate's personal bank account for Finnish Immigration Service (Migri) residence permit.",
+    "part_time_work_rights": "Up to 30 hours per week during the semester (recently expanded from 25 hours), with no weekly limits during official university vacation periods.",
+    "post_study_work_visa": "Up to 2 years post-graduation residence permit to look for work or establish a business. Time spent on a student residence permit counts 50% towards permanent residency requirements.",
+    "primary_language": "Finnish & Swedish (national), with exceptional English proficiency across the population and hundreds of English-taught Master's degrees.",
+    "top_scholarships": [
+      "finland-government-scholarships",
+      "erasmus-mundus"
+    ],
+    "key_advice": "The national joint application window occurs strictly in January for autumn intake. Applying during this window allows you to apply for up to 6 study options with one single application and apply for tuition waiver scholarships with a simple checkbox."
+  },
+  {
+    "id": "united-kingdom",
+    "name": "United Kingdom",
+    "name_ar": "المملكة المتحدة",
+    "flag": "🇬🇧",
+    "study_portal": "https://study-uk.britishcouncil.org/ and https://www.ucas.com/",
+    "tuition_policy": "International student tuition: £14,000 - £38,000/year (average ~£18,000 - £24,000 for Master's; clinical programs higher). Most UK taught Master's degrees take only 1 full year.",
+    "average_living_cost_per_year": "Outside London: £1,023/month (£9,207 for 9 months). Inside London: £1,334/month (£12,006 for 9 months) as mandated by UKVI.",
+    "proof_of_funds_requirement": "Tuition fees + 9 months living costs held in bank account continuously for at least 28 consecutive days before visa application.",
+    "part_time_work_rights": "20 hours per week during term time for degree-level courses, and full-time during official vacation periods.",
+    "post_study_work_visa": "Graduate Route Visa: 2 years of unsponsored work rights for Bachelor's and Master's graduates; 3 years for PhD graduates.",
+    "primary_language": "English (national).",
+    "top_scholarships": [
+      "chevening",
+      "gates-cambridge",
+      "rhodes-oxford",
+      "mastercard-foundation"
+    ],
+    "key_advice": "UK Master's degrees are intensive 12-month programs that save you a full year of living expenses compared to 2-year European or US degrees. For Chevening, applications open in August and close in early November—begin preparing your 4 essays in July."
+  },
+  {
+    "id": "australia",
+    "name": "Australia",
+    "name_ar": "أستراليا",
+    "flag": "🇦🇺",
+    "study_portal": "https://www.studyaustralia.gov.au/",
+    "tuition_policy": "AUD $25,000 - $48,000 / year for international students depending on university tier (Group of Eight higher).",
+    "average_living_cost_per_year": "AUD $29,710 / year (mandatory minimum living expense threshold set by Department of Home Affairs).",
+    "proof_of_funds_requirement": "Evidence of genuine access to 1 year of tuition fees + AUD $29,710 living costs + travel expenses.",
+    "part_time_work_rights": "48 hours per fortnight (24 hours/week average) while study is in session, and unrestricted full-time hours during recognized study breaks.",
+    "post_study_work_visa": "Temporary Graduate Visa (Subclass 485 - Post-Study Work stream): 2 to 4 years depending on degree level and regional campus location bonuses.",
+    "primary_language": "English (national).",
+    "top_scholarships": [
+      "australia-awards",
+      "research-training-program-rtp"
+    ],
+    "key_advice": "Australia offers two major university intakes: Semester 1 (February/March) and Semester 2 (July/August). Australian universities place significant weight on the 'Genuine Student' (GS) assessment during visa processing."
+  },
+  {
+    "id": "sweden",
+    "name": "Sweden",
+    "name_ar": "السويد",
+    "flag": "🇸🇪",
+    "study_portal": "https://studyinsweden.se/ and https://www.universityadmissions.se/",
+    "tuition_policy": "Free for EU/EEA students. For non-EU students: SEK 80,000 - 150,000 / year (~€7,000 - €13,000 / year).",
+    "average_living_cost_per_year": "SEK 110,000 - 130,000 / year (~SEK 10,000 / month, equivalent to ~€880 / month).",
+    "proof_of_funds_requirement": "Swedish Migration Agency (Migrationsverket) requires proof of maintenance of at least SEK 10,314 per month for student residence permit.",
+    "part_time_work_rights": "No statutory legal limit on work hours for student residence permit holders, provided you maintain required academic credits (minimum 15 ECTS per semester passed).",
+    "post_study_work_visa": "12-month post-study residence permit to seek employment or explore starting a business in Sweden.",
+    "primary_language": "Swedish (national), but Sweden ranks among the highest non-native English speaking countries globally with over 1,000 Master's programs in English.",
+    "top_scholarships": [
+      "swedish-institute",
+      "erasmus-mundus"
+    ],
+    "key_advice": "Sweden uses a single centralized admissions portal (universityadmissions.se) where you can rank up to 4 Master's degree choices. The Swedish Institute (SISGP) scholarship portal opens immediately after university admissions close in January/February."
+  },
+  {
+    "id": "france",
+    "name": "France",
+    "name_ar": "فرنسا",
+    "flag": "🇫🇷",
+    "study_portal": "https://www.campusfrance.org/ and Études en France portal",
+    "tuition_policy": "Very affordable public university tuition: €2,770/year for Bachelor's, €3,770/year for Master's (many French public universities even vote partial exemptions bringing fees down to €243 - €380/year!). Private Grandes Écoles and business schools charge €10,000 - €22,000/year.",
+    "average_living_cost_per_year": "€8,000 - €12,000 / year (€650 - €900/month outside Paris, €1,000 - €1,300/month in Paris).",
+    "proof_of_funds_requirement": "Must demonstrate financial resources of at least €615/month for the French student visa (VLS-TS).",
+    "part_time_work_rights": "Up to 964 hours per year (approx. 60% of normal full-time work, or ~20 hours/week).",
+    "post_study_work_visa": "Recépissé / Carte de Séjour Recherche d'Emploi ou Création d'Entreprise: 12-month post-study work authorization for Master's graduates. Graduating with a French Master's reduces the naturalization residency requirement from 5 years to 2 years!",
+    "primary_language": "French (national), but hundreds of graduate programs are offered 100% in English (catalogued on Campus France Taught in English portal).",
+    "top_scholarships": [
+      "eiffel-france",
+      "erasmus-mundus",
+      "emile-boutmy"
+    ],
+    "key_advice": "All international students in France are eligible for CAF (Caisse d'Allocations Familiales) housing subsidies, which reimburse between €100 and €250/month of your room rent! International health insurance (sécurité sociale) is 100% free."
+  },
+  {
+    "id": "netherlands",
+    "name": "Netherlands",
+    "name_ar": "هولندا",
+    "flag": "🇳🇱",
+    "study_portal": "https://www.studyinnl.org/ and https://www.studielink.nl/",
+    "tuition_policy": "Non-EU students: €8,000 - €16,000/year for Bachelor's; €12,000 - €22,000/year for Master's programs.",
+    "average_living_cost_per_year": "€12,000 - €16,000 / year (€1,000 - €1,350 / month).",
+    "proof_of_funds_requirement": "Dutch Immigration and Naturalisation Service (IND) requires proof of living costs (~€1,050/month, approx €12,600/year) transferred to the university or proven via bank statement.",
+    "part_time_work_rights": "Non-EU students may work either 16 hours per week year-round OR full-time during June, July, and August (requires employer work permit TWV).",
+    "post_study_work_visa": "Orientation Year for Highly Educated Persons (Zoekjaar / Search Year permit): 1 full year of unrestricted employment rights. Can be activated up to 3 years after graduation!",
+    "primary_language": "Dutch (national), but the Netherlands has the highest English proficiency of any non-native country in Europe (>95% fluent). Over 2,100 programs taught in English.",
+    "top_scholarships": [
+      "nl-scholarship",
+      "erasmus-mundus",
+      "orange-knowledge-programme"
+    ],
+    "key_advice": "The greatest bottleneck in the Netherlands is student housing. Dutch universities explicitly warn students NOT to travel to the Netherlands if they have not secured verified accommodation by August 1. Begin housing searches in March/April."
+  },
+  {
+    "id": "norway",
+    "name": "Norway",
+    "name_ar": "النرويج",
+    "flag": "🇩🇴",
+    "study_portal": "https://www.studyinnorway.no/ and https://www.samordnaopptak.no/",
+    "tuition_policy": "Historically free, but as of autumn 2023, non-EU/EEA students must pay tuition fees at public universities (typically NOK 130,000 - 250,000/year, approx €11,000 - €21,000). EU students and exchange/mobility students remain tuition-free.",
+    "average_living_cost_per_year": "NOK 151,690 / year (~€13,000 / year) as mandated by the Norwegian Directorate of Immigration (UDI).",
+    "proof_of_funds_requirement": "Mandatory deposit of NOK 151,690 deposited directly into an escrow account held by the Norwegian university's student welfare organization (SiO, Sammen, SiT).",
+    "part_time_work_rights": "Up to 20 hours per week during semester terms, and full-time during official university holidays.",
+    "post_study_work_visa": "Residence permit for job seekers: 1 year post-study work authorization to find skilled employment relevant to your degree.",
+    "primary_language": "Norwegian (national). Excellent English proficiency across the society, with world-class English Master's and PhD programs in Energy, Marine, and Tech.",
+    "top_scholarships": [
+      "erasmus-mundus",
+      "eea-grants"
+    ],
+    "key_advice": "PhD positions in Norway are considered salaried employment under Norwegian labor law! Norwegian PhD fellows receive a generous salary of NOK 500,000 - 550,000/year (~€45,000+) with full pension and social security benefits, and pay ZERO tuition."
+  },
+  {
+    "id": "hungary",
+    "name": "Hungary",
+    "name_ar": "المجر",
+    "flag": "🇭🇺",
+    "study_portal": "https://studyinhungary.hu/ and https://apply.stipendiumhungaricum.hu/",
+    "tuition_policy": "Full tuition waiver under Stipendium Hungaricum scholarship; low self-funded tuition (€3,000 - €6,000/year).",
+    "average_living_cost_per_year": "€6,000 - €8,500 / year (approx. €500 - €700 / month, lower than Western Europe).",
+    "proof_of_funds_requirement": "Covered 100% by Stipendium Hungaricum scholarship certificate.",
+    "part_time_work_rights": "Up to 30 hours per week during term time, and up to 90 days or 66 working days outside study terms.",
+    "post_study_work_visa": "Study-to-Work Residence Permit: 9 months post-graduation permit to seek employment or start a business in Hungary.",
+    "primary_language": "Hungarian (national); universities offer hundreds of English-taught programs in Budapest, Debrecen, Szeged, and Pécs.",
+    "top_scholarships": [
+      "stipendium-hungaricum"
+    ],
+    "key_advice": "Double-application requirement: Submit on DreamApply AND to your home country Sending Partner Ministry. Prepare for online oral interviews / subject tests conducted directly by Hungarian university faculties between March and May."
+  },
+  {
+    "id": "united-states",
+    "name": "United States",
+    "name_ar": "الولايات المتحدة الأمريكية",
+    "flag": "🇺🇸",
+    "study_portal": "https://educationusa.state.gov/",
+    "tuition_policy": "$20,000 - $65,000 / year. However, almost all STEM PhD programs and top Master's offer full departmental funding (Teaching/Research Assistantships with full tuition waiver + $25k-$38k stipend).",
+    "average_living_cost_per_year": "$15,000 - $24,000 / year depending on state and city.",
+    "proof_of_funds_requirement": "Form I-20 requirement: bank balance or scholarship guarantee covering full 1st year expenses.",
+    "part_time_work_rights": "20 hours per week on-campus during school sessions; 40 hours during school breaks.",
+    "post_study_work_visa": "Optional Practical Training (OPT): 12 months for non-STEM degrees; 36 months (3 full years) for STEM designated degrees under F-1 visa. (Fulbright scholars are on J-1 visas subject to 2-year home return rule).",
+    "primary_language": "English.",
+    "top_scholarships": [
+      "fulbright",
+      "departmental-assistantships-ra-ta"
+    ],
+    "key_advice": "For PhDs and research Master's in the USA, departmental funding (Graduate Research Assistant / Teaching Assistant) is the most common full scholarship mechanism. You do not need to pay out-of-pocket tuition if accepted with a funded assistantship."
+  },
+  {
+    "id": "canada",
+    "name": "Canada",
+    "name_ar": "كندا",
+    "flag": "🇨🇦",
+    "study_portal": "https://www.educanada.ca/ and OUAC (Ontario)",
+    "tuition_policy": "CAD $18,000 - $45,000/year for international students. Many research Master's and PhD programs provide guaranteed funding packages (stipend + tuition waiver).",
+    "average_living_cost_per_year": "CAD $20,635/year (~CAD $1,720/month) minimum living threshold mandated by IRCC.",
+    "proof_of_funds_requirement": "Tuition fees for 1st year + CAD $20,635 living expenses proven via GIC (Guaranteed Investment Certificate) or bank statement.",
+    "part_time_work_rights": "24 hours per week off-campus during academic terms, and full-time during scheduled academic breaks.",
+    "post_study_work_visa": "Post-Graduation Work Permit (PGWP): Up to 3 years of open, unrestricted work permit depending on program length. Master's graduates qualify for full 3-year PGWP even for 1-2 year programs. Leads directly to Express Entry (CEC) Permanent Residency.",
+    "primary_language": "English & French (bilingual national).",
+    "top_scholarships": [
+      "vanier-cgs",
+      "banting-postdoctoral",
+      "mastercard-foundation"
+    ],
+    "key_advice": "Canada's PGWP is among the most favorable work permits globally. For research degrees, contact potential supervisors directly before applying to secure departmental assistantship guarantees."
+  },
+  {
+    "id": "italy",
+    "name": "Italy",
+    "name_ar": "إيطاليا",
+    "flag": "🇮🇹",
+    "study_portal": "https://www.universitaly.it/ and https://studyinitaly.esteri.it/",
+    "tuition_policy": "Public university tuition is income-based (€150 - €3,000/year). Furthermore, students from developing nations can easily obtain 100% tuition waivers via Regional DSU need-based grants.",
+    "average_living_cost_per_year": "€7,000 - €10,000/year (€600 - €850/month outside Milan/Rome; €900 - €1,200/month in Milan/Rome).",
+    "proof_of_funds_requirement": "Italian visa requires proof of at least €467.65/month (€6,079.45/year) in candidate or sponsor bank account.",
+    "part_time_work_rights": "Up to 20 hours per week (maximum 1,040 hours per calendar year).",
+    "post_study_work_visa": "Permesso di soggiorno per ricerca lavoro o imprenditorialità degli studenti: 12-month post-study work search permit for Master's and PhD graduates.",
+    "primary_language": "Italian (national), with hundreds of top English-taught Master's degrees at Politecnico di Milano, Sapienza, Bologna, and Padova.",
+    "top_scholarships": [
+      "italy-maeci-dsu",
+      "erasmus-mundus"
+    ],
+    "key_advice": "CRITICAL SECRET FOR ITALY: Regional DSU scholarships (DSU Toscana, EDiSU Piemonte, Disco Lazio) are NOT merit-exclusive; they are need-based! If your family income in your home country is modest, submitting legalized income documents (ISEE Parificato) grants a 100% tuition waiver, free daily canteen meals, free student dorm, PLUS €6,000-€7,500/year cash stipend!"
+  },
+  {
+    "id": "japan",
+    "name": "Japan",
+    "name_ar": "اليابان",
+    "flag": "🇯🇵",
+    "study_portal": "https://www.studyinjapan.go.jp/ and https://www.jasso.go.jp/",
+    "tuition_policy": "National universities charge standardized tuition of ~535,800 JPY/year (~$3,600 USD), with 50%-100% tuition exemption readily available for international students.",
+    "average_living_cost_per_year": "80,000 - 120,000 JPY/month (~$6,500 - $9,500 USD/year), significantly lower outside Tokyo.",
+    "proof_of_funds_requirement": "Bank statement showing approx. 1,500,000 - 2,000,000 JPY (or MEXT scholarship certificate).",
+    "part_time_work_rights": "Up to 28 hours per week during academic semesters, and up to 40 hours (8 hours/day) during long vacation breaks (requires Shikakugai Katsudo Kyoka permit).",
+    "post_study_work_visa": "Designated Activities Visa for Job Hunting: Up to 12 months (6 months + 6-month extension) to seek employment upon university graduation.",
+    "primary_language": "Japanese (national), with extensive English graduate programs (Global 30 initiative) at Tokyo, Kyoto, Osaka, Tohoku, and Nagoya.",
+    "top_scholarships": [
+      "mext-japan",
+      "jasso-honors",
+      "adb-jsp"
+    ],
+    "key_advice": "For MEXT University Recommendation: Approach Japanese university professors directly between October and December with a clear research proposal. If a professor accepts you into their laboratory, the university nominates you directly for the MEXT scholarship with very high success rates."
+  },
+  {
+    "id": "south-korea",
+    "name": "South Korea",
+    "name_ar": "كوريا الجنوبية",
+    "flag": "🇰🇷",
+    "study_portal": "https://www.studyinkorea.go.kr/",
+    "tuition_policy": "Public universities: $2,000 - $4,500/semester; Private universities: $3,500 - $7,000/semester. Graduate STEM students routinely receive 100% tuition waivers + lab research stipends.",
+    "average_living_cost_per_year": "₩800,000 - ₩1,200,000/month (~$7,000 - $11,000 USD/year).",
+    "proof_of_funds_requirement": "Bank statement showing $10,000 - $20,000 USD held for at least 1 month (or GKS scholarship certificate).",
+    "part_time_work_rights": "20 to 30 hours per week during term time (dependent on TOPIK score level), and unlimited hours during vacations (requires immigration permission S-3).",
+    "post_study_work_visa": "D-10 Job Seeker Visa: Up to 2 years post-graduation permit to seek professional employment, leading directly to the points-based F-2-7 resident visa.",
+    "primary_language": "Korean (national), with prominent English STEM graduate programs at KAIST, SNU, POSTECH, and Yonsei.",
+    "top_scholarships": [
+      "gks-korea",
+      "kaist-scholarship",
+      "unist-scholarship"
+    ],
+    "key_advice": "When applying for GKS (Global Korea Scholarship), compare the Embassy Track vs University Track. If you apply for University Track at regional partner universities, quotas are higher and competition is less fierce than the central Embassy Track."
+  },
+  {
+    "id": "switzerland",
+    "name": "Switzerland",
+    "name_ar": "سويسرا",
+    "flag": "🇨🇭",
+    "study_portal": "https://www.studyinswitzerland.plus/",
+    "tuition_policy": "Extremely low public tuition at top-ranked universities: ETH Zurich (~730 CHF/semester), EPFL (~780 CHF/semester), University of Zurich (~720 CHF/semester).",
+    "average_living_cost_per_year": "20,000 - 26,000 CHF/year (~1,700 - 2,200 CHF/month).",
+    "proof_of_funds_requirement": "Must demonstrate 21,000 CHF in a Swiss-recognized bank account for cantonal residence permit (or official Swiss Excellence scholarship guarantee).",
+    "part_time_work_rights": "Up to 15 hours per week during term time, and full-time during holidays (non-EU students may only start working after 6 months of residency).",
+    "post_study_work_visa": "6-month post-study residence permit to seek employment in Switzerland following completion of a Swiss university degree.",
+    "primary_language": "German, French, Italian, Romansh (national). Master's and PhD programs at ETH Zurich and EPFL are taught 100% in English.",
+    "top_scholarships": [
+      "swiss-excellence",
+      "eth-excellence-fellowship",
+      "epfl-fellowship"
+    ],
+    "key_advice": "ETH Zurich and EPFL rank among the top 10 universities in the entire world, yet their tuition is under $1,800/year! For PhD candidates, Swiss PhD positions are fully funded jobs paying 47,000 - 65,000 CHF/year (~$52,000 - $72,000 USD)."
+  },
+  {
+    "id": "saudi-arabia",
+    "name": "Saudi Arabia",
+    "name_ar": "المملكة العربية السعودية",
+    "flag": "🇸🇦",
+    "study_portal": "https://studyinsaudi.moe.gov.sa/ and https://www.kaust.edu.sa/",
+    "tuition_policy": "100% Full Tuition Waiver for all admitted graduate students at KAUST and major Saudi research universities (KFUPM, KSU).",
+    "average_living_cost_per_year": "$0 Out-of-Pocket. KAUST provides free private on-campus housing, free utilities, and premium health/dental insurance.",
+    "proof_of_funds_requirement": "Covered 100% by the KAUST Fellowship or Saudi Government Scholarship.",
+    "part_time_work_rights": "On-campus graduate research and teaching assistantships included in fellowship package.",
+    "post_study_work_visa": "Access to Saudi Premium Residency pathways and direct recruitment into Saudi mega-projects (NEOM, Aramco, King Abdullah Economic City) and regional tech hubs.",
+    "primary_language": "English (100% medium of instruction and research at KAUST and KFUPM).",
+    "top_scholarships": [
+      "kaust-fellowship",
+      "kfupm-fellowship",
+      "study-in-saudi"
+    ],
+    "key_advice": "KAUST is the richest university per student in the world. Every single admitted Master's and PhD student automatically receives the KAUST Fellowship ($20,000 - $30,000 USD/year net cash stipend, free luxury townhouses/apartments, roundtrip annual flights, and state-of-the-art labs)."
+  }
+]

@@ -1,0 +1,27 @@
+name: 🐛 Bug report
+description: Something in the tool does not work as expected.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "⚠️ Never paste real personal data (passport numbers, full transcripts, addresses). Use made-up values."
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps / command to reproduce
+      render: shell
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "macOS 15, Python 3.12, used through Claude Code / Cursor / CLI"

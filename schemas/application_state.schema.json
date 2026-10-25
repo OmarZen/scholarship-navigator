@@ -1,0 +1,216 @@
+{
+  "$defs": {
+    "DocumentRecord": {
+      "description": "One paper the candidate holds (or is working on). Stored in profile/documents.json.",
+      "properties": {
+        "doc_id": {
+          "title": "Doc Id",
+          "type": "string"
+        },
+        "status": {
+          "default": "missing",
+          "enum": [
+            "have",
+            "in_progress",
+            "missing",
+            "not_applicable"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "count_ready": {
+          "default": 0,
+          "description": "For countable papers (e.g. recommendation letters): how many are secured",
+          "title": "Count Ready",
+          "type": "integer"
+        },
+        "files": {
+          "description": "Paths relative to the workspace root",
+          "items": {
+            "type": "string"
+          },
+          "title": "Files",
+          "type": "array"
+        },
+        "issued": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Issued"
+        },
+        "expires": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expires"
+        },
+        "translated": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Translated"
+        },
+        "certified": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Certified"
+        },
+        "apostilled": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Apostilled"
+        },
+        "details": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Details"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "doc_id"
+      ],
+      "title": "DocumentRecord",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "scholarship_id": {
+      "title": "Scholarship Id",
+      "type": "string"
+    },
+    "application_status": {
+      "default": "Not Started",
+      "title": "Application Status",
+      "type": "string"
+    },
+    "deadline_confirmed": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Deadline Confirmed"
+    },
+    "deadline_source": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Deadline Source"
+    },
+    "deadline_verified_on": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Deadline Verified On"
+    },
+    "documents": {
+      "additionalProperties": {
+        "$ref": "#/$defs/DocumentRecord"
+      },
+      "title": "Documents",
+      "type": "object"
+    },
+    "chosen_programs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Chosen Programs",
+      "type": "array"
+    },
+    "referees": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Referees",
+      "type": "array"
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    }
+  },
+  "required": [
+    "scholarship_id"
+  ],
+  "title": "ApplicationState",
+  "type": "object"
+}

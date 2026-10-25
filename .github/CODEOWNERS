@@ -1,0 +1,6 @@
+# Every pull request needs an approving review from a code owner before it can merge into main.
+# Replace OmarZen with your GitHub username (scripts/set_repo_owner.py does it everywhere).
+*                 @OmarZen
+/data/            @OmarZen
+/planner/         @OmarZen
+/.github/         @OmarZen

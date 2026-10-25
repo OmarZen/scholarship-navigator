@@ -1,0 +1,69 @@
+{
+  "statement_of_purpose": {
+    "title": "Master Statement of Purpose / Motivation Letter Blueprint",
+    "structure": [
+      {
+        "section": "1. Hook & Intellectual Awakening (10-15%)",
+        "description": "Engage the admissions committee immediately. Introduce a real-world problem or personal observation that ignited your passion for your field. Avoid clichés like 'Ever since I was a child...'. Focus on an intellectual catalyst."
+      },
+      {
+        "section": "2. Academic Journey & Foundation (20-25%)",
+        "description": "Highlight key bachelor courses, research projects, capstone thesis, or academic honors. Focus on analytical rigor and methodological skills you mastered."
+      },
+      {
+        "section": "3. Professional / Practical Experience (20%)",
+        "description": "Explain internships, full-time jobs, or research assistantships. Emphasize tangible results: what problems did you solve, what metrics did you improve, and what leadership skills did you demonstrate?"
+      },
+      {
+        "section": "4. Why This Specific Scholarship & University? (25%)",
+        "description": "Demonstrate deep institutional research. Name 2-3 specific professors, laboratories, specialized elective modules, or university research centers. Explain why this country's ecosystem is essential for your goals."
+      },
+      {
+        "section": "5. Future Vision & Home Country / Global Impact (15-20%)",
+        "description": "Detail your 3-5 year post-graduation career plan. Crucial for government scholarships (Chevening, Fulbright, DAAD, Australia Awards): explicitly detail how you will return and apply your skills to resolve local or regional development challenges."
+      }
+    ],
+    "scholarship_specific_essays": {
+      "chevening": {
+        "essay_1_leadership": "Describe your leadership style using 1-2 concrete examples using the STAR technique (Situation, Task, Action, Result). Show influence, persuasion, and measurable impact.",
+        "essay_2_networking": "Explain how you build and maintain relationships across diverse stakeholders. Detail how you will engage with the UK Chevening network and bring value to it.",
+        "essay_3_study_in_uk": "Outline your 3 chosen master's courses. Explain how they connect to each other and why the UK academic model is superior for your academic trajectory.",
+        "essay_4_career_plan": "Detail SMART career goals (Immediate, Short-term 2-5 years, Long-term 5-10 years). Tie them into UK bilateral cooperation with your home country."
+      },
+      "fulbright": {
+        "personal_statement": "A personal, reflective narrative showing your identity, resilience, moral compass, and what drives you intellectually (1 page).",
+        "study_objectives": "A rigorous academic statement detailing what specific topics, courses, methodologies, and thesis you aim to pursue in the US (1-2 pages)."
+      }
+    }
+  },
+  "curriculum_vitae": {
+    "title": "Academic CV Guidelines (Europass / International Standard)",
+    "rules": [
+      "Keep to 1-2 pages maximum for Master's applicants; 2-3 pages for PhD/Research applicants.",
+      "Use reverse chronological order (most recent degree/job first).",
+      "Include: Contact Info, Education (GPA, Thesis title), Research & Publications, Professional Experience, Technical/Language Skills, Awards/Honors, Extracurricular Leadership.",
+      "For European programs (Erasmus Mundus, DAAD, SI Sweden), strictly use the Europass or mandated institutional template when required."
+    ]
+  },
+  "letters_of_recommendation": {
+    "title": "Letters of Recommendation Strategy",
+    "guidelines": [
+      "Select 2 academic referees (professors who supervised your thesis or taught relevant major courses) and 1 professional referee (direct manager/employer).",
+      "Referees must write on official institutional letterhead with official email, physical signature, and department stamp.",
+      "Provide your referee with a 'Brag Sheet': bullet points of your achievements in their class/work to help them write specific, enthusiastic endorsements.",
+      "Avoid generic praise; letters must cite specific instances of analytical thinking, resilience, and collaborative teamwork."
+    ]
+  },
+  "research_proposal": {
+    "title": "PhD & Research Master's Proposal Framework",
+    "sections": [
+      "1. Title: Concise, descriptive, and scholarly.",
+      "2. Executive Summary / Abstract: 250-word synthesis of problem, gap, method, and impact.",
+      "3. Background & Literature Review: Identify the explicit research gap in current literature.",
+      "4. Research Questions & Hypotheses: Clear, falsifiable, and focused questions.",
+      "5. Methodology & Research Design: Data collection, analytical tools, experimental protocols, and ethical considerations.",
+      "6. Timeline / Work Plan: 3-4 year Gantt chart showing milestones and paper submissions.",
+      "7. Expected Contributions & References: Academic significance and complete citations."
+    ]
+  }
+}

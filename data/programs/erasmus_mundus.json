@@ -1,0 +1,4629 @@
+[
+  {
+    "id": "aiss",
+    "acronym": "AISS",
+    "name": "Erasmus Mundus Joint Master in Artificial Intelligence for Sustainable Societies (SITeS project)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://aissprogram.eu/",
+    "fields": [
+      "Artificial intelligence",
+      "Information technology",
+      "Sustainability",
+      "Digital society",
+      "AI ethics and governance"
+    ],
+    "field_groups": [
+      "computing",
+      "social_sciences"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Tallinn University",
+      "city": null,
+      "country": "Estonia"
+    },
+    "universities": [
+      {
+        "university": "Tallinn University",
+        "city": "Tallinn",
+        "country": "Estonia"
+      },
+      {
+        "university": "Universidade Lusófona",
+        "city": "Lisbon",
+        "country": "Portugal"
+      },
+      {
+        "university": "Tampere University",
+        "city": "Tampere",
+        "country": "Finland"
+      }
+    ],
+    "host_countries": [
+      "Estonia",
+      "Portugal",
+      "Finland"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 2,
+      "day": 2,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://aissprogram.eu/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-02-02"
+      },
+      "note": "September 2027 intake: applications 2 Dec 2026 to 2 Feb 2027 via DreamApply (Tallinn University). Scholarship applications are made in the same admission process."
+    },
+    "deadline_notes": "September 2027 intake: applications 2 Dec 2026 to 2 Feb 2027 via DreamApply (Tallinn University). Scholarship applications are made in the same admission process.",
+    "english_requirement": "IELTS Academic 6.5 (min 5.5 each); TOEFL iBT 92 (no section below 20) before 21 Jan 2026, or new scale 4 in each section; PTE 62 (59 each); Cambridge B2 First/C1/C2 169; exemption for full English-medium study in US/CA/AU/NZ/UK/CH/EU-EEA",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": null,
+    "eligible_nationalities": "Worldwide (max 10% of scholarships per nationality; Estonian applicants apply via SAIS)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://aissprogram.eu/",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "The site brands the programme AISS; 'SITeS' is the EU project name (SITeS project page, social handles 'SiTESAISS'). Triple degree, 3 countries, final-semester location chosen by student. EMJM scholarship (1,400 EUR/month) goes to the top 10 ranked applicants. Coordinator inferred as Tallinn University (admissions, DreamApply Estonia, TLU regulations), not explicitly stated. Eligible bachelor fields not found on the pages checked."
+  },
+  {
+    "id": "amir",
+    "acronym": "AMIR",
+    "name": "Erasmus Mundus Master in Advanced Materials for Innovative Recycling",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.amir-em-master.com/",
+    "fields": [
+      "materials science",
+      "recycling",
+      "circular economy",
+      "chemistry",
+      "metallurgy / raw materials"
+    ],
+    "field_groups": [
+      "natural_sciences",
+      "engineering",
+      "environment"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Universite de Bordeaux",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "Universite de Bordeaux",
+        "city": "Bordeaux (Talence)",
+        "country": "France"
+      },
+      {
+        "university": "Universidad Politecnica de Madrid",
+        "city": "Madrid",
+        "country": "Spain"
+      },
+      {
+        "university": "Technische Universitat Darmstadt",
+        "city": "Darmstadt",
+        "country": "Germany"
+      },
+      {
+        "university": "University of Liege",
+        "city": "Liege",
+        "country": "Belgium"
+      },
+      {
+        "university": "Universidade NOVA de Lisboa (NOVA FCT)",
+        "city": "Lisbon",
+        "country": "Portugal"
+      },
+      {
+        "university": "University of Miskolc",
+        "city": "Miskolc",
+        "country": "Hungary"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Spain",
+      "Germany",
+      "Belgium",
+      "Portugal",
+      "Hungary"
+    ],
+    "status": "self_funded_only",
+    "scholarships_available": false,
+    "deadline": {
+      "month": 5,
+      "day": 17,
+      "years_before_intake": 0,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.amir-em-master.com/fees-and-scholarships/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2026": "2026-05-17"
+      },
+      "note": "The 2026-2028 call ran 9 Mar - 17 May 2026 (self-funded). The EIT partial-scholarship call ran 19 Oct 2025 - 23 Jan 2026. No 2027-2029 call announced yet."
+    },
+    "deadline_notes": "The 2026-2028 call ran 9 Mar - 17 May 2026 (self-funded). The EIT partial-scholarship call ran 19 Oct 2025 - 23 Jan 2026. No 2027-2029 call announced yet.",
+    "english_requirement": "Not found (application must be completed in English)",
+    "ielts_min": null,
+    "eligible_backgrounds": "Bachelor (min. 3 years / 180 ECTS) in Engineering or Environmental Sciences with advanced chemistry, or in Chemistry, Physical Chemistry or Materials Science",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.amir-em-master.com/fees-and-scholarships/",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "EMJM scholarships (EUR 1,400/month) covered 4 intakes starting with 2022-2024. 'Full scholarships are not available for the next cohort' (2026-28), which is self-funded, with EIT partial scholarships (EUR 15,000) available. Status for 2027 is extrapolated (no renewal found). Coordinator: Guido Sonnemann, Universite de Bordeaux. The exact host for each semester was not verified, so all 6 listed universities are included. Teaching language English is not explicitly stated on the pages fetched."
+  },
+  {
+    "id": "bioceb",
+    "acronym": "Bioceb",
+    "name": "European Master in Biological and Chemical Engineering for a Sustainable Bioeconomy",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.bioceb.eu/",
+    "fields": [
+      "Biotechnology",
+      "Bioprocess engineering",
+      "Green chemistry",
+      "Biorefinery",
+      "Biopolymers and biomaterials",
+      "Bioeconomy"
+    ],
+    "field_groups": [
+      "engineering",
+      "natural_sciences",
+      "environment"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "AgroParisTech (Université Paris-Saclay)",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "AgroParisTech / Université Paris-Saclay",
+        "city": "Palaiseau",
+        "country": "France"
+      },
+      {
+        "university": "Université de Reims Champagne-Ardenne",
+        "city": "Reims",
+        "country": "France"
+      },
+      {
+        "university": "Université de Liège",
+        "city": "Liège",
+        "country": "Belgium"
+      },
+      {
+        "university": "Aalto University",
+        "city": "Espoo",
+        "country": "Finland"
+      },
+      {
+        "university": "Tallinn University of Technology (TalTech)",
+        "city": "Tallinn",
+        "country": "Estonia"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Belgium",
+      "Finland",
+      "Estonia"
+    ],
+    "status": "upcoming",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 1,
+      "day": 29,
+      "years_before_intake": 0,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://ijpb.versailles.inrae.fr/en/news/bioceb-the-european-master-in-biological-and-chemical-engineering-for-a-sustainable-bioeconomy-has-been-renewed",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2026": "2026-01-29"
+      },
+      "note": "2026-28 call closed 29 Jan 2026 12:00 CET. 2027 dates not found because bioceb.eu returned HTTP 503 several times. Expect an autumn 2026 opening and a late-January 2027 close."
+    },
+    "deadline_notes": "2026-28 call closed 29 Jan 2026 12:00 CET. 2027 dates not found because bioceb.eu returned HTTP 503 several times. Expect an autumn 2026 opening and a late-January 2027 close.",
+    "english_requirement": null,
+    "ielts_min": null,
+    "eligible_backgrounds": "Biotechnology, biochemistry, microbiology, biophysics, bioprocess engineering, molecular biology or similar (per Aalto page)",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://ijpb.versailles.inrae.fr/en/news/bioceb-the-european-master-in-biological-and-chemical-engineering-for-a-sustainable-bioeconomy-has-been-renewed",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "Renewed under ERASMUS-EDU-2025-PEX-EMJM-MOB (EUR 4.53M, 74 months) for 4 new cohorts starting Sept 2026, so 2027 should be funded. Aalto renamed its listing to 'European Master in ...' on 1 Aug 2026. bioceb.eu was down (503), so the English requirement, the 2027 deadline and the cities are unverified. Students attend 3 institutions depending on track. ULiège teaching may be at the Gembloux campus (not verified)."
+  },
+  {
+    "id": "cne",
+    "acronym": "CNE",
+    "name": "Erasmus Mundus Master in Chemical Nano-Engineering",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://master-cne.eu",
+    "fields": [
+      "Nanotechnology",
+      "Chemistry",
+      "Chemical engineering",
+      "Materials science"
+    ],
+    "field_groups": [
+      "engineering",
+      "natural_sciences"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Aix-Marseille University",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "Aix-Marseille University",
+        "city": "Marseille",
+        "country": "France"
+      },
+      {
+        "university": "University of Rome Tor Vergata",
+        "city": "Rome",
+        "country": "Italy"
+      },
+      {
+        "university": "Wroclaw University of Science and Technology",
+        "city": "Wroclaw",
+        "country": "Poland"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Italy",
+      "Poland"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 2,
+      "day": 2,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://master-cne.eu/index.php/application-information/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-02-02"
+      },
+      "note": "Application campaign 'cne-2027' opens 2 Nov 2026 (site text says 1 Nov) and closes 2 Feb 2027. Selection in June; waiting list until end of August."
+    },
+    "deadline_notes": "Application campaign 'cne-2027' opens 2 Nov 2026 (site text says 1 Nov) and closes 2 Feb 2027. Selection in June; waiting list until end of August.",
+    "english_requirement": "IELTS 6.2 / TOEFL iBT 91",
+    "ielts_min": 6.2,
+    "eligible_backgrounds": "Bachelor in science: chemistry, physics, mechanical/chemical/electronic engineering, materials science or similar; GPA at least 75% of scale maximum",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://master-cne.eu/index.php/application-information/",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "Wroclaw Tech news (20 Aug 2026) confirms CNE secured new Erasmus Mundus funding for future cohorts, continuing for six more years. Scholarship page confirms EACEA-funded EMJM scholarships (EUR 1,400/month) but gives no count for 2027. Teaching language not stated explicitly on site; English inferred from English requirement and third-party listings."
+  },
+  {
+    "id": "codas",
+    "acronym": "CoDaS",
+    "name": "Erasmus Mundus Master of Science in Communications Engineering and Data Science",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.unite-codas-master.eu/",
+    "fields": [
+      "Communications engineering",
+      "Data science",
+      "Wireless communications",
+      "Signal processing",
+      "Networks"
+    ],
+    "field_groups": [
+      "computing",
+      "engineering"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Aalto University",
+      "city": null,
+      "country": "Finland"
+    },
+    "universities": [
+      {
+        "university": "Aalto University",
+        "city": "Espoo",
+        "country": "Finland"
+      },
+      {
+        "university": "Grenoble INP - UGA",
+        "city": "Grenoble",
+        "country": "France"
+      },
+      {
+        "university": "Instituto Superior Técnico (Técnico Lisboa)",
+        "city": "Lisbon",
+        "country": "Portugal"
+      },
+      {
+        "university": "Technische Universität Braunschweig",
+        "city": "Braunschweig",
+        "country": "Germany"
+      },
+      {
+        "university": "Universitat Politècnica de Catalunya (UPC BarcelonaTech)",
+        "city": "Barcelona",
+        "country": "Spain"
+      }
+    ],
+    "host_countries": [
+      "Finland",
+      "France",
+      "Portugal",
+      "Germany",
+      "Spain"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 1,
+      "day": 5,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.unite-codas-master.eu/admission.html",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-01-05"
+      },
+      "note": "Application form open 1 Dec 2026 09:00 to 5 Jan 2027 15:00 (GMT+2); supporting documents (video, references, language test) by 12 Jan 2027 15:00. Results end of March 2027. Single round for scholarship and self-funded."
+    },
+    "deadline_notes": "Application form open 1 Dec 2026 09:00 to 5 Jan 2027 15:00 (GMT+2); supporting documents (video, references, language test) by 12 Jan 2027 15:00. Results end of March 2027. Single round for scholarship and self-funded.",
+    "english_requirement": "IELTS Academic 6.5 (writing 6.0); TOEFL iBT 92 (writing 22) for tests before 21 Jan 2026; PTE Academic 62 (writing 54); Cambridge C1/C2. Duolingo and EF SET not accepted. Test taken on/after 1 Dec 2024.",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Bachelor (180 ECTS) in communications engineering, computer science, electrical engineering (communications major) or software engineering; solid maths, algorithms, OS, networks. Must graduate by 31 Jul 2027.",
+    "eligible_nationalities": "Worldwide (max 10% of EMJM scholarships per nationality in 2024-2027 admissions)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.unite-codas-master.eu/admission.html",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "Unite! alliance programme. Scholarship page says the EU-funded admissions cover 2024-2027, so the 2027 intake looks like the last EMJM-funded intake under the current grant. Fee 8,000 EUR/yr; CoDaS fee-waiver scholarships also offered. Coordinator (Aalto) taken from UPC/partner docs; admission office is codas@aalto.fi. Mobility: one year each at two partners in two countries. The new-scale TOEFL score on the site looks garbled, so verify it."
+  },
+  {
+    "id": "cybermacs",
+    "acronym": "CYBERMACS",
+    "name": "CyberMACS - Erasmus Mundus Joint Master in Applied Cybersecurity",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "http://www.cybermacs.eu",
+    "fields": [
+      "Cybersecurity",
+      "Applied cybersecurity"
+    ],
+    "field_groups": [
+      "computing"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Kadir Has University",
+      "city": null,
+      "country": "Turkey"
+    },
+    "universities": [
+      {
+        "university": "Kadir Has University",
+        "city": "Istanbul",
+        "country": "Turkey"
+      },
+      {
+        "university": "SRH University Berlin",
+        "city": "Berlin",
+        "country": "Germany"
+      },
+      {
+        "university": "Ss. Cyril and Methodius University in Skopje",
+        "city": "Skopje",
+        "country": "North Macedonia"
+      }
+    ],
+    "host_countries": [
+      "Turkey",
+      "Germany",
+      "North Macedonia"
+    ],
+    "status": "unknown",
+    "scholarships_available": null,
+    "deadline": {
+      "month": 12,
+      "day": 15,
+      "years_before_intake": 1,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.srh-university.de/en/extra-pages/ex-io-hidden-pages/ex-berlin/erasmus-mundus/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2026": "2025-12-15"
+      },
+      "note": "No official 2027 call found. Third-party listings give 15 Dec 2025 for the 2026-28 cohort; SRH reported 1 Sep - 15 Dec 2024 for the 2025 intake."
+    },
+    "deadline_notes": "No official 2027 call found. Third-party listings give 15 Dec 2025 for the 2026-28 cohort; SRH reported 1 Sep - 15 Dec 2024 for the 2025 intake.",
+    "english_requirement": null,
+    "ielts_min": null,
+    "eligible_backgrounds": null,
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.srh-university.de/en/extra-pages/ex-io-hidden-pages/ex-berlin/erasmus-mundus/",
+    "verified_on": "2026-10-25",
+    "confidence": "low",
+    "notes": "Official site cybermacs.eu returned HTTP 525 during research. EU project period 1 Oct 2022 - 30 Nov 2028 (first intake Sept 2023, 15 scholarships per edition), so a Sept 2027 intake would end after the grant period; 2026 was likely the last funded intake unless renewed. Not confirmed. Year 1 Istanbul; Year 2 Berlin or Skopje (double degree)."
+  },
+  {
+    "id": "cybersure",
+    "acronym": "CYBERSURE",
+    "name": "Master's Programme in Cybersecurity and Assurance (CYBERSURE)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://cybersure-master.eu/",
+    "fields": [
+      "Cybersecurity",
+      "Information security",
+      "Security assurance"
+    ],
+    "field_groups": [
+      "computing"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Norwegian University of Science and Technology (NTNU)",
+      "city": null,
+      "country": "Norway"
+    },
+    "universities": [
+      {
+        "university": "Norwegian University of Science and Technology (NTNU)",
+        "city": "Trondheim / Gjøvik",
+        "country": "Norway"
+      },
+      {
+        "university": "Aalto University",
+        "city": "Espoo",
+        "country": "Finland"
+      },
+      {
+        "university": "KTH Royal Institute of Technology",
+        "city": "Stockholm",
+        "country": "Sweden"
+      },
+      {
+        "university": "Technical University of Denmark (DTU)",
+        "city": "Kongens Lyngby",
+        "country": "Denmark"
+      },
+      {
+        "university": "University of Tartu",
+        "city": "Tartu",
+        "country": "Estonia"
+      },
+      {
+        "university": "EURECOM",
+        "city": "Biot (Sophia Antipolis)",
+        "country": "France"
+      },
+      {
+        "university": "Graz University of Technology",
+        "city": "Graz",
+        "country": "Austria"
+      }
+    ],
+    "host_countries": [
+      "Norway",
+      "Finland",
+      "Sweden",
+      "Denmark",
+      "Estonia",
+      "France",
+      "Austria"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 1,
+      "day": 4,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://cybersure-master.eu/admission",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-01-04"
+      },
+      "note": "Applications 16 Nov 2026 09:00 to 4 Jan 2027 23:59 (GMT+1); language test results by 18 Jan 2027; results mid-March 2027. Scholarship choice made in the same form."
+    },
+    "deadline_notes": "Applications 16 Nov 2026 09:00 to 4 Jan 2027 23:59 (GMT+1); language test results by 18 Jan 2027; results mid-March 2027. Scholarship choice made in the same form.",
+    "english_requirement": "IELTS Academic 6.5 (writing 6.0) / TOEFL iBT 92 (writing 22; new-format tests 4.5 overall and per section) / C1 Advanced or C2 Proficiency",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Bachelor (180 ECTS) in computer science, IT, computer engineering, mathematics, information systems or related",
+    "eligible_nationalities": "Worldwide (all nationalities); extra documents for some countries",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://cybersure-master.eu/admission",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "Year 1 at NTNU (S1 Trondheim, S2 Gjøvik + summer school); Year 2 at one of six partners by track. NTNU coordinator inferred (first-year host, contact in Trondheim). 2026 intake had up to 18 EM scholarships; 2027 count not yet posted but programme is newly funded (2027 call published). Partner set overlaps with former SECCLO consortium."
+  },
+  {
+    "id": "deai",
+    "acronym": "DEAI",
+    "name": "Erasmus Mundus Joint Master in Data Engineering and Artificial Intelligence (DEAI)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://deai.ulb.be/",
+    "fields": [
+      "Data engineering",
+      "Artificial intelligence",
+      "Data science",
+      "Big data management"
+    ],
+    "field_groups": [
+      "computing"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Université Libre de Bruxelles (ULB)",
+      "city": null,
+      "country": "Belgium"
+    },
+    "universities": [
+      {
+        "university": "Université Libre de Bruxelles (ULB)",
+        "city": "Brussels",
+        "country": "Belgium"
+      },
+      {
+        "university": "Universitat Politècnica de Catalunya (UPC)",
+        "city": "Barcelona",
+        "country": "Spain"
+      },
+      {
+        "university": "TU Wien",
+        "city": "Vienna",
+        "country": "Austria"
+      },
+      {
+        "university": "Université Claude Bernard Lyon 1",
+        "city": "Lyon",
+        "country": "France"
+      },
+      {
+        "university": "University of Padua",
+        "city": "Padua",
+        "country": "Italy"
+      }
+    ],
+    "host_countries": [
+      "Belgium",
+      "Spain",
+      "Austria",
+      "France",
+      "Italy"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 1,
+      "day": 11,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://deai.ulb.be/home/students/admission/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-01-11"
+      },
+      "note": "Grant (EMJM) applicants: opens 20 Oct 2026, deadline 11 Jan 2027 12:00 GMT, reference letters by 18 Jan 2027. Self-funded: opens 1 Mar 2027, deadline 15 May 2027 (non-EU) / 30 May 2027 (EU)."
+    },
+    "deadline_notes": "Grant (EMJM) applicants: opens 20 Oct 2026, deadline 11 Jan 2027 12:00 GMT, reference letters by 18 Jan 2027. Self-funded: opens 1 Mar 2027, deadline 15 May 2027 (non-EU) / 30 May 2027 (EU).",
+    "english_requirement": "CEFR B2: e.g. IELTS Academic 5.5 / TOEFL iBT 72 / TOEFL PBT 570 / Cambridge FCE",
+    "ielts_min": 5.5,
+    "eligible_backgrounds": "Bachelor of Science (180 ECTS) with a major in computer science",
+    "eligible_nationalities": "Worldwide (max 10% of selected applicants of one nationality)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://deai.ulb.be/home/students/admission/",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "Successor of the BDMA/DEAL line (user listed 'DEAL / DEAI'). S1 ULB, S2 UPC, S3 specialisation at TU Wien, Padua or Lyon 1, S4 thesis. Online application form was briefly offline for security maintenance (news 21 Oct 2026)."
+  },
+  {
+    "id": "densys-2-0",
+    "acronym": "DENSYS 2.0",
+    "name": "Erasmus Mundus Joint Master in Decentralised Smart Energy Systems (DENSYS 2.0)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://densys.univ-lorraine.fr/",
+    "fields": [
+      "Energy engineering",
+      "Smart energy systems",
+      "Thermal engineering",
+      "Renewable energy",
+      "Energy storage"
+    ],
+    "field_groups": [
+      "engineering",
+      "environment"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Université de Lorraine",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "Université de Lorraine",
+        "city": "Nancy",
+        "country": "France"
+      },
+      {
+        "university": "KTH Royal Institute of Technology",
+        "city": "Stockholm",
+        "country": "Sweden"
+      },
+      {
+        "university": "Politecnico di Torino",
+        "city": "Turin",
+        "country": "Italy"
+      },
+      {
+        "university": "Universitat Politècnica de Catalunya",
+        "city": "Barcelona",
+        "country": "Spain"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Sweden",
+      "Italy",
+      "Spain"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 1,
+      "day": 27,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://densys.univ-lorraine.fr/application/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-01-27"
+      },
+      "note": "Call for the 2027-2029 intake opened 12 Oct 2026 and closes 27 Jan 2027 18:00 CEST. Separate France Excellence Eiffel route: documents by 27 Nov 2026."
+    },
+    "deadline_notes": "Call for the 2027-2029 intake opened 12 Oct 2026 and closes 27 Jan 2027 18:00 CEST. Separate France Excellence Eiffel route: documents by 27 Nov 2026.",
+    "english_requirement": "TOEFL iBT 92 (writing 22) or new-scale 4.5 (writing 4.5); IELTS Academic 6.5 (writing 5.5); Cambridge CAE/CPE grade C. No Duolingo or MOI letters; waiver for some English-medium degrees.",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Bachelor (180 ECTS) in science or engineering: mechanical, aeronautical, chemical, electrical or energy engineering, or other technical/natural science degrees with thermodynamics, heat transfer, fluid dynamics, maths and numerical methods. CGPA below 3.0/4 may be judged insufficient.",
+    "eligible_nationalities": "Worldwide (some targeted countries get extra scholarships)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://densys.univ-lorraine.fr/application/",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "Re-funded by Erasmus+ in July 2024 as DENSYS 2.0 for five cohorts, so the 2027 intake is covered. S1-S2 in Nancy; S3 specialisation at KTH, PoliTo or UPC; S4 thesis. Outcomes: EMJM scholarship, reduced fee, or self-funded. Teaching language not stated explicitly; English inferred from the English requirement and documents."
+  },
+  {
+    "id": "digicrea",
+    "acronym": "DIGICREA",
+    "name": "Digital Creativity - Art & Science European Master",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://master-digicrea.univ-st-etienne.fr/en/index.html",
+    "fields": [
+      "Digital arts / new media art",
+      "Image, video and digital visual design",
+      "Sound design, music and electroacoustic composition",
+      "Creative computing, XR/VR and video games"
+    ],
+    "field_groups": [
+      "humanities",
+      "computing"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Université Jean Monnet Saint-Étienne",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "Université Jean Monnet Saint-Étienne",
+        "city": "Saint-Étienne",
+        "country": "France"
+      },
+      {
+        "university": "Universidade Católica Portuguesa - Escola das Artes",
+        "city": "Porto",
+        "country": "Portugal"
+      },
+      {
+        "university": "University of Silesia in Katowice",
+        "city": "Katowice",
+        "country": "Poland"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Portugal",
+      "Poland"
+    ],
+    "status": "upcoming",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 2,
+      "day": 16,
+      "years_before_intake": 0,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://master-digicrea.univ-st-etienne.fr/en/join-digicrea/how-to-apply.html",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2026": "2026-02-16"
+      },
+      "note": "The 2027-2029 call is expected to open mid-November 2026 with no closing date yet. The 2026-28 call ran 14 Nov 2025 - 16 Feb 2026."
+    },
+    "deadline_notes": "The 2027-2029 call is expected to open mid-November 2026 with no closing date yet. The 2026-28 call ran 14 Nov 2025 - 16 Feb 2026.",
+    "english_requirement": "At least B2 (C1 recommended): IELTS 6, TOEFL iBT 90+, TOEFL ITP 550, TOEIC 650+; English-taught diploma accepted",
+    "ielts_min": 6.0,
+    "eligible_backgrounds": "Any bachelor of min 180 ECTS (150 ECTS accepted if 180 completed before start); aptitude for audiovisual/musical production assessed, plus a maths/DSP/computer-science skills form",
+    "eligible_nationalities": "Worldwide (no restriction stated)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://master-digicrea.univ-st-etienne.fr/en/join-digicrea/how-to-apply.html",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "EMJM grant 101180274 (2024 selection); first cohort 2025-2027. The financial-aid page refers to a limited number of EMJM scholarships per cohort; 2027 availability is inferred from the grant timeline. Mobility: S1 Saint-Étienne, S2 Porto, S3 Katowice, S4 internship/thesis worldwide. Image or Sound/Music specialisation. Coordinator is not explicitly named; UJM hosts the site. No tuition fees."
+  },
+  {
+    "id": "e-pico",
+    "acronym": "E-PiCo+",
+    "name": "Erasmus Mundus Joint Master on Electric Vehicle Propulsion and Control (E-PiCo+)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://master-epico.ec-nantes.fr/",
+    "fields": [
+      "Electric vehicle propulsion",
+      "Electrical machines and drives",
+      "Power electronics",
+      "Control systems",
+      "Mechatronics"
+    ],
+    "field_groups": [
+      "engineering"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "École Centrale de Nantes",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "École Centrale de Nantes",
+        "city": "Nantes",
+        "country": "France"
+      },
+      {
+        "university": "Università degli Studi dell'Aquila",
+        "city": "L'Aquila",
+        "country": "Italy"
+      },
+      {
+        "university": "Christian-Albrechts-Universität zu Kiel",
+        "city": "Kiel",
+        "country": "Germany"
+      },
+      {
+        "university": "National University of Science and Technology Politehnica Bucharest",
+        "city": "Bucharest",
+        "country": "Romania"
+      },
+      {
+        "university": "CINVESTAV (Centro de Investigación y de Estudios Avanzados del IPN)",
+        "city": null,
+        "country": "Mexico"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Italy",
+      "Germany",
+      "Romania",
+      "Mexico"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 1,
+      "day": 31,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://master-epico.ec-nantes.fr/english-version/admission/deadlines",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-01-31"
+      },
+      "note": "Applications for the 2027-2029 cohort open 1 Nov 2026. EMJM and Consortium scholarship applicants: 31 Jan 2027 23:59 GMT+1. Self-funded: 30 Apr 2027."
+    },
+    "deadline_notes": "Applications for the 2027-2029 cohort open 1 Nov 2026. EMJM and Consortium scholarship applicants: 31 Jan 2027 23:59 GMT+1. Self-funded: 30 Apr 2027.",
+    "english_requirement": "IELTS 6.5; TOEFL iBT 80 (CBT 220 / PBT 550); Cambridge B2 First 173 or C1 Advanced 160; TOEIC 800; English-medium study letter accepted",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "BSc (180 ECTS) in control systems, electrical engineering or mechatronics",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://master-epico.ec-nantes.fr/english-version/admission/deadlines",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "Renewed as E-PiCo+ for four cohorts from 2025-26 (2025-2028 intakes), so the 2027 intake is funded. Students start in Nantes; mobility in at least 2 countries among 4 EU partners and 1 non-EU partner (CINVESTAV, Mexico, now a full partner). S4 is a jointly supervised thesis. The exact semester-by-city map was not verified, and CINVESTAV's campus city is not stated."
+  },
+  {
+    "id": "ediss",
+    "acronym": "EDISS",
+    "name": "Erasmus Mundus Joint Master Programme on the Engineering of Data-intensive Intelligent Software Systems",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.master-ediss.eu/",
+    "fields": [
+      "Software engineering",
+      "Data-intensive systems / big data",
+      "Artificial intelligence and machine learning",
+      "Embedded and cyber-physical systems"
+    ],
+    "field_groups": [
+      "computing"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Åbo Akademi University",
+      "city": null,
+      "country": "Finland"
+    },
+    "universities": [
+      {
+        "university": "Åbo Akademi University",
+        "city": "Turku",
+        "country": "Finland"
+      },
+      {
+        "university": "Mälardalen University",
+        "city": "Västerås",
+        "country": "Sweden"
+      },
+      {
+        "university": "University of L'Aquila",
+        "city": "L'Aquila",
+        "country": "Italy"
+      },
+      {
+        "university": "University of the Balearic Islands",
+        "city": "Palma",
+        "country": "Spain"
+      }
+    ],
+    "host_countries": [
+      "Finland",
+      "Sweden",
+      "Italy",
+      "Spain"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 1,
+      "day": 12,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.master-ediss.eu/admission/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-01-12"
+      },
+      "note": "Intake 7 rounds: Erasmus Mundus and EDISS scholarships 16 Nov 2026 - 12 Jan 2027; tuition-fee-waiver scholarships 25 Feb - 11 Mar 2027; self-funded 6-15 Apr 2027. A separate application is needed per round."
+    },
+    "deadline_notes": "Intake 7 rounds: Erasmus Mundus and EDISS scholarships 16 Nov 2026 - 12 Jan 2027; tuition-fee-waiver scholarships 25 Feb - 11 Mar 2027; self-funded 6-15 Apr 2027. A separate application is needed per round.",
+    "english_requirement": "IELTS Academic 6.5 (no band <6) / TOEFL iBT 93 (old scale) or 4.5 with no band <4 (tests after 21 Jan 2026); home editions not accepted",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Bachelor (min 180 ECTS) in computer science, software engineering or equivalent, with programming, algorithms/data structures, computer architecture, networks, software engineering and mathematics courses",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.master-ediss.eu/admission/",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "Renewed with EMJM grant 101238940 (2025 selection). Åbo Akademi says the programme continues to 2031, with about 50 more EM scholarships. Year 1 is in Turku and year 2 is a specialisation at Mälardalen, L'Aquila or Balearic Islands; graduates get a double degree."
+  },
+  {
+    "id": "eesic",
+    "acronym": "EESIC",
+    "name": "Engineering for Environmental Sustainability and International Cooperation",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://eesic.eu/",
+    "fields": [
+      "Environmental engineering",
+      "Civil engineering",
+      "Water and sanitation / hydraulics",
+      "Sustainability and international development cooperation"
+    ],
+    "field_groups": [
+      "engineering",
+      "environment"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "University of Trento",
+      "city": null,
+      "country": "Italy"
+    },
+    "universities": [
+      {
+        "university": "University of Trento",
+        "city": "Trento",
+        "country": "Italy"
+      },
+      {
+        "university": "Instituto Superior Técnico, Universidade de Lisboa",
+        "city": "Lisbon",
+        "country": "Portugal"
+      },
+      {
+        "university": "Universitat Politècnica de València",
+        "city": "Valencia",
+        "country": "Spain"
+      }
+    ],
+    "host_countries": [
+      "Italy",
+      "Portugal",
+      "Spain"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 1,
+      "day": 18,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://eesic.eu/sites/eesic.eu/files/documenti/%5Bnid%5D/EESIC_Call%20for%20Applications_2027-29.pdf",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-01-18"
+      },
+      "note": "Call open now. Deadline Mon 18 Jan 2027 23:59 CET; referee letters by 20 Jan 2027; results by end of April 2027. 40 places, max 19 EMJM scholarships and 15 fee reductions. Previous cycle closed 10 Feb 2026 (aggregator)."
+    },
+    "deadline_notes": "Call open now. Deadline Mon 18 Jan 2027 23:59 CET; referee letters by 20 Jan 2027; results by end of April 2027. 40 places, max 19 EMJM scholarships and 15 fee reductions. Previous cycle closed 10 Feb 2026 (aggregator).",
+    "english_requirement": "B2 CEFR (e.g. IELTS at B2 'Competent User', TOEFL iBT with no skill below 18, PTE Academic 42, Cambridge FCE); English-medium-of-instruction letter accepted",
+    "ielts_min": 2.0,
+    "eligible_backgrounds": "Bachelor (min 180 ECTS) in civil and/or environmental engineering or a closely related field. Other bachelors qualify with at least 24 ECTS maths, 18 physics/chemistry, 30 civil-environmental engineering and 12 structural engineering.",
+    "eligible_nationalities": "Worldwide (some scholarships may be reserved for targeted regions)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://eesic.eu/sites/eesic.eu/files/documenti/%5Bnid%5D/EESIC_Call%20for%20Applications_2027-29.pdf",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "Renewed under EMJM grant 101240871 (2025 selection). Mobility: one semester each in Lisbon, Valencia and Trento, then a 4th-semester fieldwork/thesis with associated partners worldwide. Self-funded fee is 8,000 EUR/year (75% reduction possible). Enrolment quota for 2027/28 is still pending approval at UniTrento."
+  },
+  {
+    "id": "emecs",
+    "acronym": "EMECS",
+    "name": "European Master in Embedded Computing Systems (EMECS)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://emecs.eit.uni-kl.de",
+    "fields": [
+      "Embedded systems",
+      "Computer engineering",
+      "Electrical engineering"
+    ],
+    "field_groups": [
+      "computing",
+      "engineering"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "RPTU Kaiserslautern-Landau",
+      "city": null,
+      "country": "Germany"
+    },
+    "universities": [
+      {
+        "university": "RPTU Kaiserslautern-Landau",
+        "city": "Kaiserslautern",
+        "country": "Germany"
+      },
+      {
+        "university": "University of Southampton",
+        "city": "Southampton",
+        "country": "United Kingdom"
+      },
+      {
+        "university": "Norwegian University of Science and Technology (NTNU)",
+        "city": "Trondheim",
+        "country": "Norway"
+      },
+      {
+        "university": "Politecnico di Torino",
+        "city": "Turin",
+        "country": "Italy"
+      }
+    ],
+    "host_countries": [
+      "Germany",
+      "United Kingdom",
+      "Norway",
+      "Italy"
+    ],
+    "status": "discontinued",
+    "scholarships_available": false,
+    "deadline": {
+      "month": 1,
+      "day": 31,
+      "years_before_intake": 0,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://emecs.eit.uni-kl.de/admission",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2024": "2024-01-31"
+      },
+      "note": "Last application deadline 31 Jan 2024 for Fall 2024 intake. Site: 'EMECS will not admit new students in Fall 2025 / 2026.' No 2027 information."
+    },
+    "deadline_notes": "Last application deadline 31 Jan 2024 for Fall 2024 intake. Site: 'EMECS will not admit new students in Fall 2025 / 2026.' No 2027 information.",
+    "english_requirement": "IELTS 6.5 (min 6.0 each band) / approx. TOEFL iBT 95",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "BSc in electrical engineering, computer engineering, computer science or related; ECTS grade B or better",
+    "eligible_nationalities": "Worldwide (historically)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://emecs.eit.uni-kl.de/admission",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "No admissions for 2025 or 2026; programme appears inactive (not formally declared ended). Site points applicants to local masters at partner universities. Each year spent at a different partner. Language not explicitly stated; English inferred from requirements."
+  },
+  {
+    "id": "emerald",
+    "acronym": "EMerald",
+    "name": "EMerald Master in Georesources Engineering",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.emerald.uliege.be/",
+    "fields": [
+      "Georesources / mineral resources engineering",
+      "Mineral processing and geometallurgy",
+      "Mining geology",
+      "Recycling and secondary raw materials"
+    ],
+    "field_groups": [
+      "engineering",
+      "natural_sciences",
+      "environment"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "University of Liège (ULiège)",
+      "city": null,
+      "country": "Belgium"
+    },
+    "universities": [
+      {
+        "university": "University of Liège (ULiège)",
+        "city": "Liège",
+        "country": "Belgium"
+      },
+      {
+        "university": "Université de Lorraine",
+        "city": "Nancy",
+        "country": "France"
+      },
+      {
+        "university": "Luleå University of Technology",
+        "city": "Luleå",
+        "country": "Sweden"
+      },
+      {
+        "university": "TU Bergakademie Freiberg",
+        "city": "Freiberg",
+        "country": "Germany"
+      }
+    ],
+    "host_countries": [
+      "Belgium",
+      "France",
+      "Sweden",
+      "Germany"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 2,
+      "day": 28,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.emerald.uliege.be/apply-3/apply/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-02-28"
+      },
+      "note": "Round 1 (EMJM scholarships): 3 Nov 2026 - 28 Feb 2027; 40 top applicants interviewed; decisions 16 Apr 2027. Round 2 (self-funded) deadline not stated; interviews May (non-EU) / July (EU)."
+    },
+    "deadline_notes": "Round 1 (EMJM scholarships): 3 Nov 2026 - 28 Feb 2027; 40 top applicants interviewed; decisions 16 Apr 2027. Round 2 (self-funded) deadline not stated; interviews May (non-EU) / July (EU).",
+    "english_requirement": "B2-C1: TOEFL 87 / IELTS 6.5 / Duolingo 120 or equivalent proof",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Bachelor (min 180 ECTS) in engineering with basic geology, or minerals, mining, chemical, geological, metallurgical or extraction-oriented materials engineering, or a Master in geology; at least 22.5 ECTS university maths",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.emerald.uliege.be/apply-3/apply/",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "EMJM grant 101127887 (2023 selection); the fees page says the 'call 2027' EMJM grants (33,600 EUR) are AVAILABLE. Also EIT RawMaterials-labelled. Mobility: S1 Liège, S2 Lorraine (Nancy), S3 Luleå or Freiberg, S4 thesis/internship. Consortium names and cities come from the ULiège/TUBAF programme pages; the EMerald site shows them only as an image. Fees: non-EU 8,000 EUR/yr, EU 2,000 EUR/yr. A motivation video is required."
+  },
+  {
+    "id": "emimep",
+    "acronym": "EMIMEP",
+    "name": "European Master for Industry in Microwave Electronics and Photonics",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.erasmus-mundus.emimep.eu/",
+    "fields": [
+      "Microwave electronics / RF engineering",
+      "Photonics",
+      "Telecommunications engineering",
+      "Applied physics"
+    ],
+    "field_groups": [
+      "engineering",
+      "natural_sciences"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "University of Limoges",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "University of Limoges (UNILIM)",
+        "city": "Limoges",
+        "country": "France"
+      },
+      {
+        "university": "University of Brescia (UNIBS)",
+        "city": "Brescia",
+        "country": "Italy"
+      },
+      {
+        "university": "University of the Basque Country (UPV/EHU)",
+        "city": "Bilbao",
+        "country": "Spain"
+      },
+      {
+        "university": "Friedrich Schiller University Jena (Abbe School of Photonics)",
+        "city": "Jena",
+        "country": "Germany"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Italy",
+      "Spain",
+      "Germany"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 3,
+      "day": 12,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.erasmus-mundus.emimep.eu/admission-applications/https-www-erasmus-mundus-emimep-eu-admission-applications-erasmus-mundus-application/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-03-12"
+      },
+      "note": "The application page says applications open Mon 16 Nov 2026 and close Fri 12 Mar 2027 23:59 Paris time. The page title still says 2024-2026, but the content refers to the 2027 intake."
+    },
+    "deadline_notes": "The application page says applications open Mon 16 Nov 2026 and close Fri 12 Mar 2027 23:59 Paris time. The page title still says 2024-2026, but the content refers to the 2027 intake.",
+    "english_requirement": "CEFR B1 minimum (TOEFL, IELTS or PTE Academic accepted; score table only as image); mandatory for applicants from non-English-official-language countries",
+    "ielts_min": null,
+    "eligible_backgrounds": "Bachelor (180 ECTS) in electrical/electronic engineering, telecommunication engineering, photonics or applied physics (computer science and physics also mentioned)",
+    "eligible_nationalities": "Worldwide (no restriction stated)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.erasmus-mundus.emimep.eu/admission-applications/https-www-erasmus-mundus-emimep-eu-admission-applications-erasmus-mundus-application/",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "EMJM grant 101128187 (2023 selection); project runs 1 Sep 2023 - 31 Oct 2029. The site says EM scholarship applications open Nov 2026. Mobility: S1 Limoges, S2 Brescia, S3 track at UNILIM/UNIBS/EHU/FSU Jena, S4 thesis. The coordinator is not named on the fetched page; Limoges is inferred from the site footer address. Associate partner: Cluj-Napoca (Romania)."
+  },
+  {
+    "id": "eminent",
+    "acronym": "EMINENT",
+    "name": "European Master on Embedded Intelligence Nanosystems Engineering",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://eminent-master.eu/",
+    "fields": [
+      "Nanotechnology and functional nanomaterials",
+      "Sensors and embedded systems",
+      "Internet of Things and robotics",
+      "Opto-electronics and biosensors"
+    ],
+    "field_groups": [
+      "engineering",
+      "computing",
+      "natural_sciences"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "University of Siegen",
+      "city": null,
+      "country": "Germany"
+    },
+    "universities": [
+      {
+        "university": "Hellenic Mediterranean University (HMU)",
+        "city": "Heraklion",
+        "country": "Greece"
+      },
+      {
+        "university": "University of Siegen",
+        "city": "Siegen",
+        "country": "Germany"
+      },
+      {
+        "university": "University of Orléans",
+        "city": "Orléans",
+        "country": "France"
+      },
+      {
+        "university": "Vilnius Gediminas Technical University (Vilnius Tech)",
+        "city": "Vilnius",
+        "country": "Lithuania"
+      },
+      {
+        "university": "NOVA University Lisbon",
+        "city": "Lisbon",
+        "country": "Portugal"
+      }
+    ],
+    "host_countries": [
+      "Greece",
+      "Germany",
+      "France",
+      "Lithuania",
+      "Portugal"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 3,
+      "day": 1,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://eminent-master.eu/important-dates/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-03-01"
+      },
+      "note": "Official important-dates page: application period 1 Nov 2026 - 1 Mar 2027, results in May, studies start end Sep/early Oct at HMU. The Uni Siegen page says 1 Nov - 28 Feb. All applicants are automatically considered for a scholarship."
+    },
+    "deadline_notes": "Official important-dates page: application period 1 Nov 2026 - 1 Mar 2027, results in May, studies start end Sep/early Oct at HMU. The Uni Siegen page says 1 Nov - 28 Feb. All applicants are automatically considered for a scholarship.",
+    "english_requirement": "IELTS Academic 6.5 (no band <6) / TOEFL iBT 93 / PTE Academic 63 / Cambridge 178 / Oxford Test of English Advanced 137; MOI letters not accepted; exemptions for EU/AU/CA/IE/NZ/UK/US/CH English-taught degrees",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Bachelor (min 180 ECTS) in electrical/electronic engineering, mechanical engineering, physics, materials science, computer engineering or equivalent; German-converted grade 2.7 or better",
+    "eligible_nationalities": "Worldwide (no restriction stated)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://eminent-master.eu/important-dates/",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "EMJM grant 101128051 (2023 selection, normally funding intakes 2024-2027), so 2027 is expected to be the last funded intake (inferred). Mobility: S1 HMU (Greece), S2 Siegen, then S3/S4 specialisation at one of the 5 partners. The coordinator (Siegen) comes from secondary sources and the Siegen-run application portal; the official site doesn't state it. HMU city (Heraklion) is from general knowledge, not the fetched pages."
+  },
+  {
+    "id": "emlds",
+    "acronym": "EMLDS",
+    "name": "European Master in Linguistic Data Science",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://emlds.fcsh.unl.pt/",
+    "fields": [
+      "Linguistics",
+      "Computational linguistics",
+      "Natural language processing",
+      "Data science"
+    ],
+    "field_groups": [
+      "humanities",
+      "computing"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Universidade NOVA de Lisboa",
+      "city": null,
+      "country": "Portugal"
+    },
+    "universities": [
+      {
+        "university": "Universidade NOVA de Lisboa (NOVA FCSH)",
+        "city": "Lisbon",
+        "country": "Portugal"
+      },
+      {
+        "university": "Università Cattolica del Sacro Cuore",
+        "city": null,
+        "country": "Italy"
+      },
+      {
+        "university": "Universidad de Zaragoza",
+        "city": "Zaragoza",
+        "country": "Spain"
+      }
+    ],
+    "host_countries": [
+      "Portugal",
+      "Italy",
+      "Spain"
+    ],
+    "status": "upcoming",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 2,
+      "day": 6,
+      "years_before_intake": 0,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://emlds.fcsh.unl.pt/whentoapply/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2026": "2026-02-06"
+      },
+      "note": "2027-2029 cohort timeline published with all dates 'to be announced'; 15 EMJM scholarships stated for 2027-29. Previous cohort: opened 3 Nov 2025, closed 30 Jan 2026, extended to 6 Feb 2026."
+    },
+    "deadline_notes": "2027-2029 cohort timeline published with all dates 'to be announced'; 15 EMJM scholarships stated for 2027-29. Previous cohort: opened 3 Nov 2025, closed 30 Jan 2026, extended to 6 Feb 2026.",
+    "english_requirement": "CEFR B2.2: IELTS 6.5 / TOEFL 94 / Duolingo 125; exempt for native speakers or English-taught degree (MoI certificate)",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Any bachelor (180 ECTS) from a recognised institution; no specific field required",
+    "eligible_nationalities": "Worldwide (max 10% of scholarships to one nationality)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://emlds.fcsh.unl.pt/whentoapply/",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "120 ECTS. Coordinator not stated explicitly; NOVA inferred because the programme site is hosted by NOVA FCSH. Mobility page shows NOVA 'OR' Cattolica plus Zaragoza; exact semester mapping not stated. Cattolica city not stated (it has campuses in Milan, Brescia, Piacenza, Rome)."
+  },
+  {
+    "id": "emmbiome",
+    "acronym": "EMMBIOME",
+    "name": "Erasmus Mundus Master in Biomedical Engineering",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en",
+    "fields": [
+      "Biomedical engineering",
+      "Bioengineering and biomechanics",
+      "Medical devices and computational biomedicine"
+    ],
+    "field_groups": [
+      "engineering",
+      "health"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "University of Kragujevac",
+      "city": null,
+      "country": "Serbia"
+    },
+    "universities": [
+      {
+        "university": "University of Kragujevac",
+        "city": "Kragujevac",
+        "country": "Serbia"
+      },
+      {
+        "university": "University of Patras",
+        "city": "Patras",
+        "country": "Greece"
+      },
+      {
+        "university": "Grigore T. Popa University of Medicine and Pharmacy",
+        "city": "Iași",
+        "country": "Romania"
+      }
+    ],
+    "host_countries": [
+      "Serbia",
+      "Greece",
+      "Romania"
+    ],
+    "status": "unknown",
+    "scholarships_available": null,
+    "deadline": {
+      "month": 3,
+      "day": 6,
+      "years_before_intake": 0,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "http://emmbiome.eu/important-dates/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2026": "2026-03-06"
+      },
+      "note": "2026 call: opened 28 Nov 2025, deadline 27 Feb 2026 extended to 6 Mar 2026, results 20 Apr 2026. Earlier deadlines were 9 Feb 2024 and 15 Mar 2025. No 2027 call found."
+    },
+    "deadline_notes": "2026 call: opened 28 Nov 2025, deadline 27 Feb 2026 extended to 6 Mar 2026, results 20 Apr 2026. Earlier deadlines were 9 Feb 2024 and 15 Mar 2025. No 2027 call found.",
+    "english_requirement": "B2 CEFR certificate (no specific IELTS/TOEFL score listed); waived with at least 1 year of English-medium secondary/university study",
+    "ielts_min": null,
+    "eligible_backgrounds": "Bachelor (180-240 ECTS) in biomedical engineering, bioengineering, mechanical, electrical or chemical engineering, computer engineering and informatics, materials science, biochemistry/molecular biomedicine or related fields",
+    "eligible_nationalities": "Worldwide (max 10% of scholarships to one nationality)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "http://emmbiome.eu/important-dates/",
+    "verified_on": "2026-10-25",
+    "confidence": "low",
+    "notes": "WEBSITE WARNING (checked 2026-10-25): emmbiome.eu showed a TLS certificate mismatch and its menu links pointed to an external URL shortener, so the site may be compromised. Find the program through the EACEA catalogue or the partner universities (Kragujevac, Patras, Iasi) instead. EMJM grant 101082688 (2022 selection). The project ran 1 Nov 2022 - 31 Dec 2028 (74 months), and intakes appear to be 2023-2026, so 2027 EMJM scholarships are unlikely under the current grant (null, not confirmed). Mobility: S1 Kragujevac, S2 Patras, S3 Iași, S4 thesis at any partner. Participation cost is 6,000 EUR. SECURITY WARNING: emmbiome.eu serves a TLS certificate for kg.ac.rs, and its internal navigation links point to a third-party URL shortener (urshort.com), which suggests the site may be compromised. Don't link users to those internal links. The coordinator is inferred (site hosted by Kragujevac; S1 there) and not stated explicitly. Teaching language is inferred from the B2 English requirement."
+  },
+  {
+    "id": "emship",
+    "acronym": "EMSHIP",
+    "name": "International Master in Advanced Design of Sustainable Ships and Offshore Structures (EMship+)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://emship.eu/",
+    "fields": [
+      "Naval architecture and ship design",
+      "Offshore structures",
+      "Marine technology",
+      "Mechanical/structural engineering"
+    ],
+    "field_groups": [
+      "engineering"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Ghent University",
+      "city": null,
+      "country": "Belgium"
+    },
+    "universities": [
+      {
+        "university": "Ghent University",
+        "city": "Ghent",
+        "country": "Belgium"
+      },
+      {
+        "university": "Dunărea de Jos University of Galați",
+        "city": "Galați",
+        "country": "Romania"
+      },
+      {
+        "university": "École Centrale de Nantes",
+        "city": "Nantes",
+        "country": "France"
+      },
+      {
+        "university": "University of Rostock",
+        "city": "Rostock",
+        "country": "Germany"
+      },
+      {
+        "university": "Instituto Superior Técnico, Universidade de Lisboa",
+        "city": "Lisbon",
+        "country": "Portugal"
+      },
+      {
+        "university": "University of Liège",
+        "city": "Liège",
+        "country": "Belgium"
+      },
+      {
+        "university": "Universidad Politécnica de Madrid",
+        "city": "Madrid",
+        "country": "Spain"
+      }
+    ],
+    "host_countries": [
+      "Belgium",
+      "Romania",
+      "France",
+      "Germany",
+      "Portugal",
+      "Spain"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 1,
+      "day": 31,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://emship.eu/how-to-apply/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-01-31"
+      },
+      "note": "The homepage says 2027-2028 applications are open. The how-to-apply page gives generic dates (no year): scholarship applications close 31 January; self-funded by 1 April (visa needed) or 1 June (no visa); form opens 1 October. The year 2027 is inferred."
+    },
+    "deadline_notes": "The homepage says 2027-2028 applications are open. The how-to-apply page gives generic dates (no year): scholarship applications close 31 January; self-funded by 1 April (visa needed) or 1 June (no visa); form opens 1 October. The year 2027 is inferred.",
+    "english_requirement": "IELTS Academic 6.5 (6.0 each) / TOEFL iBT 92 (20 each; MyBest not accepted) / PTE 62 (59 each) / CAE-CPE 176; English-taught degree is not an automatic exemption",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Bachelor (3 years / 180 ECTS) in mechanical, electromechanical engineering, naval architecture, marine technology or related; marine engineers (STCW) and Belgian 'ing.' engineering-technology bachelors not eligible",
+    "eligible_nationalities": "Worldwide (fees and scholarship category depend on nationality)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://emship.eu/how-to-apply/",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "EMJM grant 101128183 (2023 selection, normally intakes 2024-2027), so 2027 is expected to be the last funded intake under this grant (inferred; the scholarship page has no 2027-specific text). Mobility: S1-S2 at Ghent or Galați, S3 at Nantes, Rostock, IST Lisbon, Liège or UPM Madrid, S4 thesis at a partner or in industry. The coordinator (Ghent) is from the IST EMship page; emship.eu doesn't name it. The catalogue lists www.EMship.eu."
+  },
+  {
+    "id": "emsse",
+    "acronym": "EMSSE",
+    "name": "European Master in Sustainable Systems Engineering",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://emsse.eu/",
+    "fields": [
+      "Systems engineering",
+      "Model-based systems engineering",
+      "Sustainable/complex systems design",
+      "Industrial and management engineering"
+    ],
+    "field_groups": [
+      "engineering",
+      "computing"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Université de Technologie de Compiègne (UTC)",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "Université de Technologie de Compiègne (UTC)",
+        "city": "Compiègne",
+        "country": "France"
+      },
+      {
+        "university": "Università di Genova (UNIGE)",
+        "city": "Genoa",
+        "country": "Italy"
+      },
+      {
+        "university": "Universitat Politècnica de Catalunya (UPC)",
+        "city": "Barcelona",
+        "country": "Spain"
+      },
+      {
+        "university": "Polytechnic University of Tirana (UPT)",
+        "city": "Tirana",
+        "country": "Albania"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Italy",
+      "Spain",
+      "Albania"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 2,
+      "day": 15,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://emsse.eu/admission-and-scholarships/admission/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-02-15"
+      },
+      "note": "Platform opens 15 Nov 2026; deadline 15 Feb 2027 23:59 Paris time; video interviews 18-20 Mar 2027; results end of March 2027."
+    },
+    "deadline_notes": "Platform opens 15 Nov 2026; deadline 15 Feb 2027 23:59 Paris time; video interviews 18-20 Mar 2027; results end of March 2027.",
+    "english_requirement": "IELTS Academic 6.5 / TOEFL iBT 87 (CBT 237, PBT 580) / Cambridge B2 First 173; exemption for native speakers or fully English-taught degree",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Bachelor (180 ECTS) in computer, electronic, control, management or biomedical engineering, or computer science. Industrial, mechanical, electrical, chemical or civil engineering and applied mathematics are considered after preliminary evaluation.",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://emsse.eu/admission-and-scholarships/admission/",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "EMJM grant 101128119 (2023 selection). The site says the 2027-2029 recruitment campaign is for scholarship holders. The coordinator is not named explicitly; UTC is inferred from the contact person (Dritan Nace, UTC). The site lists UPT Tirana as a consortium member but does not map semesters to universities. The Italian Systems Engineering Association (AISE) is a non-academic partner."
+  },
+  {
+    "id": "eu-core",
+    "acronym": "EU-CORE",
+    "name": "European Master on Control of Renewable Energy Systems",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://master-eu-core.ec-nantes.fr/",
+    "fields": [
+      "Control engineering",
+      "Renewable energy systems",
+      "Power electronics",
+      "Wind and marine energy",
+      "Smart grids"
+    ],
+    "field_groups": [
+      "engineering",
+      "environment"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "École Centrale de Nantes",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "École Centrale de Nantes",
+        "city": "Nantes",
+        "country": "France"
+      },
+      {
+        "university": "University of Zagreb (FER)",
+        "city": "Zagreb",
+        "country": "Croatia"
+      },
+      {
+        "university": "Brandenburg University of Technology Cottbus-Senftenberg",
+        "city": "Cottbus",
+        "country": "Germany"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Croatia",
+      "Germany"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 1,
+      "day": 31,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://master-eu-core.ec-nantes.fr/admission/students/deadlines",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-01-31"
+      },
+      "note": "Applications open 1 Nov 2026. EMJM and Consortium scholarship applicants: 31 Jan 2027 23:59 GMT+1. Self-funded: 15 May 2027."
+    },
+    "deadline_notes": "Applications open 1 Nov 2026. EMJM and Consortium scholarship applicants: 31 Jan 2027 23:59 GMT+1. Self-funded: 15 May 2027.",
+    "english_requirement": "IELTS 6.5; TOEFL iBT 80 (CBT 220 / ITP 550); Cambridge B2 First 173 or C1 Advanced 160; TOEIC 800; max 3 years old; English-medium study letter accepted",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "BSc (180 ECTS) in mechanical, electrical or process engineering; knowledge of automatic control is mandatory",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://master-eu-core.ec-nantes.fr/admission/students/deadlines",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "120 ECTS. S1 Centrale Nantes, S2 Zagreb, S3 BTU Cottbus, S4 thesis (Zagreb page also mentions teaching in S4, so verify). Winter and summer schools in Nantes and Dubrovnik. Graduation deadline: 31 Jul for non-Europeans, 30 Sep for Europeans."
+  },
+  {
+    "id": "eu4m",
+    "acronym": "EU4M",
+    "name": "Erasmus Mundus Joint Master in Mechatronic Engineering",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.eu4m.eu/",
+    "fields": [
+      "mechatronics",
+      "mechanical engineering",
+      "electronics",
+      "automation and control",
+      "micro-mechatronic systems"
+    ],
+    "field_groups": [
+      "engineering"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "Multilingual (English, Spanish, German, French depending on mobility path)",
+    "coordinator": {
+      "university": "Universidad de Oviedo",
+      "city": null,
+      "country": "Spain"
+    },
+    "universities": [
+      {
+        "university": "Universidad de Oviedo",
+        "city": "Gijon",
+        "country": "Spain"
+      },
+      {
+        "university": "Hochschule Karlsruhe - Technik und Wirtschaft (HKA)",
+        "city": "Karlsruhe",
+        "country": "Germany"
+      },
+      {
+        "university": "SUPMICROTECH-ENSMM (Ecole Nationale Superieure de Mecanique et des Microtechniques)",
+        "city": "Besancon",
+        "country": "France"
+      },
+      {
+        "university": "Hogskolan i Skovde (University of Skovde)",
+        "city": "Skovde",
+        "country": "Sweden"
+      }
+    ],
+    "host_countries": [
+      "Spain",
+      "Germany",
+      "France",
+      "Sweden"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 1,
+      "day": 15,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.eu4m.eu/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-01-15"
+      },
+      "note": "The site says online registration is open for the 2027-2029 intake and EACEA-scholarship applications close 'January 15th' (year not printed; 15 Jan 2027 inferred)."
+    },
+    "deadline_notes": "The site says online registration is open for the 2027-2029 intake and EACEA-scholarship applications close 'January 15th' (year not printed; 15 Jan 2027 inferred).",
+    "english_requirement": "English alone is not enough: proficiency in at least two of Spanish, German, French and English is required (third-party sources: B1 in the language of the first-year country). No specific IELTS/TOEFL score found.",
+    "ielts_min": null,
+    "eligible_backgrounds": "Bachelor (180 ECTS) in mechanical, electrical/electronic, mechatronics, automation or a related engineering field (from third-party listings; official criteria page not retrieved)",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.eu4m.eu/",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "The consortium page lists Oviedo, HKA, ENSMM and Hogskolan i Skovde (his.se). One extraction wrongly expanded HiS as Halmstad. Coordinator is Oviedo per its Erasmus Mundus office (third-party sources place it at the Gijon campus). Application portal: https://emjmdeu4m.em.uniovi.es. Mobility semester mapping was not verified. Duration 24 months inferred from the 2027-2029 intake label."
+  },
+  {
+    "id": "europhotonics",
+    "acronym": "EUROPHOTONICS",
+    "name": "Erasmus Mundus Joint Master Degree EUROPHOTONICS (Photonics Engineering, Biomedical Imaging, Quantum/Laser Optics, Nanophotonics, Biophotonics)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.europhotonics.org/wordpress/",
+    "fields": [
+      "Photonics engineering",
+      "Laser and quantum optics",
+      "Nanophotonics and biophotonics",
+      "Biomedical imaging",
+      "Optics for astronomy"
+    ],
+    "field_groups": [
+      "natural_sciences",
+      "engineering"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Aix-Marseille Université",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "Aix-Marseille Université (with École Centrale Méditerranée / Institut Fresnel)",
+        "city": "Marseille",
+        "country": "France"
+      },
+      {
+        "university": "Karlsruhe Institute of Technology (KIT)",
+        "city": "Karlsruhe",
+        "country": "Germany"
+      },
+      {
+        "university": "Barcelona universities (Universitat Politècnica de Catalunya, Universitat de Barcelona; with ICFO)",
+        "city": "Barcelona",
+        "country": "Spain"
+      },
+      {
+        "university": "Tampere University",
+        "city": "Tampere",
+        "country": "Finland"
+      },
+      {
+        "university": "Vilnius University",
+        "city": "Vilnius",
+        "country": "Lithuania"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Germany",
+      "Spain",
+      "Finland",
+      "Lithuania"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 2,
+      "day": 4,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.europhotonics.org/wordpress/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-02-04"
+      },
+      "note": "The homepage says the recruitment campaign for Intake 2027-2029 is 'opening soon - Nov 1st to Feb 4th'. The Intake 2026-2028 campaign closed 30 Jan 2026."
+    },
+    "deadline_notes": "The homepage says the recruitment campaign for Intake 2027-2029 is 'opening soon - Nov 1st to Feb 4th'. The Intake 2026-2028 campaign closed 30 Jan 2026.",
+    "english_requirement": "B2: IELTS 6.5 / TOEFL iBT 88 (PBT 570, CBT 250) / Duolingo 120 / TOEIC 785",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Bachelor/Licence (min 180 ECTS) in physics, optics/photonics, electrical engineering, mechanical engineering, physical chemistry or applied physics; usually at least 12 ECTS each in physics and maths",
+    "eligible_nationalities": "Worldwide (max 10% of scholarships per nationality)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.europhotonics.org/wordpress/",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "EMJM grant 101128124 (2023 selection, normally intakes 2024-2027). The homepage advertises two-year EMJM scholarships for students joining at M1. All students start in Marseille and continue to Karlsruhe, Barcelona, Tampere or Vilnius, earning a double degree. The coordinator (AMU) is from secondary sources plus the fresnel.fr contact. The Barcelona member set varies by source (UPC/UB/UAB/ICFO). Non-European associated partners include Rochester, Shanghai Jiao Tong and Sydney."
+  },
+  {
+    "id": "fameais",
+    "acronym": "FAMEAIS",
+    "name": "Functional Advanced Materials Engineering with Artificial Intelligence for Sustainability",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.fame-master.eu/",
+    "fields": [
+      "Materials science",
+      "Functional materials",
+      "Artificial intelligence for materials",
+      "Electrochemistry",
+      "Metallurgy",
+      "Sustainability"
+    ],
+    "field_groups": [
+      "engineering",
+      "natural_sciences",
+      "computing"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Grenoble INP - UGA",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "Grenoble INP - UGA",
+        "city": "Grenoble",
+        "country": "France"
+      },
+      {
+        "university": "Technische Universität Darmstadt",
+        "city": "Darmstadt",
+        "country": "Germany"
+      },
+      {
+        "university": "Universität Augsburg",
+        "city": "Augsburg",
+        "country": "Germany"
+      },
+      {
+        "university": "Université catholique de Louvain (UCLouvain)",
+        "city": "Louvain-la-Neuve",
+        "country": "Belgium"
+      },
+      {
+        "university": "Université de Liège",
+        "city": "Liège",
+        "country": "Belgium"
+      },
+      {
+        "university": "Universidade de Aveiro",
+        "city": "Aveiro",
+        "country": "Portugal"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Germany",
+      "Belgium",
+      "Portugal"
+    ],
+    "status": "upcoming",
+    "scholarships_available": null,
+    "deadline": {
+      "month": 1,
+      "day": 15,
+      "years_before_intake": 0,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.fame-master.eu/admissions/admission-criteria/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2026": "2026-01-15"
+      },
+      "note": "2026-28: EMJM scholarship applicants 15 Nov 2025 to 15 Jan 2026; self-funded until 15 Apr 2026. Official site shows no 2027 dates yet. Mastersportal lists a Sept 2027 start with self-funded deadline 15 Apr 2027. If the pattern holds, the EMJM deadline would be about mid-January 2027 (unconfirmed)."
+    },
+    "deadline_notes": "2026-28: EMJM scholarship applicants 15 Nov 2025 to 15 Jan 2026; self-funded until 15 Apr 2026. Official site shows no 2027 dates yet. Mastersportal lists a Sept 2027 start with self-funded deadline 15 Apr 2027. If the pattern holds, the EMJM deadline would be about mid-January 2027 (unconfirmed).",
+    "english_requirement": "IELTS Academic 6.5 (writing 5.5); TOEFL iBT 92 (writing 22) or PBT 580; CAE/CPE A-C; PTE 59 (writing 50); exemption for English-taught degrees in English-speaking or EU/EEA countries",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "First-cycle degree in physics, chemistry, metallurgy, materials science, electrochemistry or closely related science/engineering field",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.fame-master.eu/admissions/admission-criteria/",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "Successor to FAME+ (15 years). Year 1 at Grenoble INP-UGA or TU Darmstadt, year 2 at another partner. Sources say 7 universities in 4 countries; Mastersportal lists Université de Bordeaux (France) as the likely 7th partner, but it is not on the official site navigation. Coordinator inferred (application portal on grenoble-inp.fr; FAME+ heritage), not stated on the site. Fees 4,000 EUR/yr EU, 9,000 EUR/yr non-EU. EMJM funding for 2027 not confirmed."
+  },
+  {
+    "id": "food4s",
+    "acronym": "FOOD4S",
+    "name": "European Master of Science in Sustainable Food Systems Engineering, Technology and Business (BiFTec-FOOD4S)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://iiw.kuleuven.be/english/food4s/",
+    "fields": [
+      "food engineering",
+      "food technology",
+      "food business",
+      "sustainable food systems"
+    ],
+    "field_groups": [
+      "agriculture",
+      "engineering",
+      "economics_business",
+      "environment"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "KU Leuven",
+      "city": null,
+      "country": "Belgium"
+    },
+    "universities": [
+      {
+        "university": "KU Leuven (Ghent Technology Campus)",
+        "city": "Ghent",
+        "country": "Belgium"
+      },
+      {
+        "university": "Universidade Catolica Portuguesa",
+        "city": "Porto",
+        "country": "Portugal"
+      },
+      {
+        "university": "Anhalt University of Applied Sciences",
+        "city": "Kothen",
+        "country": "Germany"
+      },
+      {
+        "university": "University College Dublin",
+        "city": "Dublin",
+        "country": "Ireland"
+      }
+    ],
+    "host_countries": [
+      "Belgium",
+      "Portugal",
+      "Germany",
+      "Ireland"
+    ],
+    "status": "discontinued",
+    "scholarships_available": false,
+    "deadline": null,
+    "deadline_notes": "No intakes. The programme is being phased out from AY 2026/2027.",
+    "english_requirement": "Not retrieved (programme discontinued)",
+    "ielts_min": null,
+    "eligible_backgrounds": "Not retrieved (programme discontinued)",
+    "eligible_nationalities": "N/A (no new intakes)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://iiw.kuleuven.be/english/food4s/",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "Official page: 'As from AY 2026/2027 the programme is being phased out'. No new students; the last cohort finishes in 2026/27. 120 ECTS (90 taught + 30 thesis). Coordinator inferred (KU Leuven hosts the site). Anhalt's city (Kothen) is not stated on the page. No successor programme was mentioned."
+  },
+  {
+    "id": "fusion",
+    "acronym": "FUSION",
+    "name": "European Master of Science in Nuclear Fusion and Engineering Physics (FUSION-EP)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.em-master-fusion.org",
+    "fields": [
+      "nuclear fusion",
+      "plasma physics",
+      "engineering physics",
+      "nuclear engineering"
+    ],
+    "field_groups": [
+      "natural_sciences",
+      "engineering"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Aix-Marseille Universite",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "Aix-Marseille Universite",
+        "city": "Marseille",
+        "country": "France"
+      },
+      {
+        "university": "INSTN (Institut National des Sciences et Techniques Nucleaires)",
+        "city": "Saclay",
+        "country": "France"
+      },
+      {
+        "university": "Universite de Lorraine",
+        "city": "Nancy",
+        "country": "France"
+      },
+      {
+        "university": "Universidad Carlos III de Madrid",
+        "city": "Madrid",
+        "country": "Spain"
+      },
+      {
+        "university": "Universidad Complutense de Madrid",
+        "city": "Madrid",
+        "country": "Spain"
+      },
+      {
+        "university": "Universitat Stuttgart",
+        "city": "Stuttgart",
+        "country": "Germany"
+      },
+      {
+        "university": "Czech Technical University in Prague",
+        "city": "Prague",
+        "country": "Czech Republic"
+      },
+      {
+        "university": "Ghent University",
+        "city": "Ghent",
+        "country": "Belgium"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Spain",
+      "Germany",
+      "Czech Republic",
+      "Belgium"
+    ],
+    "status": "upcoming",
+    "scholarships_available": null,
+    "deadline": null,
+    "deadline_notes": "Official: applications generally open mid-November to mid-February, with an optional May round for non-scholarship applicants. Next campaign dates are 'still to be decided'. Aggregators cite 15 Feb 2025 (past) and 31 Jan 2027 (unverified).",
+    "english_requirement": "C1: TOEFL iBT 94 / IELTS 7.0 (min 6.0 each) / Cambridge B2 First Grade A or C1 Advanced Grade C; or 120 ECTS taught in English or native speaker. EF SET not accepted.",
+    "ielts_min": 7.0,
+    "eligible_backgrounds": "Bachelor (3 years / 180 ECTS) in physics or engineering (engineering physics, electrical, nuclear, energy, mechanical); others at the Steering Committee's discretion",
+    "eligible_nationalities": "Worldwide (no EU/non-EU distinction in admission)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.em-master-fusion.org/index.php/application",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "A new cohort started Sept 2026 and the programme is described as EU-funded. A 'limited number' of full EMJM scholarships are offered, but whether they continue for 2027 is not stated. Coordinator moved from Ghent to Aix-Marseille in 2019/20 (per AMU pages). Students spend 2 semesters at each of two host universities. The curriculum and mobility scheme changed from 2025-26. Cities are main campus locations, not confirmed on the site."
+  },
+  {
+    "id": "greenano",
+    "acronym": "GREENANO",
+    "name": "Erasmus Mundus Joint Master in Nanomaterials for Green and Digital Transition",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.greenanomaster.eu",
+    "fields": [
+      "nanomaterials",
+      "materials science",
+      "nanotechnology",
+      "physics",
+      "chemistry",
+      "green and digital technologies"
+    ],
+    "field_groups": [
+      "natural_sciences",
+      "engineering",
+      "environment"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Universite de Lorraine",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "Universite de Lorraine",
+        "city": "Nancy",
+        "country": "France"
+      },
+      {
+        "university": "University of Rome Tor Vergata",
+        "city": "Rome",
+        "country": "Italy"
+      },
+      {
+        "university": "Jozef Stefan International Postgraduate School",
+        "city": "Ljubljana",
+        "country": "Slovenia"
+      },
+      {
+        "university": "Istituto di Struttura della Materia (ISM-CNR)",
+        "city": "Rome",
+        "country": "Italy"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Italy",
+      "Slovenia"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 1,
+      "day": 6,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.greenanomaster.eu/application-and-selection",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-01-06"
+      },
+      "note": "Official: 'Application is open from 15 October 2026 to 6 January 2027'. One window covers both the full EMJM grant (main/reserve list) and partial grant."
+    },
+    "deadline_notes": "Official: 'Application is open from 15 October 2026 to 6 January 2027'. One window covers both the full EMJM grant (main/reserve list) and partial grant.",
+    "english_requirement": "IELTS 6.5 / TOEFL iBT 90 / TOEIC 850 / PTE Academic 60 / Cambridge CAE or CPE (B2-C2), max 2 years old. Exempt if from a country where English is an official language (proof of English-medium bachelor required).",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Bachelor (min. 3 years / 180 ECTS) in Physics, Materials Science, Chemistry, Engineering, Nanoscience or a related field",
+    "eligible_nationalities": "Worldwide (no restrictions; previous EMJM scholarship holders are ineligible for another)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.greenanomaster.eu/application-and-selection",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "Leads to 3 MSc diplomas. Study cities are Nancy, Rome and Ljubljana. ISM is a CNR research institute (consortium member, not a separate study city). Coordinator is not explicitly stated; Lorraine is inferred because it is listed first and hosts the application portal (greenano-app.univ-lorraine.fr). Scholarship: EUR 1,400/month."
+  },
+  {
+    "id": "hyset",
+    "acronym": "HYSET",
+    "name": "Erasmus Mundus Joint Master in Hydrogen Systems and Enabling Technologies",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://hysetmaster.polito.it",
+    "fields": [
+      "hydrogen technologies",
+      "energy engineering",
+      "chemical engineering",
+      "fuel cells and electrolysis",
+      "energy systems"
+    ],
+    "field_groups": [
+      "engineering",
+      "environment"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Politecnico di Torino",
+      "city": null,
+      "country": "Italy"
+    },
+    "universities": [
+      {
+        "university": "Politecnico di Torino",
+        "city": "Turin",
+        "country": "Italy"
+      },
+      {
+        "university": "Politecnico di Milano",
+        "city": "Milan",
+        "country": "Italy"
+      },
+      {
+        "university": "Norwegian University of Science and Technology (NTNU)",
+        "city": "Trondheim",
+        "country": "Norway"
+      },
+      {
+        "university": "Universitat Politecnica de Catalunya (UPC)",
+        "city": "Barcelona",
+        "country": "Spain"
+      },
+      {
+        "university": "Eindhoven University of Technology (TU/e)",
+        "city": "Eindhoven",
+        "country": "Netherlands"
+      }
+    ],
+    "host_countries": [
+      "Italy",
+      "Norway",
+      "Spain",
+      "Netherlands"
+    ],
+    "status": "open",
+    "scholarships_available": null,
+    "deadline": {
+      "month": 11,
+      "day": 14,
+      "years_before_intake": 1,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://hysetmaster.polito.it/news/programme-continuation-beyond-2026-funding-and-admissions",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2026": "2025-11-14"
+      },
+      "note": "Applications for 2027-29 opened 1 Oct 2026 and close 'mid-November' 2026, possibly extended to end of November (exact date not published). The 2026-28 deadline was 14 Nov 2025; a self-paying round followed (4 Mar - 4 Apr 2026)."
+    },
+    "deadline_notes": "Applications for 2027-29 opened 1 Oct 2026 and close 'mid-November' 2026, possibly extended to end of November (exact date not published). The 2026-28 deadline was 14 Nov 2025; a self-paying round followed (4 Mar - 4 Apr 2026).",
+    "english_requirement": "IELTS 6.5 (6.0 each section) / TOEFL iBT 90 (21 each) / CAE 160 (180, min 169 each, for TU/e). Duolingo not accepted.",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Bachelor (180 credits) in Mechanical, Energy, Industrial, Chemical Engineering/Chemistry, Electrical or Aeronautical Engineering, or Physics. Physics, chemistry, aeronautical and electrical graduates must show thermodynamics, heat transfer and fluid mechanics.",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://hysetmaster.polito.it/news/programme-continuation-beyond-2026-funding-and-admissions",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "The Sept 2026 cohort was the 4th and final edition under the current EMJM grant. The consortium is applying to EACEA for 4 more editions and 'is not currently in a position to guarantee that scholarships will be available for the 2027 cohort'. Self-paying admission continues regardless. Year 1 is at PoliTo or PoliMi; year 2 at TU/e, NTNU or UPC."
+  },
+  {
+    "id": "i-mesc",
+    "acronym": "I-MESC",
+    "name": "Interdisciplinarity in Materials for Energy Storage and Conversion",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://i-mesc.eu/",
+    "fields": [
+      "Materials science",
+      "Electrochemistry",
+      "Batteries and energy storage",
+      "Energy conversion (fuel cells, etc.)",
+      "Computational modelling of materials"
+    ],
+    "field_groups": [
+      "natural_sciences",
+      "engineering"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Université de Picardie Jules Verne",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "Université de Picardie Jules Verne",
+        "city": "Amiens",
+        "country": "France"
+      },
+      {
+        "university": "Université de Toulouse (Toulouse III Paul Sabatier)",
+        "city": "Toulouse",
+        "country": "France"
+      },
+      {
+        "university": "Universidad del País Vasco (UPV/EHU)",
+        "city": "Bilbao",
+        "country": "Spain"
+      },
+      {
+        "university": "University of Ljubljana",
+        "city": "Ljubljana",
+        "country": "Slovenia"
+      },
+      {
+        "university": "Warsaw University of Technology",
+        "city": "Warsaw",
+        "country": "Poland"
+      },
+      {
+        "university": "Deakin University",
+        "city": "Melbourne",
+        "country": "Australia"
+      },
+      {
+        "university": "Drexel University",
+        "city": "Philadelphia",
+        "country": "United States"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Spain",
+      "Slovenia",
+      "Poland",
+      "Australia",
+      "United States"
+    ],
+    "status": "upcoming",
+    "scholarships_available": true,
+    "deadline": null,
+    "deadline_notes": "Official site: 'Applications for Class #23 (2027-2029) are not opened yet'. Class #22 window was about 19 Nov 2025 to 3/4 Feb 2026, per aggregators (not verified on the official site).",
+    "english_requirement": "No minimum score published; English proficiency (TOEFL or equivalent) is scored in selection",
+    "ielts_min": null,
+    "eligible_backgrounds": "Bachelor (min 180 ECTS) in chemistry, physics, chemical engineering, materials science, materials process engineering or modelling applied to electrochemistry; outstanding applicants from compatible fields may be considered",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://i-mesc.eu/scholarships/funding-opportunities",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "EMJM grant 101128159 is co-funded 2023-2029 and the official scholarships page lists 2027-2029 as Intake 4, the last under the current grant. There are up to 80 EMJM scholarships across 4 intakes plus at least 40 industrial scholarships of 20,000 EUR. Semesters 1-3 are in Europe; the semester-4 thesis can be in Europe, the USA (Drexel) or Australia (Deakin). One page names 'University of Warsaw' and the homepage names 'Warsaw University of Technology' (homepage used here). The teaching language is not explicitly stated on the fetched pages; English is inferred."
+  },
+  {
+    "id": "ifros",
+    "acronym": "IFROS",
+    "name": "Erasmus Mundus Joint Master in Intelligent Field Robotic Systems (IFRoS)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://ifrosmaster.org",
+    "fields": [
+      "Robotics",
+      "Field robotics",
+      "Autonomous systems",
+      "Marine and aerial robots"
+    ],
+    "field_groups": [
+      "engineering",
+      "computing"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "University of Girona",
+      "city": null,
+      "country": "Spain"
+    },
+    "universities": [
+      {
+        "university": "University of Girona",
+        "city": "Girona",
+        "country": "Spain"
+      },
+      {
+        "university": "University of Zagreb, Faculty of Electrical Engineering and Computing (FER)",
+        "city": "Zagreb",
+        "country": "Croatia"
+      },
+      {
+        "university": "Eötvös Loránd University (ELTE)",
+        "city": "Budapest",
+        "country": "Hungary"
+      }
+    ],
+    "host_countries": [
+      "Spain",
+      "Croatia",
+      "Hungary"
+    ],
+    "status": "unknown",
+    "scholarships_available": null,
+    "deadline": null,
+    "deadline_notes": "Applicants page: 2027-2029 intake (start Sept 2027) not open yet; consortium-grant and self-funded dates 'to be announced'. Exact 2026 deadline not found.",
+    "english_requirement": "B2 equivalent (TOEIC, TOEFL iBT, IELTS or Cambridge accepted; minimum scores not stated); 100% English-taught degree certificate accepted",
+    "ielts_min": null,
+    "eligible_backgrounds": "First degree in computer science, mathematics, robotics or engineering (biomedical, electronics, industrial, mechanical, etc.); strong Python skills",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://ifrosmaster.org/ifros-applicants",
+    "verified_on": "2026-10-25",
+    "confidence": "low",
+    "notes": "User-given URL ifromaster.org does not resolve; correct site is ifrosmaster.org. For the 2026-28 intake the site lists only 14 'IFRoS Consortium Excellence Grants' (tuition reductions), not EMJM scholarships, suggesting EU scholarship funding has lapsed; renewal for 2027 unconfirmed. S1-S2 Girona; S3 Zagreb (multi-robot/aerial) or Budapest (autonomous land vehicles). Up to 30 students/year."
+  },
+  {
+    "id": "imfse",
+    "acronym": "IMFSE",
+    "name": "International Master of Science in Fire Safety Engineering",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://imfse.be/",
+    "fields": [
+      "Fire safety engineering",
+      "Fire dynamics",
+      "Structural fire engineering",
+      "Human behaviour in fire",
+      "Risk analysis"
+    ],
+    "field_groups": [
+      "engineering"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Ghent University",
+      "city": null,
+      "country": "Belgium"
+    },
+    "universities": [
+      {
+        "university": "Ghent University",
+        "city": "Ghent",
+        "country": "Belgium"
+      },
+      {
+        "university": "Lund University",
+        "city": "Lund",
+        "country": "Sweden"
+      },
+      {
+        "university": "The University of Edinburgh",
+        "city": "Edinburgh",
+        "country": "United Kingdom"
+      },
+      {
+        "university": "Universitat Politècnica de Catalunya",
+        "city": "Barcelona",
+        "country": "Spain"
+      }
+    ],
+    "host_countries": [
+      "Belgium",
+      "Sweden",
+      "United Kingdom",
+      "Spain"
+    ],
+    "status": "open",
+    "scholarships_available": null,
+    "deadline": {
+      "month": 1,
+      "day": 31,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://imfse.be/finances-overview",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-01-31"
+      },
+      "note": "Site says 'Applications for 2027-2028 are now open'. The deadlines page has no year but says scholarship applications must be in before 1 Feb; after 31 Jan only self-sponsored. Self-funded: before 1 Apr (visa needed) or 1 Jun (no visa)."
+    },
+    "deadline_notes": "Site says 'Applications for 2027-2028 are now open'. The deadlines page has no year but says scholarship applications must be in before 1 Feb; after 31 Jan only self-sponsored. Self-funded: before 1 Apr (visa needed) or 1 Jun (no visa).",
+    "english_requirement": "IELTS Academic 6.5 (min 6.0 each); TOEFL iBT 92 (min 20 each) before 21 Jan 2026, or new scale 4.5 (min 4.0 each); C1/C2 Cambridge, Trinity ISE, Oxford tests; follows Edinburgh rules; English-taught degree not automatically exempt",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Bachelor/Master (180 ECTS) in civil, structural, mechanical, electrical, chemical or industrial engineering, materials science, chemistry, physics, architecture, urbanism/spatial planning or related",
+    "eligible_nationalities": "Worldwide (fees 8,000 EUR/yr Programme-country, 12,000 EUR/yr Partner-country)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://imfse.be/finances-overview",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "The finances page says 'it is not certain that EMJM scholarships can be provided' (depends on EACEA), though IMFSE Contributors scholarships (full or partial fee waivers) will be issued. 11 partner institutions in total; the 4 listed are the full degree-awarding partners. Associated partners for thesis include ETH Zürich, Univ. Queensland and Univ. Maryland. Semester-by-site map not verified."
+  },
+  {
+    "id": "ipcvai",
+    "acronym": "IPCVai",
+    "name": "Erasmus Mundus Joint Master in Artificial Intelligence for Image Processing and Computer Vision (IPCVai)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://ipcv.eu/",
+    "fields": [
+      "Computer vision",
+      "Image processing",
+      "Artificial intelligence",
+      "Machine learning",
+      "Signal processing"
+    ],
+    "field_groups": [
+      "computing",
+      "engineering"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Pázmány Péter Catholic University",
+      "city": null,
+      "country": "Hungary"
+    },
+    "universities": [
+      {
+        "university": "Pázmány Péter Catholic University (PPKE ITK)",
+        "city": "Budapest",
+        "country": "Hungary"
+      },
+      {
+        "university": "Universidad Autónoma de Madrid",
+        "city": "Madrid",
+        "country": "Spain"
+      },
+      {
+        "university": "Université de Bordeaux",
+        "city": "Bordeaux",
+        "country": "France"
+      }
+    ],
+    "host_countries": [
+      "Hungary",
+      "Spain",
+      "France"
+    ],
+    "status": "upcoming",
+    "scholarships_available": null,
+    "deadline": {
+      "month": 2,
+      "day": 2,
+      "years_before_intake": 0,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://itk.ppke.hu/en/about-us-253/apply-by-7-april-study-image-processing-and-computer-vision-in-three-european-countries",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2026": "2026-02-02"
+      },
+      "note": "A third-party guide says the 2026 scholarship call ran on eMundus from 1 Nov 2025 to 2 Feb 2026 12:00 CET and projects about 2 Feb 2027 for 2027. Not verified on the official site. Self-funded round deadline was 7 Apr 2026 (PPKE news)."
+    },
+    "deadline_notes": "A third-party guide says the 2026 scholarship call ran on eMundus from 1 Nov 2025 to 2 Feb 2026 12:00 CET and projects about 2 Feb 2027 for 2027. Not verified on the official site. Self-funded round deadline was 7 Apr 2026 (PPKE news).",
+    "english_requirement": null,
+    "ielts_min": null,
+    "eligible_backgrounds": null,
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://itk.ppke.hu/en/about-us-253/apply-by-7-april-study-image-processing-and-computer-vision-in-three-european-countries",
+    "verified_on": "2026-10-25",
+    "confidence": "low",
+    "notes": "Official site ipcv.eu refused connections (ECONNREFUSED, also www) on 2026-10-25, so English requirement, backgrounds and 2027 dates are unverified. S1 in Budapest, then Madrid and Bordeaux, final semester internship. An aggregator lists the EU project as 1 Sep 2023 to 31 Oct 2029, which would normally cover a 2027 intake (unconfirmed). Coordinator assumed to be PPKE from IPCV history and news, not confirmed. Self-funded fees 4,500 EUR/yr EU, 9,000 EUR/yr non-EU. 2025 cohort: 21 students from 1,700+ applicants."
+  },
+  {
+    "id": "ipsrs",
+    "acronym": "iPSRS",
+    "name": "Erasmus Mundus Joint Master in Intelligent Photonics for Security, Reliability, Sustainability and Safety",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://master-photonics4security.eu/",
+    "fields": [
+      "Photonics",
+      "Optics",
+      "Optical sensing",
+      "AI for photonics",
+      "Radiation effects and reliability",
+      "Security and safety"
+    ],
+    "field_groups": [
+      "natural_sciences",
+      "engineering",
+      "computing"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Université Jean Monnet Saint-Étienne",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "Université Jean Monnet (UJM)",
+        "city": "Saint-Étienne",
+        "country": "France"
+      },
+      {
+        "university": "University of Eastern Finland (UEF)",
+        "city": "Joensuu",
+        "country": "Finland"
+      },
+      {
+        "university": "Vilnius University",
+        "city": "Vilnius",
+        "country": "Lithuania"
+      },
+      {
+        "university": "Université Paris-Est Créteil (UPEC)",
+        "city": "Créteil",
+        "country": "France"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Finland",
+      "Lithuania"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 2,
+      "day": 7,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://master-photonics4security.eu/key-dates/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-02-07"
+      },
+      "note": "Call opened 21 Oct 2026 (delayed by a technical issue). EM scholarship deadline 7 Feb 2027 23:59 UTC; self-funded extended deadline 15 Apr 2027. Selection end of March 2027."
+    },
+    "deadline_notes": "Call opened 21 Oct 2026 (delayed by a technical issue). EM scholarship deadline 7 Feb 2027 23:59 UTC; self-funded extended deadline 15 Apr 2027. Selection end of March 2027.",
+    "english_requirement": null,
+    "ielts_min": null,
+    "eligible_backgrounds": "Must master prerequisites in mathematics, optics and wave physics (checked by a supervised test in induction week); specific degree list not found",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://master-photonics4security.eu/key-dates/",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "EU-funded 2024-2030: 80 EM scholarships (1,400 EUR/month) awarded Sept 2024 to Sept 2030, and the 2027 cohort has an EM scholarship deadline. Self-funded students pay no tuition per key-dates page. English requirement and teaching language not stated on pages checked; English assumed. Mobility scheme page not checked. UEF city assumed to be Joensuu (photonics campus)."
+  },
+  {
+    "id": "maths-disc",
+    "acronym": "MATHS-DISC",
+    "name": "Mathematical Modelling, Simulation and Data Science for Industrial and Societal Challenges (MATHS-DISC)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.mathsdisc.eu/",
+    "fields": [
+      "Applied mathematics",
+      "Mathematical modelling",
+      "Scientific computing and simulation",
+      "Data science",
+      "Quantitative finance"
+    ],
+    "field_groups": [
+      "natural_sciences",
+      "computing",
+      "engineering"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "University of Verona",
+      "city": null,
+      "country": "Italy"
+    },
+    "universities": [
+      {
+        "university": "University of Verona",
+        "city": "Verona",
+        "country": "Italy"
+      },
+      {
+        "university": "University of Wuppertal",
+        "city": "Wuppertal",
+        "country": "Germany"
+      },
+      {
+        "university": "Université Grenoble Alpes",
+        "city": "Grenoble",
+        "country": "France"
+      },
+      {
+        "university": "University of Lisbon",
+        "city": "Lisbon",
+        "country": "Portugal"
+      },
+      {
+        "university": "Igor Sikorsky Kyiv Polytechnic Institute",
+        "city": "Kyiv",
+        "country": "Ukraine"
+      }
+    ],
+    "host_countries": [
+      "Italy",
+      "Germany",
+      "France",
+      "Portugal",
+      "Ukraine"
+    ],
+    "status": "upcoming",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 3,
+      "day": 2,
+      "years_before_intake": 0,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.mathsdisc.eu/admission/how-to-apply/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2026": "2026-03-02"
+      },
+      "note": "Main round (EMJM, targeted-region, self-funded) runs every year Dec-Feb; 2026 main round closed 2 Mar 2026 13:00. Second round May-June (2026: 15 May-30 Jun). 2027 dates not yet published."
+    },
+    "deadline_notes": "Main round (EMJM, targeted-region, self-funded) runs every year Dec-Feb; 2026 main round closed 2 Mar 2026 13:00. Second round May-June (2026: 15 May-30 Jun). 2027 dates not yet published.",
+    "english_requirement": "IELTS 6.5 / TOEFL iBT 80 / Cambridge B2 First 173 / C1 Advanced 160 / TOEIC 800 (max 3 years old); English-taught degree exemption",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Bachelor (180 ECTS) in mathematics/applied mathematics or related (physics, engineering, computer science, economics, statistics) with strong maths (calculus, linear algebra, numerical analysis, programming, statistics)",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.mathsdisc.eu/admission/how-to-apply/",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "First cohort 2025, second 2026; site states ~15 EMJM + 4 targeted-region scholarships 'per year' (2026 round: 18). Coordinator (Verona) from university call docs/third-party, not stated on the programme site. Language not stated explicitly; English inferred from requirements. S1 at any partner, S2 Verona or Wuppertal, S3-S4 at a specialisation host (8 tracks)."
+  },
+  {
+    "id": "mbuild",
+    "acronym": "MBUILD",
+    "name": "Erasmus Mundus Joint Master Degree in Sustainable Design, Construction and Management of the Built Environment",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.up.pt/mbuild/web/",
+    "fields": [
+      "civil engineering",
+      "sustainable construction",
+      "construction management",
+      "building design",
+      "built environment"
+    ],
+    "field_groups": [
+      "engineering",
+      "environment"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "University of Porto",
+      "city": null,
+      "country": "Portugal"
+    },
+    "universities": [
+      {
+        "university": "University of Porto (FEUP)",
+        "city": "Porto",
+        "country": "Portugal"
+      },
+      {
+        "university": "Technische Hochschule Mittelhessen (THM)",
+        "city": "Giessen",
+        "country": "Germany"
+      },
+      {
+        "university": "University of Cantabria",
+        "city": "Santander",
+        "country": "Spain"
+      }
+    ],
+    "host_countries": [
+      "Portugal",
+      "Germany",
+      "Spain"
+    ],
+    "status": "self_funded_only",
+    "scholarships_available": false,
+    "deadline": {
+      "month": 1,
+      "day": 31,
+      "years_before_intake": 0,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.up.pt/mbuild/web/apply.html",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2026": "2026-01-31"
+      },
+      "note": "The 2026/27 (5th edition) call ran 15 Dec 2025 - 31 Jan 2026 (23:59 CET). No 2027/28 call announced yet."
+    },
+    "deadline_notes": "The 2026/27 (5th edition) call ran 15 Dec 2025 - 31 Jan 2026 (23:59 CET). No 2027/28 call announced yet.",
+    "english_requirement": "B2 (within last 2 years): IELTS 5.5 / TOEFL iBT 72. Waiver possible if fully educated in English in a UKBA-listed country.",
+    "ielts_min": 5.5,
+    "eligible_backgrounds": "Bachelor (180 ECTS / 3 years) in Civil Engineering or Architecture; related fields (construction management, structural engineering, technical architecture) may be considered",
+    "eligible_nationalities": "Worldwide (fees: EU EUR 2,500/yr; CPLP EUR 3,300/yr; non-EU EUR 6,000/yr)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.up.pt/mbuild/web/apply.html",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "The 5th edition (2026/27) 'is not co-funded by the Erasmus Mundus program; all students will be self-funded' (30 places). Status and scholarships_2027=false are extrapolated from that; 2027/28 is not yet announced. Earlier editions offered 15 EM scholarships. Coordinator not explicitly named; Porto is inferred (site hosted at up.pt, S1 at FEUP). The University of Cantabria coordinated the predecessor MECE. S1 Porto, S2 Giessen, S3 Santander, S4 dissertation."
+  },
+  {
+    "id": "me3",
+    "acronym": "ME3+",
+    "name": "Erasmus Mundus Joint Master in Management and Engineering of Environment and Energy (ME3+), being replaced by ME3-4S",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.imt-atlantique.fr/en/study/masters/emjmd/me3plus",
+    "fields": [
+      "energy engineering",
+      "renewable energy integration",
+      "environmental engineering",
+      "resource recovery / circular economy",
+      "smart cities and industry 4.0",
+      "environmental and energy management"
+    ],
+    "field_groups": [
+      "engineering",
+      "environment",
+      "economics_business"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "IMT Atlantique",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "IMT Atlantique",
+        "city": "Nantes",
+        "country": "France"
+      },
+      {
+        "university": "Budapest University of Technology and Economics",
+        "city": "Budapest",
+        "country": "Hungary"
+      },
+      {
+        "university": "University of Boras",
+        "city": "Boras",
+        "country": "Sweden"
+      },
+      {
+        "university": "Free University of Bozen-Bolzano",
+        "city": "Bolzano",
+        "country": "Italy"
+      },
+      {
+        "university": "University of Trento",
+        "city": "Trento",
+        "country": "Italy"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Hungary",
+      "Sweden",
+      "Italy"
+    ],
+    "status": "upcoming",
+    "scholarships_available": null,
+    "deadline": null,
+    "deadline_notes": "IMT Atlantique says ME3+ 'no longer exists in its current form'. The successor ME3-4S has its first intake in Sept 2027. Its website launches from Nov 2026; deadlines are not published.",
+    "english_requirement": "Not found",
+    "ielts_min": null,
+    "eligible_backgrounds": "Not found",
+    "eligible_nationalities": "Worldwide (EMJM norm; not confirmed for ME3-4S)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.imt-atlantique.fr/en/study/masters/emjmd/me3plus/apply",
+    "verified_on": "2026-10-25",
+    "confidence": "low",
+    "notes": "About 15 EM scholarships per intake were funded for the 2021-23, 2022-24, 2023-25 and 2024-26 intakes. Self-payer fees: EUR 12k (EU/EEA/CH) or 18k (others) for 2 years. Partners, scholarships and requirements for ME3-4S are not yet published; the partner list above is the ME3+ consortium. IMT Atlantique also has Brest and Rennes campuses; the Nantes city is not confirmed by the fetched pages. Re-check after Nov 2026."
+  },
+  {
+    "id": "mesd",
+    "acronym": "MESD",
+    "name": "Erasmus Mundus Master in Membrane Engineering for Sustainable Development",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://mesd.edu.umontpellier.fr/",
+    "fields": [
+      "Membrane science",
+      "Chemical engineering",
+      "Materials science",
+      "Water treatment",
+      "Energy",
+      "Food/bio/health processing"
+    ],
+    "field_groups": [
+      "engineering",
+      "natural_sciences",
+      "environment"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Université de Montpellier",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "Université de Montpellier",
+        "city": "Montpellier",
+        "country": "France"
+      },
+      {
+        "university": "Université de Toulouse (Paul Sabatier)",
+        "city": "Toulouse",
+        "country": "France"
+      },
+      {
+        "university": "University of Chemistry and Technology Prague",
+        "city": "Prague",
+        "country": "Czech Republic"
+      },
+      {
+        "university": "Universidade NOVA de Lisboa",
+        "city": "Lisbon",
+        "country": "Portugal"
+      },
+      {
+        "university": "Universidad de Zaragoza",
+        "city": "Zaragoza",
+        "country": "Spain"
+      },
+      {
+        "university": "University of Twente",
+        "city": "Enschede",
+        "country": "Netherlands"
+      },
+      {
+        "university": "Lund University",
+        "city": "Lund",
+        "country": "Sweden"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Czech Republic",
+      "Portugal",
+      "Spain",
+      "Netherlands",
+      "Sweden"
+    ],
+    "status": "unknown",
+    "scholarships_available": null,
+    "deadline": {
+      "month": 1,
+      "day": 28,
+      "years_before_intake": 0,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://mesd.edu.umontpellier.fr/how-to-apply/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2026": "2026-01-28"
+      },
+      "note": "Intake 4 (2026-2028) ran 21 Nov 2025 to 21 Jan 2026 13:00 CET, then extended to 28 Jan 2026. As of Oct 2026 the site gives no 2027 intake information."
+    },
+    "deadline_notes": "Intake 4 (2026-2028) ran 21 Nov 2025 to 21 Jan 2026 13:00 CET, then extended to 28 Jan 2026. As of Oct 2026 the site gives no 2027 intake information.",
+    "english_requirement": "Upper B2 CEFR: TOEFL iBT 90, IELTS 6.5, PTE 61, Cambridge C1 Advanced 170, Duolingo 120, TOEIC 4-skills; English-medium degree letter accepted",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Bachelor in chemistry, physics, materials engineering, chemical or biochemical engineering, or equivalent coursework; relevant professional experience or a prior master also considered",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://mesd.edu.umontpellier.fr/how-to-apply/",
+    "verified_on": "2026-10-25",
+    "confidence": "low",
+    "notes": "Students study in at least 3 countries (M1 tracks MemMAT/MemENG/MemTECH; M2 tracks Energy/Food-Bio-Health/Water). 2026-28 was 'Intake 4', which is typically the last of the 4 intakes an EMJM grant funds. No renewal or 2027 call was found, so it may be self-funded or paused for 2027. The site doesn't say which partner hosts which semester. Associated partners: Univ. Calabria, KU Leuven, CNR-ITM."
+  },
+  {
+    "id": "meta-4-0",
+    "acronym": "META 4.0",
+    "name": "Manufacturing 4.0 by Intelligent and Sustainable Technologies (meta4.0)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.master-meta4-0.eu/",
+    "fields": [
+      "Advanced manufacturing / Industry 4.0",
+      "Mechanical engineering",
+      "Materials science and engineering",
+      "Sustainable production technologies"
+    ],
+    "field_groups": [
+      "engineering"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "École Centrale de Lyon (ENISE)",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "École Centrale de Lyon - ENISE",
+        "city": "Saint-Étienne",
+        "country": "France"
+      },
+      {
+        "university": "Mines Saint-Étienne (EMSE)",
+        "city": "Saint-Étienne",
+        "country": "France"
+      },
+      {
+        "university": "Politecnico di Torino",
+        "city": "Turin",
+        "country": "Italy"
+      },
+      {
+        "university": "University of Ljubljana",
+        "city": "Ljubljana",
+        "country": "Slovenia"
+      },
+      {
+        "university": "Norwegian University of Science and Technology (NTNU)",
+        "city": "Trondheim",
+        "country": "Norway"
+      },
+      {
+        "university": "Chemnitz University of Technology (TU Chemnitz)",
+        "city": "Chemnitz",
+        "country": "Germany"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Italy",
+      "Slovenia",
+      "Norway",
+      "Germany"
+    ],
+    "status": "unknown",
+    "scholarships_available": null,
+    "deadline": {
+      "month": 2,
+      "day": 15,
+      "years_before_intake": 0,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.master-meta4-0.eu/fees-and-scholarships/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2026": "2026-02-15"
+      },
+      "note": "The official site gives a generic window of 15 Nov - 15 Feb (no year); its webinars in Dec 2025/Jan 2026 imply the 2026 intake. No 2027 call found."
+    },
+    "deadline_notes": "The official site gives a generic window of 15 Nov - 15 Feb (no year); its webinars in Dec 2025/Jan 2026 imply the 2026 intake. No 2027 call found.",
+    "english_requirement": "B2 CEFR, proven by IELTS, TOEFL or TOEIC certificate (no exact score published)",
+    "ielts_min": null,
+    "eligible_backgrounds": "BSc/BEng (180 ECTS) in mechanics, mechanical engineering, materials science and engineering, or possibly mechatronics",
+    "eligible_nationalities": "Worldwide (max 10 shortlisted and max 10% of main list per nationality)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.master-meta4-0.eu/fees-and-scholarships/",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "EMJM grant 101082643 (2022 selection) funds 4 cohorts with 90 scholarships in total. The first cohort was 2023-2025, so 2026-2028 appears to be the last funded cohort. No renewal or 2027 call was found, so 2027 EMJM scholarships are doubtful (null, not confirmed). Self-funded fees are 9,000 EUR (programme countries) or 18,000 EUR (partner countries) for 2 years."
+  },
+  {
+    "id": "multicom",
+    "acronym": "MULTICOM",
+    "name": "Data Science of Human Multimodal Communication (MULTICOM)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://multicom-em.eu/",
+    "fields": [
+      "Multimodal communication",
+      "Linguistics",
+      "Cognitive science",
+      "Data science",
+      "Machine learning"
+    ],
+    "field_groups": [
+      "humanities",
+      "social_sciences",
+      "computing"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "University of Murcia",
+      "city": null,
+      "country": "Spain"
+    },
+    "universities": [
+      {
+        "university": "University of Murcia",
+        "city": "Murcia",
+        "country": "Spain"
+      },
+      {
+        "university": "Lund University",
+        "city": "Lund",
+        "country": "Sweden"
+      },
+      {
+        "university": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+        "city": "Erlangen",
+        "country": "Germany"
+      }
+    ],
+    "host_countries": [
+      "Spain",
+      "Sweden",
+      "Germany"
+    ],
+    "status": "upcoming",
+    "scholarships_available": true,
+    "deadline": null,
+    "deadline_notes": "New application period expected to open 1 Nov 2026 'or soon thereafter'; closing date not yet published. First cycle ran fall 2025 to March 2026 (exact closing day not found).",
+    "english_requirement": "Excellent English: examples IELTS 7.5 / TOEFL iBT 105 / UNIcert III / Cambridge Advanced; or English-taught degree in an English-speaking country, or 5 years' English-only work",
+    "ielts_min": 7.5,
+    "eligible_backgrounds": "Degree from ANABIN-listed institution with at least 30 ECTS in language/communication/thought (linguistics, psycholinguistics, phonetics, pragmatics, etc.) or equivalent, plus basic quantitative training (e.g. intro statistics); mixed profiles (e.g. CS with language minor) may qualify",
+    "eligible_nationalities": "Worldwide (max 10% of EM scholarships per nationality; regional allocations incl. Sub-Saharan Africa, Latin America, Asia)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://multicom-em.eu/",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "New programme: first edition started Sept 2026; 10-20 EM scholarships planned per edition for the first four editions (2026-2029 intakes), so 2027 intake is funded. Mobility: S1 Murcia, S2 Lund, S3 Erlangen, S4 thesis anywhere."
+  },
+  {
+    "id": "multiphase",
+    "acronym": "MULTIPHASE",
+    "name": "Erasmus Mundus Joint Master in Multiphase Systems for Sustainable Engineering",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.multiphase-master.eu/",
+    "fields": [
+      "Multiphase flows",
+      "Chemical and process engineering",
+      "Fluid mechanics",
+      "Computational modelling",
+      "Sustainable engineering"
+    ],
+    "field_groups": [
+      "engineering",
+      "natural_sciences"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Mines Saint-Étienne (IMT)",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "Mines Saint-Étienne (IMT)",
+        "city": "Saint-Étienne",
+        "country": "France"
+      },
+      {
+        "university": "Politecnico di Torino",
+        "city": "Turin",
+        "country": "Italy"
+      },
+      {
+        "university": "Technical University of Munich (TUM)",
+        "city": "Munich",
+        "country": "Germany"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Italy",
+      "Germany"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 1,
+      "day": 31,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.multiphase-master.eu/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-01-31"
+      },
+      "note": "Call (with EMJM scholarship application) opens 2 Nov 2026; closes 31 Jan 2027 23:59 Paris time. Interviews in March, admission list end of March 2027."
+    },
+    "deadline_notes": "Call (with EMJM scholarship application) opens 2 Nov 2026; closes 31 Jan 2027 23:59 Paris time. Interviews in March, admission list end of March 2027.",
+    "english_requirement": "IELTS 6.5; TOEFL iBT 88; PTE Academic 65 (strong B2); native speakers with English-taught degree from AU/CA/IE/NZ/UK/US exempt; scores accepted until 11 Apr",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "BSc/Bachelor in chemical (incl. petrochemical) engineering or chemistry, aerospace, applied mathematics, mechanical engineering, physics, engineering sciences. B.Tech degrees not accepted.",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.multiphase-master.eu/",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "First cohort 2024-2026. One semester at each of the 3 universities plus thesis; triple degree. About 22 EMJM scholarships per edition (1,400 EUR/month plus fee waiver). Test-fee help for 26 low-income economies."
+  },
+  {
+    "id": "neurodata",
+    "acronym": "NeuroData",
+    "name": "NeuroData - Erasmus Mundus Joint Master in Brain and Data Science",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.neurodata-master.org/",
+    "fields": [
+      "Neuroscience",
+      "Brain science",
+      "Data science",
+      "Computational neuroscience"
+    ],
+    "field_groups": [
+      "natural_sciences",
+      "computing",
+      "health"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Bar-Ilan University",
+      "city": null,
+      "country": "Israel"
+    },
+    "universities": [
+      {
+        "university": "Bar-Ilan University",
+        "city": "Ramat Gan",
+        "country": "Israel"
+      },
+      {
+        "university": "Instituto Superior Técnico, University of Lisbon",
+        "city": "Lisbon",
+        "country": "Portugal"
+      },
+      {
+        "university": "University of Padua",
+        "city": "Padua",
+        "country": "Italy"
+      },
+      {
+        "university": "Vrije Universiteit Amsterdam",
+        "city": "Amsterdam",
+        "country": "Netherlands"
+      },
+      {
+        "university": "University of Jyväskylä",
+        "city": "Jyväskylä",
+        "country": "Finland"
+      },
+      {
+        "university": "University of Zagreb",
+        "city": "Zagreb",
+        "country": "Croatia"
+      }
+    ],
+    "host_countries": [
+      "Israel",
+      "Portugal",
+      "Italy",
+      "Netherlands",
+      "Finland"
+    ],
+    "status": "self_funded_only",
+    "scholarships_available": false,
+    "deadline": {
+      "month": 2,
+      "day": 5,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.neurodata-master.org/programme-costs",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-02-05"
+      },
+      "note": "Application system open 15 Nov 2026 to 5 Feb 2027; interviews early March 2027; results April 2027. Costs page: 'From the 2027 intake, only self-funded students will be accepted until refunding is obtained.'"
+    },
+    "deadline_notes": "Application system open 15 Nov 2026 to 5 Feb 2027; interviews early March 2027; results April 2027. Costs page: 'From the 2027 intake, only self-funded students will be accepted until refunding is obtained.'",
+    "english_requirement": "CEFR B2+: IELTS Academic 6.5 / TOEFL iBT 85 (test within 2 years); exemptions for English-taught degree or native speakers",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Bachelor (180 ECTS) in brain sciences, life sciences, exact sciences, engineering, psychology/cognitive science; basic biology, maths and Python; roughly top 10% of class",
+    "eligible_nationalities": "Worldwide in principle, but Year 1 is in Israel: candidates from countries without diplomatic relations with programme countries cannot get visas and cannot participate. Past EMJM scholarship holders ineligible for scholarship.",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.neurodata-master.org/programme-costs",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "EU funding covered four editions (2023-24 to 2026-27). 2027 intake currently self-funded only (max ~5 self-funded places/edition) unless refunding is obtained; applicants can opt to be considered as self-funded. Year 1 at Bar-Ilan; mandatory summer school at Zagreb (Croatia); Year 2 at Lisbon, Padua, Amsterdam or Jyväskylä. Croatia excluded from host_countries as it only hosts the summer school."
+  },
+  {
+    "id": "nucphys",
+    "acronym": "NUCPHYS",
+    "name": "Erasmus Mundus Joint Master Degree in Nuclear Physics",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.emm-nucphys.eu/",
+    "fields": [
+      "nuclear physics",
+      "applied nuclear physics",
+      "physics"
+    ],
+    "field_groups": [
+      "natural_sciences"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Universidad de Sevilla",
+      "city": null,
+      "country": "Spain"
+    },
+    "universities": [
+      {
+        "university": "Universidad de Sevilla",
+        "city": "Seville",
+        "country": "Spain"
+      },
+      {
+        "university": "Universitat de Barcelona",
+        "city": "Barcelona",
+        "country": "Spain"
+      },
+      {
+        "university": "Universidad Complutense de Madrid",
+        "city": "Madrid",
+        "country": "Spain"
+      },
+      {
+        "university": "Universite de Caen Normandie",
+        "city": "Caen",
+        "country": "France"
+      },
+      {
+        "university": "Universita degli Studi di Padova",
+        "city": "Padua",
+        "country": "Italy"
+      },
+      {
+        "university": "Universita di Catania",
+        "city": "Catania",
+        "country": "Italy"
+      }
+    ],
+    "host_countries": [
+      "Spain",
+      "France",
+      "Italy"
+    ],
+    "status": "upcoming",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 1,
+      "day": 20,
+      "years_before_intake": 0,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.emm-nucphys.eu/en/application-admission/admission-requirements",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2026": "2026-01-20"
+      },
+      "note": "Official site: the 2027-2029 application period 'will open in Fall 2026' (no date yet). The 2026-28 deadline was 19 Dec 2025, extended to 20 Jan 2026. A third-party guide estimates mid-Dec 2026 (unconfirmed)."
+    },
+    "deadline_notes": "Official site: the 2027-2029 application period 'will open in Fall 2026' (no date yet). The 2026-28 deadline was 19 Dec 2025, extended to 20 Jan 2026. A third-party guide estimates mid-Dec 2026 (unconfirmed).",
+    "english_requirement": "TOEFL iBT 78 / IELTS Academic 6.0 / Cambridge FCE B2 (72). Exempt with a degree from CA, US, UK, IE, NZ or AU, or with an English-medium letter.",
+    "ielts_min": 6.0,
+    "eligible_backgrounds": "Bachelor in Physics preferred; Chemistry, Engineering or Applied Mathematics accepted with lower preference",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.emm-nucphys.eu/en/application-admission/admission-requirements",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "The site does not name the coordinator. Sevilla is inferred: it is listed first, hosts master.us.es/nuphysjmd and the selection email is @us.es. scholarships_2027=true is inferred: Catania says the current EM project starts 2025-26 and the 2026-28 edition is the 2nd under it (EMJM grants usually fund 4 intakes). However, an older Sevilla page said there would be no EM scholarships for 2025-27, so confirm. Applicants are also considered for INFN and Normandie Region grants. Teaching language is implied (English) from the requirements."
+  },
+  {
+    "id": "quanteem",
+    "acronym": "QUANTEEM",
+    "name": "Erasmus Mundus Master in Quantum Technologies and Engineering",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.quanteem.eu",
+    "fields": [
+      "quantum technologies",
+      "quantum physics",
+      "photonics",
+      "quantum computing and communication",
+      "quantum sensing"
+    ],
+    "field_groups": [
+      "natural_sciences",
+      "engineering",
+      "computing"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Universite Bourgogne Europe",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "Universite Bourgogne Europe (UBE)",
+        "city": "Dijon",
+        "country": "France"
+      },
+      {
+        "university": "RPTU Kaiserslautern-Landau",
+        "city": "Kaiserslautern",
+        "country": "Germany"
+      },
+      {
+        "university": "Aarhus University",
+        "city": "Aarhus",
+        "country": "Denmark"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Germany",
+      "Denmark"
+    ],
+    "status": "upcoming",
+    "scholarships_available": null,
+    "deadline": {
+      "month": 5,
+      "day": 15,
+      "years_before_intake": 0,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.quanteem.eu/registration/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2026": "2026-05-15"
+      },
+      "note": "The 2026 intake call ran 26 Jan - 15 May 2026. No 2027 call found yet. (The 2025 EM scholarship deadline was ~6 Apr 2025, per an aggregator.)"
+    },
+    "deadline_notes": "The 2026 intake call ran 26 Jan - 15 May 2026. No 2027 call found yet. (The 2025 EM scholarship deadline was ~6 Apr 2025, per an aggregator.)",
+    "english_requirement": "Official English certificate required; minimum score not stated",
+    "ielts_min": null,
+    "eligible_backgrounds": "Bachelor in Science (180 ECTS) with a strong physics background; maths/CS a plus but cannot replace physics",
+    "eligible_nationalities": "Worldwide ('without restriction of geographical origin')",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.quanteem.eu/registration/",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "For 2026 the site says 'Erasmus Mundus scholarships are not available this year'. Only a limited number of non-EM grants (EUR 680/month net) were offered, plus self-funded places. Earlier editions (2024/26, 2025/27) had full EUR 1,400/month EM scholarships. Whether 2027 has EM funding is unknown (an aggregator says the Erasmus+ project period ends 31 Dec 2027). Coordinator inferred: the ICB lab at UBE is 'in charge of the project'. UBE was formerly Universite de Bourgogne / UBFC. Mobility: S1 at UBE; S2 at UBE or RPTU; S3 at RPTU or AU; S4 thesis/internship anywhere."
+  },
+  {
+    "id": "re-play",
+    "acronym": "RE_PLAY",
+    "name": "REPLAY - The European Game Design Master's (Erasmus Mundus)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.replaymasters.eu/",
+    "fields": [
+      "Game design",
+      "Interactive media",
+      "Art and design"
+    ],
+    "field_groups": [
+      "humanities",
+      "computing"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Universidade Lusófona",
+      "city": null,
+      "country": "Portugal"
+    },
+    "universities": [
+      {
+        "university": "Universidade Lusófona",
+        "city": "Lisbon",
+        "country": "Portugal"
+      },
+      {
+        "university": "LUCA School of Arts (C-Mine campus)",
+        "city": "Genk",
+        "country": "Belgium"
+      },
+      {
+        "university": "Aalto University",
+        "city": "Espoo",
+        "country": "Finland"
+      }
+    ],
+    "host_countries": [
+      "Portugal",
+      "Belgium",
+      "Finland"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 1,
+      "day": 8,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://aalto.fi/en/study-options/replay-the-european-game-design-masters-erasmus-mundus-master-of-arts-art-and-design",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-01-08"
+      },
+      "note": "Application period 7 Oct 2026 - 8 Jan 2027 (Aalto programme page). Previous cycle: 15 Oct 2025 - 9 Jan 2026."
+    },
+    "deadline_notes": "Application period 7 Oct 2026 - 8 Jan 2027 (Aalto programme page). Previous cycle: 15 Oct 2025 - 9 Jan 2026.",
+    "english_requirement": null,
+    "ielts_min": null,
+    "eligible_backgrounds": "Relevant bachelor's degree; portfolio, game post-mortem and showreel (max 1 min) required",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://aalto.fi/en/study-options/replay-the-european-game-design-masters-erasmus-mundus-master-of-arts-art-and-design",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "Official site replaymasters.eu refused connections during research, so details come from Aalto's official page. Aalto confirms candidates can apply for an Erasmus Mundus scholarship; third-party sources describe 2027 as the 4th funded intake (scholarship count not confirmed). Coordinator (Lusófona/COFAC as leading partner) from Lusófona research pages. English requirement not verified. Mobility: S1 Lusófona, S2 LUCA, S3 Aalto, S4 final project by area."
+  },
+  {
+    "id": "resco",
+    "acronym": "RESCO",
+    "name": "Erasmus Mundus Master in Renewable Energy and Sustainable Construction",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://resco-master.eu/",
+    "fields": [
+      "Renewable energy",
+      "Sustainable construction",
+      "Civil and architectural engineering",
+      "Energy efficiency in buildings"
+    ],
+    "field_groups": [
+      "engineering",
+      "environment"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "INSA Rouen Normandie",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "Budapest University of Technology and Economics (BME)",
+        "city": "Budapest",
+        "country": "Hungary"
+      },
+      {
+        "university": "University of A Coruña (UDC)",
+        "city": "A Coruña",
+        "country": "Spain"
+      },
+      {
+        "university": "University of Minho (UMinho)",
+        "city": "Braga / Guimarães",
+        "country": "Portugal"
+      },
+      {
+        "university": "Université Le Havre Normandie (ULHN)",
+        "city": "Le Havre",
+        "country": "France"
+      },
+      {
+        "university": "INSA Rouen Normandie",
+        "city": "Saint-Étienne-du-Rouvray (Rouen)",
+        "country": "France"
+      }
+    ],
+    "host_countries": [
+      "Hungary",
+      "Spain",
+      "Portugal",
+      "France"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 2,
+      "day": 28,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://resco-master.eu/admission/fees-and-scholarships/scholarships/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-02-28"
+      },
+      "note": "The deadlines page says the 2027-intake platform opens Dec 2026 and the EMJM scholarship deadline is '28 February 2026'. That year is presumably a typo for 2027 (it falls before the opening date) and should be confirmed. No separate self-funded deadline is listed."
+    },
+    "deadline_notes": "The deadlines page says the 2027-intake platform opens Dec 2026 and the EMJM scholarship deadline is '28 February 2026'. That year is presumably a typo for 2027 (it falls before the opening date) and should be confirmed. No separate self-funded deadline is listed.",
+    "english_requirement": "B2: IELTS 6.5 / TOEFL iBT 80 / Cambridge First 173 / C1 Advanced 160 / TOEIC 800; test max 3 years old; MOI letter may exempt",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Bachelor (180 ECTS, 3+ years) preferably in civil, mechanical or architectural engineering or related AEC fields",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://resco-master.eu/admission/fees-and-scholarships/scholarships/",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "New EMJM grant 101238875 (2025 selection). Edition 2 (2027-2029) expects about 17 EMJM scholarships. Mobility: S1 Budapest, S2 A Coruña (Spain) and Braga/Guimarães (Portugal), S3 Le Havre, S4 internship worldwide. Applications go through the BME e-admission portal."
+  },
+  {
+    "id": "sarena",
+    "acronym": "SARENA",
+    "name": "Erasmus Mundus Joint Master in Safe and Reliable Nuclear Applications",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.imt-atlantique.fr/en/study/masters/emjmd/sarena",
+    "fields": [
+      "Nuclear engineering",
+      "Reactor operation and safety",
+      "Radioactive waste management",
+      "Decommissioning",
+      "Radiation protection"
+    ],
+    "field_groups": [
+      "engineering",
+      "natural_sciences"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "IMT Atlantique",
+      "city": null,
+      "country": "France"
+    },
+    "universities": [
+      {
+        "university": "IMT Atlantique",
+        "city": "Nantes",
+        "country": "France"
+      },
+      {
+        "university": "Universidad Politécnica de Madrid (UPM)",
+        "city": "Madrid",
+        "country": "Spain"
+      },
+      {
+        "university": "LUT University",
+        "city": "Lappeenranta",
+        "country": "Finland"
+      },
+      {
+        "university": "University of Ljubljana",
+        "city": "Ljubljana",
+        "country": "Slovenia"
+      }
+    ],
+    "host_countries": [
+      "France",
+      "Spain",
+      "Finland",
+      "Slovenia"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 2,
+      "day": 1,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://sarena.imt-atlantique.fr/index.php?lang=en",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-02-01"
+      },
+      "note": "The 2027-2029 campaign is open on sarena.imt-atlantique.fr and closes 1 Feb 2027 23:59 Europe/Paris. Usual cycle: October to February, results early April."
+    },
+    "deadline_notes": "The 2027-2029 campaign is open on sarena.imt-atlantique.fr and closes 1 Feb 2027 23:59 Europe/Paris. Usual cycle: October to February, results early April.",
+    "english_requirement": null,
+    "ielts_min": null,
+    "eligible_backgrounds": "Bachelor (180 ECTS, 3 years) in science or engineering, e.g. engineering, physics, chemistry, environmental sciences; nuclear background welcome",
+    "eligible_nationalities": "Worldwide (fees 9,000 EUR Programme-country, 18,000 EUR Partner-country for 2 years)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://sarena.imt-atlantique.fr/index.php?lang=en",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "EU-funded 2018-2024 and renewed for 2024-2030. About 21 EMJM scholarships per intake; fees page lists intakes up to 2027-28. Two tracks: RWMD (French and Spanish degrees: IMT Atlantique + UPM) and NROS (Finnish and Slovenian degrees: LUT + Ljubljana). English requirement not found (English-proficiency subpage URL 404)."
+  },
+  {
+    "id": "se4gd",
+    "acronym": "SE4GD",
+    "name": "Erasmus Mundus Joint Master in Software Engineers for Green Deal (SE4GD)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://se4gd.lutsoftware.com",
+    "fields": [
+      "software engineering",
+      "sustainable / green software",
+      "ICT for sustainability"
+    ],
+    "field_groups": [
+      "computing",
+      "environment"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "LUT University (Lappeenranta-Lahti University of Technology)",
+      "city": null,
+      "country": "Finland"
+    },
+    "universities": [
+      {
+        "university": "LUT University",
+        "city": "Lappeenranta",
+        "country": "Finland"
+      },
+      {
+        "university": "University of L'Aquila",
+        "city": "L'Aquila",
+        "country": "Italy"
+      },
+      {
+        "university": "Vrije Universiteit Amsterdam",
+        "city": "Amsterdam",
+        "country": "Netherlands"
+      }
+    ],
+    "host_countries": [
+      "Finland",
+      "Italy",
+      "Netherlands"
+    ],
+    "status": "discontinued",
+    "scholarships_available": false,
+    "deadline": {
+      "month": 1,
+      "day": 17,
+      "years_before_intake": 0,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://se4gd.lutsoftware.com",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2024": "2024-01-17"
+      },
+      "note": "The last funded round closed 17 Jan 2024 (2024 intake). There was no intake in 2025 and no new intakes are listed."
+    },
+    "deadline_notes": "The last funded round closed 17 Jan 2024 (2024 intake). There was no intake in 2025 and no new intakes are listed.",
+    "english_requirement": "English test required (per secclo.eu requirements); scores not retrieved",
+    "ielts_min": null,
+    "eligible_backgrounds": "Not retrieved (software engineering / computer science expected)",
+    "eligible_nationalities": "Worldwide (when running)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://se4gd.lutsoftware.com",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "The site says the programme 'has ended in August 2026' with no new intakes. It also mentions an aim to open to self-funded students in 2026, which is unconfirmed and contradictory. The consortium plans to reapply as 'SE4GD+'. Watch for a renewed programme. Coordinator inferred (site hosted by LUT). Hosting partners: LUT, UnivAQ and VU Amsterdam, plus associate partners (HS Harz, UDC, USP, Aalborg, Chalmers, Furtwangen, USC) and regional hubs (Sunway University, Malaysia; University of Lagos, Nigeria)."
+  },
+  {
+    "id": "seas4-0",
+    "acronym": "SEAS4.0",
+    "name": "Erasmus Mundus Joint Master in Sustainable Ship and Shipping 4.0 (SEAS 4.0)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.master-seas40.unina.it",
+    "fields": [
+      "naval architecture",
+      "marine engineering",
+      "ship design",
+      "sustainable shipping",
+      "maritime digitalisation"
+    ],
+    "field_groups": [
+      "engineering",
+      "environment"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 18,
+    "language": "English",
+    "coordinator": {
+      "university": "University of Naples Federico II",
+      "city": null,
+      "country": "Italy"
+    },
+    "universities": [
+      {
+        "university": "University of Naples Federico II",
+        "city": "Naples",
+        "country": "Italy"
+      },
+      {
+        "university": "University of A Coruna (Escuela Politecnica Superior)",
+        "city": "Ferrol",
+        "country": "Spain"
+      },
+      {
+        "university": "University of Zagreb (FSB)",
+        "city": "Zagreb",
+        "country": "Croatia"
+      },
+      {
+        "university": "Hamburg University of Technology (TUHH)",
+        "city": "Hamburg",
+        "country": "Germany"
+      }
+    ],
+    "host_countries": [
+      "Italy",
+      "Spain",
+      "Croatia",
+      "Germany"
+    ],
+    "status": "discontinued",
+    "scholarships_available": false,
+    "deadline": {
+      "month": 3,
+      "day": 15,
+      "years_before_intake": 0,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.master-seas40.unina.it",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2024": "2024-03-15"
+      },
+      "note": "The last call (2024/25 intake) closed 15 Mar 2024. The site states there are no applications for 2025/26."
+    },
+    "deadline_notes": "The last call (2024/25 intake) closed 15 Mar 2024. The site states there are no applications for 2025/26.",
+    "english_requirement": "CEFR B2 minimum",
+    "ielts_min": null,
+    "eligible_backgrounds": "Bachelor/Master of 240 ECTS (or equivalent) in Marine Engineering, Naval Architecture or a related field",
+    "eligible_nationalities": "Worldwide (when running)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.master-seas40.unina.it",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "A 2026 IATED paper by the coordinator says the programme trained 80+ students over four intakes between Sept 2021 and March 2026, which matches the end of the EMJM grant. No new call or renewal was found. 90 ECTS. Third-party '2026 intake' listings look unreliable. Coordinator inferred from the site being hosted by UNINA (contact: Ermina Begovic)."
+  },
+  {
+    "id": "secclo",
+    "acronym": "SECCLO",
+    "name": "Erasmus Mundus Master in Security and Cloud Computing (SECCLO)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://haic.fi/?p=1225",
+    "fields": [
+      "Information security",
+      "Cloud computing",
+      "Distributed systems"
+    ],
+    "field_groups": [
+      "computing"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Aalto University",
+      "city": null,
+      "country": "Finland"
+    },
+    "universities": [
+      {
+        "university": "Aalto University",
+        "city": "Espoo",
+        "country": "Finland"
+      },
+      {
+        "university": "KTH Royal Institute of Technology",
+        "city": "Stockholm",
+        "country": "Sweden"
+      },
+      {
+        "university": "Norwegian University of Science and Technology (NTNU)",
+        "city": "Trondheim",
+        "country": "Norway"
+      },
+      {
+        "university": "Technical University of Denmark (DTU)",
+        "city": "Kongens Lyngby",
+        "country": "Denmark"
+      },
+      {
+        "university": "University of Tartu",
+        "city": "Tartu",
+        "country": "Estonia"
+      },
+      {
+        "university": "EURECOM",
+        "city": "Biot (Sophia Antipolis)",
+        "country": "France"
+      }
+    ],
+    "host_countries": [
+      "Finland",
+      "Sweden",
+      "Norway",
+      "Denmark",
+      "Estonia",
+      "France"
+    ],
+    "status": "discontinued",
+    "scholarships_available": false,
+    "deadline": null,
+    "deadline_notes": "Historically early-January deadline (e.g. 4 Jan). No 2025, 2026 or 2027 call found.",
+    "english_requirement": null,
+    "ielts_min": null,
+    "eligible_backgrounds": "Bachelor in computer science or related (historical)",
+    "eligible_nationalities": "Worldwide (historically)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://haic.fi/?p=1225",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "secclo.eu refused connections; Aalto programme page returned 403. 2020 EU grant covered four more annual intakes (2021-2024) 'with the last students to graduate in 2026'; no renewal found. CYBERSURE (NTNU-coordinated, same partners plus TU Graz) looks like the successor, but no source states this explicitly. Year 1 at Aalto, Year 2 at a partner (double degree)."
+  },
+  {
+    "id": "smaccs",
+    "acronym": "SMACCs",
+    "name": "Erasmus Mundus Joint Master in Smart Cities and Communities",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.smaccs.eu/",
+    "fields": [
+      "Smart cities",
+      "Energy systems",
+      "Sustainable transport",
+      "Buildings",
+      "Urban planning",
+      "ICT"
+    ],
+    "field_groups": [
+      "engineering",
+      "computing",
+      "environment"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Université de Mons (UMONS)",
+      "city": null,
+      "country": "Belgium"
+    },
+    "universities": [
+      {
+        "university": "Université de Mons (UMONS)",
+        "city": "Mons",
+        "country": "Belgium"
+      },
+      {
+        "university": "International Hellenic University (IHU)",
+        "city": null,
+        "country": "Greece"
+      },
+      {
+        "university": "University of the Basque Country (UPV/EHU)",
+        "city": null,
+        "country": "Spain"
+      },
+      {
+        "university": "University of Vaasa",
+        "city": "Vaasa",
+        "country": "Finland"
+      }
+    ],
+    "host_countries": [
+      "Belgium",
+      "Greece",
+      "Spain",
+      "Finland"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 2,
+      "day": 1,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.smaccs.eu/admissions/deadlines/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-02-01"
+      },
+      "note": "Edition 4 (2027-2029): scholarship applications 1 Feb 2027; interviews April 2027; self-funded 30 Apr 2027 (visa needed) or 8 Jun 2027 (no visa)."
+    },
+    "deadline_notes": "Edition 4 (2027-2029): scholarship applications 1 Feb 2027; interviews April 2027; self-funded 30 Apr 2027 (visa needed) or 8 Jun 2027 (no visa).",
+    "english_requirement": "TOEFL iBT 90 (CBT 230 / PBT 550); IELTS 6.5 (min 5.5 each); TOEIC 850; CPE/CAE/FCE pass; B2 CEFR; English-taught degrees from AU/UK/US/NZ/ZA/CA auto-accepted",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Engineering (mechanical, chemical, electrical, civil, environmental, architectural, computer, energy) or sciences (physics, chemistry, maths, CS, operations research); others case by case; arts, social science, business and law not eligible",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.smaccs.eu/admissions/deadlines/",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "At least four editions (2024-2026 to 2027-2029), max 40 students each, so 2027 is the 4th and probably last EU-funded edition of the current grant. Physical mobility across all 4 universities is compulsory. IHU and UPV/EHU host cities not stated."
+  },
+  {
+    "id": "ssi2",
+    "acronym": "SSI2",
+    "name": "Joint International Master in Semiconductor ChipS Integration and Innovation (SSI2), successor to Smart Systems Integrated Solutions (SSIs)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.usn.no/english/academics/semiconductor-chips-integration-and-innovation/",
+    "fields": [
+      "Semiconductors and microelectronics",
+      "Chip design and integration",
+      "Smart systems integration",
+      "Packaging and reliability"
+    ],
+    "field_groups": [
+      "engineering",
+      "natural_sciences"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "University of South-Eastern Norway (USN)",
+      "city": null,
+      "country": "Norway"
+    },
+    "universities": [
+      {
+        "university": "Aalto University",
+        "city": "Espoo",
+        "country": "Finland"
+      },
+      {
+        "university": "University of South-Eastern Norway (USN)",
+        "city": "Vestfold",
+        "country": "Norway"
+      },
+      {
+        "university": "Budapest University of Technology and Economics (BME)",
+        "city": "Budapest",
+        "country": "Hungary"
+      }
+    ],
+    "host_countries": [
+      "Finland",
+      "Norway",
+      "Hungary"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 1,
+      "day": 10,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.usn.no/english/academics/semiconductor-chips-integration-and-innovation/joint-international-master-in-semiconductor-chips-integration-and-innovation",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-01-10"
+      },
+      "note": "Admission opens Oct 2026. Deadline 10 Jan (2027) for Erasmus Mundus scholarship applicants and non-EU/EEA self-funded; 15 Apr 2027 for EU/EEA self-funded. EM grant agreement expected mid-Nov 2026."
+    },
+    "deadline_notes": "Admission opens Oct 2026. Deadline 10 Jan (2027) for Erasmus Mundus scholarship applicants and non-EU/EEA self-funded; 15 Apr 2027 for EU/EEA self-funded. EM grant agreement expected mid-Nov 2026.",
+    "english_requirement": "IELTS 6.5 (no band below 6.0) / TOEFL iBT 92 (no section below 22) / CEFR C1; waived for English-taught bachelor in listed countries",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Bachelor (180 ECTS) in electrical engineering, electronics, computer engineering, physics, materials science, mechanical or biomedical engineering or related; ECTS grade B or above; basic electronics courses",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.usn.no/english/academics/semiconductor-chips-integration-and-innovation/joint-international-master-in-semiconductor-chips-integration-and-innovation",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "User listed SSIS/SSI (ssi-master.eu). The original SSIs programme had EM scholarships only for admissions 2020-2024 and none for 2025. The same consortium won new EM funding as SSI2, first cohort autumn 2027, and ssi-master.eu now announces SSI2. Mobility: S1 Aalto, S2 USN Vestfold, S3 BME Budapest, S4 thesis. Self-funded fees EUR 2,000/yr (EU) and 4,000/yr (non-EU). Coordinator per USN news."
+  },
+  {
+    "id": "steps",
+    "acronym": "STEPS",
+    "name": "Erasmus Mundus Joint Master in Sustainable Transportation and Electric Power Systems",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.emjmdstepsrock.eu/",
+    "fields": [
+      "electrical engineering",
+      "electric power systems",
+      "electric/sustainable transportation",
+      "power electronics",
+      "renewable energy integration"
+    ],
+    "field_groups": [
+      "engineering",
+      "environment"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "University of Oviedo",
+      "city": null,
+      "country": "Spain"
+    },
+    "universities": [
+      {
+        "university": "University of Oviedo",
+        "city": "Oviedo",
+        "country": "Spain"
+      },
+      {
+        "university": "Kiel University (Christian-Albrechts-Universitat zu Kiel)",
+        "city": "Kiel",
+        "country": "Germany"
+      },
+      {
+        "university": "Sapienza University of Rome",
+        "city": "Rome",
+        "country": "Italy"
+      },
+      {
+        "university": "Polytechnic Institute of Coimbra (ISEC)",
+        "city": "Coimbra",
+        "country": "Portugal"
+      }
+    ],
+    "host_countries": [
+      "Spain",
+      "Germany",
+      "Italy",
+      "Portugal"
+    ],
+    "status": "open",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 1,
+      "day": 8,
+      "years_before_intake": 0,
+      "precision": "exact",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.emjmdstepsrock.eu/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2027": "2027-01-08",
+        "2026": "2026-01-15"
+      },
+      "note": "New site says applications open until 8 Jan 2027 for the Sept 2027 start. Admission page gives a generic rule of 15 January of the start year. Use 8 Jan 2027 to be safe."
+    },
+    "deadline_notes": "New site says applications open until 8 Jan 2027 for the Sept 2027 start. Admission page gives a generic rule of 15 January of the start year. Use 8 Jan 2027 to be safe.",
+    "english_requirement": "B2: IELTS Academic 6.0 (no band below 5.5) or TOEFL 79 (W17/R18/S20); test taken within 2 years",
+    "ielts_min": 6.0,
+    "eligible_backgrounds": "Bachelor in engineering (min. 3 years / 180 ECTS); electrical/electronic engineering focus",
+    "eligible_nationalities": "Worldwide (assessed on academic merit regardless of national origin)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.emjmdstepsrock.eu/",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "The old site emjmdsteps.eu is outdated and points to emjmdstepsrock.eu for the 2026-27 edition onward. The new consortium has Kiel as a partner and drops the University of Nottingham (UK) from the old consortium. Mobility tracks: Coimbra-Kiel-Oviedo or Rome-Kiel-Oviedo. The EACEA catalogue lists it as a new EMJM (project 101241082), so it is EU-funded. There was no call for the 2025 intake."
+  },
+  {
+    "id": "sustagri",
+    "acronym": "SUSTAGRI",
+    "name": "Erasmus Mundus Joint Master in Cutting-Edge Technologies for Sustainable Agriculture",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://www.unavarra.es/sites/sustagri-em/home.html",
+    "fields": [
+      "Precision / smart agriculture",
+      "Geoinformatics and GIS",
+      "Remote sensing and agricultural data analysis",
+      "Sustainable natural resource management"
+    ],
+    "field_groups": [
+      "agriculture",
+      "engineering",
+      "environment",
+      "computing"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Universidad Pública de Navarra (UPNA)",
+      "city": null,
+      "country": "Spain"
+    },
+    "universities": [
+      {
+        "university": "Universidad Pública de Navarra (UPNA)",
+        "city": "Pamplona",
+        "country": "Spain"
+      },
+      {
+        "university": "Universidade de Trás-os-Montes e Alto Douro (UTAD)",
+        "city": "Vila Real",
+        "country": "Portugal"
+      },
+      {
+        "university": "Agricultural University of Athens (AUA)",
+        "city": "Athens",
+        "country": "Greece"
+      }
+    ],
+    "host_countries": [
+      "Spain",
+      "Portugal",
+      "Greece"
+    ],
+    "status": "upcoming",
+    "scholarships_available": true,
+    "deadline": {
+      "month": 2,
+      "day": 22,
+      "years_before_intake": 0,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://www.unavarra.es/sites/sustagri-em/application-and-selection/calendar.html",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2026": "2026-02-22"
+      },
+      "note": "2026-28 cohort: EMJM scholarship window 19 Dec 2025 - 22 Feb 2026; tuition-waiver window to 13 Mar 2026; self-funded 22 May - 2 Jun 2026. 2025 cohort scholarship deadline was 15 Jan 2025. No 2027-29 dates published yet."
+    },
+    "deadline_notes": "2026-28 cohort: EMJM scholarship window 19 Dec 2025 - 22 Feb 2026; tuition-waiver window to 13 Mar 2026; self-funded 22 May - 2 Jun 2026. 2025 cohort scholarship deadline was 15 Jan 2025. No 2027-29 dates published yet.",
+    "english_requirement": "B2; IELTS Academic 6.0 (min 5.5 each band); TOEFL iBT, PTE Academic, Cambridge B2 First also accepted; test within 2 years; waivers for listed countries",
+    "ielts_min": 6.0,
+    "eligible_backgrounds": "Bachelor (min 3 years / 180 ECTS), preferably agricultural engineering or a similar field",
+    "eligible_nationalities": "Worldwide (EMS quota: 3 for EU/associated countries, 17 for non-associated third countries, incl. 4 NDICI regions and 1 IPA III)",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://www.unavarra.es/sites/sustagri-em/application-and-selection/calendar.html",
+    "verified_on": "2026-10-25",
+    "confidence": "medium",
+    "notes": "The user-supplied site sustagri-em.eu returned HTTP 404 (it is still the URL listed in the EACEA catalogue). The working official pages are on the UPNA site. EMJM grant 101180446 comes from the 2024 selection, so the 2027 intake is expected to be the third funded intake. scholarships_2027=true is inferred from that and is not confirmed by a published 2027 call. The UPNA page says 20 full EMS per intake."
+  },
+  {
+    "id": "weteam",
+    "acronym": "WETEAM",
+    "name": "World Textile Engineering Advanced Master (WE-TEAM)",
+    "type": "EMJM",
+    "parent_scholarship": "erasmus-mundus",
+    "website": "https://we-team.education",
+    "fields": [
+      "Textile engineering",
+      "Textile materials",
+      "Smart and technical textiles",
+      "Materials science"
+    ],
+    "field_groups": [
+      "engineering",
+      "natural_sciences"
+    ],
+    "degrees": [
+      "Master"
+    ],
+    "duration_months": 24,
+    "language": "English",
+    "coordinator": {
+      "university": "Ghent University",
+      "city": null,
+      "country": "Belgium"
+    },
+    "universities": [
+      {
+        "university": "Ghent University",
+        "city": "Ghent",
+        "country": "Belgium"
+      },
+      {
+        "university": "Universitat Politècnica de València (Alcoy campus)",
+        "city": "Alcoy",
+        "country": "Spain"
+      },
+      {
+        "university": "Université de Haute-Alsace",
+        "city": "Mulhouse",
+        "country": "France"
+      },
+      {
+        "university": "University of Borås",
+        "city": "Borås",
+        "country": "Sweden"
+      },
+      {
+        "university": "Kyoto Institute of Technology",
+        "city": "Kyoto",
+        "country": "Japan"
+      },
+      {
+        "university": "University of West Attica",
+        "city": "Athens",
+        "country": "Greece"
+      }
+    ],
+    "host_countries": [
+      "Belgium",
+      "Spain",
+      "France",
+      "Sweden",
+      "Japan",
+      "Greece"
+    ],
+    "status": "self_funded_only",
+    "scholarships_available": false,
+    "deadline": {
+      "month": 1,
+      "day": 31,
+      "years_before_intake": 0,
+      "precision": "approx",
+      "label": "Program application deadline (scholarship round)",
+      "source": "https://we-team.education/emjmd-scholarships/",
+      "verified_on": "2026-10-25",
+      "known_dates": {
+        "2026": "2026-01-31"
+      },
+      "note": "2026-28 edition was already self-funded only (deadline 31 Jan 2026 for non-EU, 31 May 2026 for EU). Scholarships page: 'If Edition 2027-2029 is organised, it will only be for self-funded students.' No 2027 dates published."
+    },
+    "deadline_notes": "2026-28 edition was already self-funded only (deadline 31 Jan 2026 for non-EU, 31 May 2026 for EU). Scholarships page: 'If Edition 2027-2029 is organised, it will only be for self-funded students.' No 2027 dates published.",
+    "english_requirement": "IELTS 6.5 (min 6 writing) / TOEFL iBT 86 / TOEIC 1560 / Cambridge B2; waiver with 60 ECTS taught in English",
+    "ielts_min": 6.5,
+    "eligible_backgrounds": "Bachelor (180 ECTS) in engineering or science, with at least 15 ECTS mathematics and 10 ECTS chemistry and physics",
+    "eligible_nationalities": "Worldwide",
+    "nationality": {
+      "mode": "any"
+    },
+    "source": "https://we-team.education/emjmd-scholarships/",
+    "verified_on": "2026-10-25",
+    "confidence": "high",
+    "notes": "EMJM scholarship funding appears to have ended with the 2025-27 cohort. Coordinator inferred from UGent contact and lead role (not labelled 'coordinator' on site). Semester 1 Ghent; S2 UPV Alcoy (2025 cohort) or UHA (2026 cohort); S3 Borås or Kyoto; S4 thesis at a full or associate partner. UNIWA (Greece) is a full partner; its exact mobility role isn't stated. City for UHA and UNIWA not stated on site (standard campus cities used)."
+  }
+]

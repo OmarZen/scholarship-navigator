@@ -1,0 +1,125 @@
+{
+  "description": "One paper the candidate holds (or is working on). Stored in profile/documents.json.",
+  "properties": {
+    "doc_id": {
+      "title": "Doc Id",
+      "type": "string"
+    },
+    "status": {
+      "default": "missing",
+      "enum": [
+        "have",
+        "in_progress",
+        "missing",
+        "not_applicable"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "count_ready": {
+      "default": 0,
+      "description": "For countable papers (e.g. recommendation letters): how many are secured",
+      "title": "Count Ready",
+      "type": "integer"
+    },
+    "files": {
+      "description": "Paths relative to the workspace root",
+      "items": {
+        "type": "string"
+      },
+      "title": "Files",
+      "type": "array"
+    },
+    "issued": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Issued"
+    },
+    "expires": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Expires"
+    },
+    "translated": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Translated"
+    },
+    "certified": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Certified"
+    },
+    "apostilled": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Apostilled"
+    },
+    "details": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Details"
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    }
+  },
+  "required": [
+    "doc_id"
+  ],
+  "title": "DocumentRecord",
+  "type": "object"
+}

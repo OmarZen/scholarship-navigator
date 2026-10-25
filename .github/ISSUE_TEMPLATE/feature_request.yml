@@ -1,0 +1,14 @@
+name: ✨ Feature request
+description: An idea to make the tool more useful.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve for applicants?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea

@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "scholarship-navigator": {
+      "command": ".venv/bin/python",
+      "args": ["mcp_server.py"],
+      "env": {}
+    }
+  }
+}

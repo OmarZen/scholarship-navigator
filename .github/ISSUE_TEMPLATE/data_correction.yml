@@ -1,0 +1,33 @@
+name: 📅 Data correction
+description: A deadline, eligibility rule, link or program status is wrong or outdated.
+title: "data: <scholarship or program> - <what is wrong>"
+labels: ["data", "good first issue"]
+body:
+  - type: input
+    id: record
+    attributes:
+      label: Scholarship or program id
+      description: As shown in docs/SCHOLARSHIPS.md / docs/PROGRAMS.md or `cli.py list` (e.g. chevening, ediss)
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is wrong, and what is correct?
+      placeholder: "The 2027 deadline is 2027-01-12, not 2027-01-15."
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official source (link)
+      description: The program's own site, a government/embassy page, or the EACEA catalogue. Not a blog or social post.
+    validations:
+      required: true
+  - type: input
+    id: checked
+    attributes:
+      label: Date you checked it
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true

@@ -1,0 +1,506 @@
+{
+  "$defs": {
+    "DeadlineEstimate": {
+      "properties": {
+        "month": {
+          "title": "Month",
+          "type": "integer"
+        },
+        "day": {
+          "title": "Day",
+          "type": "integer"
+        },
+        "years_before_intake": {
+          "default": 0,
+          "title": "Years Before Intake",
+          "type": "integer"
+        },
+        "label": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Label"
+        },
+        "precision": {
+          "default": "approx",
+          "enum": [
+            "exact",
+            "approx",
+            "varies"
+          ],
+          "title": "Precision",
+          "type": "string"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source"
+        },
+        "verified_on": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Verified On"
+        },
+        "known_dates": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Intake year -> published ISO date",
+          "title": "Known Dates",
+          "type": "object"
+        },
+        "extra": {
+          "description": "Other dates in the same cycle (priority rounds, second steps)",
+          "items": {
+            "$ref": "#/$defs/DeadlinePattern"
+          },
+          "title": "Extra",
+          "type": "array"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        }
+      },
+      "required": [
+        "month",
+        "day"
+      ],
+      "title": "DeadlineEstimate",
+      "type": "object"
+    },
+    "DeadlinePattern": {
+      "properties": {
+        "month": {
+          "title": "Month",
+          "type": "integer"
+        },
+        "day": {
+          "title": "Day",
+          "type": "integer"
+        },
+        "years_before_intake": {
+          "default": 0,
+          "title": "Years Before Intake",
+          "type": "integer"
+        },
+        "label": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Label"
+        }
+      },
+      "required": [
+        "month",
+        "day"
+      ],
+      "title": "DeadlinePattern",
+      "type": "object"
+    },
+    "NationalityRule": {
+      "properties": {
+        "mode": {
+          "default": "any",
+          "enum": [
+            "any",
+            "include",
+            "exclude",
+            "verify"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "countries": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Countries",
+          "type": "array"
+        },
+        "regions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Regions",
+          "type": "array"
+        },
+        "exclude_countries": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Exclude Countries",
+          "type": "array"
+        },
+        "exclude_regions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Exclude Regions",
+          "type": "array"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source"
+        },
+        "verified_on": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Verified On"
+        }
+      },
+      "title": "NationalityRule",
+      "type": "object"
+    },
+    "University": {
+      "properties": {
+        "university": {
+          "title": "University",
+          "type": "string"
+        },
+        "city": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "City"
+        },
+        "country": {
+          "default": "",
+          "title": "Country",
+          "type": "string"
+        }
+      },
+      "required": [
+        "university"
+      ],
+      "title": "University",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "acronym": {
+      "title": "Acronym",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "type": {
+      "default": "EMJM",
+      "description": "EMJM (Erasmus Mundus Joint Master), Intra-Africa, ...",
+      "title": "Type",
+      "type": "string"
+    },
+    "parent_scholarship": {
+      "default": "erasmus-mundus",
+      "description": "Scholarship id in data/scholarships.json",
+      "title": "Parent Scholarship",
+      "type": "string"
+    },
+    "website": {
+      "title": "Website",
+      "type": "string"
+    },
+    "fields": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Fields",
+      "type": "array"
+    },
+    "field_groups": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Field Groups",
+      "type": "array"
+    },
+    "degrees": {
+      "items": {
+        "enum": [
+          "Bachelor",
+          "Master",
+          "PhD",
+          "Postdoc"
+        ],
+        "type": "string"
+      },
+      "title": "Degrees",
+      "type": "array"
+    },
+    "duration_months": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Duration Months"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "English",
+      "title": "Language"
+    },
+    "coordinator": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/University"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "universities": {
+      "items": {
+        "$ref": "#/$defs/University"
+      },
+      "title": "Universities",
+      "type": "array"
+    },
+    "host_countries": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Host Countries",
+      "type": "array"
+    },
+    "status": {
+      "default": "unknown",
+      "enum": [
+        "open",
+        "upcoming",
+        "self_funded_only",
+        "discontinued",
+        "unknown"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "scholarships_available": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Scholarships offered for the researched intake",
+      "title": "Scholarships Available"
+    },
+    "deadline": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/DeadlineEstimate"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "deadline_notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Deadline Notes"
+    },
+    "english_requirement": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "English Requirement"
+    },
+    "ielts_min": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Ielts Min"
+    },
+    "eligible_backgrounds": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Eligible Backgrounds"
+    },
+    "eligible_nationalities": {
+      "default": "Worldwide",
+      "title": "Eligible Nationalities",
+      "type": "string"
+    },
+    "nationality": {
+      "$ref": "#/$defs/NationalityRule"
+    },
+    "source": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source"
+    },
+    "verified_on": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Verified On"
+    },
+    "confidence": {
+      "anyOf": [
+        {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Confidence"
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    }
+  },
+  "required": [
+    "id",
+    "acronym",
+    "name",
+    "website"
+  ],
+  "title": "Program",
+  "type": "object"
+}

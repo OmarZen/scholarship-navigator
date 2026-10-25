@@ -1,0 +1,73 @@
+[
+  {
+    "id": "spree",
+    "acronym": "SPREE",
+    "name": "Strengthening Mobility and Promoting Regional Integration of Engineering Education in Africa",
+    "type": "Intra-Africa",
+    "parent_scholarship": "intra-africa-mobility",
+    "website": "https://uonresearch.uonbi.ac.ke/node/801",
+    "fields": [
+      "engineering (various disciplines)"
+    ],
+    "field_groups": [
+      "engineering"
+    ],
+    "degrees": [
+      "Master",
+      "PhD"
+    ],
+    "duration_months": null,
+    "language": "English",
+    "coordinator": {
+      "university": "?",
+      "city": null,
+      "country": ""
+    },
+    "universities": [
+      {
+        "university": "Federal University of Technology, Akure (FUTA)",
+        "city": "Akure",
+        "country": "Nigeria"
+      },
+      {
+        "university": "University of Zambia",
+        "city": "Lusaka",
+        "country": "Zambia"
+      },
+      {
+        "university": "Moi University",
+        "city": "Eldoret",
+        "country": "Kenya"
+      },
+      {
+        "university": "Ain Shams University",
+        "city": "Cairo",
+        "country": "Egypt"
+      }
+    ],
+    "host_countries": [
+      "Nigeria",
+      "Zambia",
+      "Kenya",
+      "Egypt"
+    ],
+    "status": "unknown",
+    "scholarships_available": null,
+    "deadline": null,
+    "deadline_notes": "The University of Nairobi listing (undated) says only 'various dates depending on programme selected'. No dated call was found.",
+    "english_requirement": null,
+    "ielts_min": null,
+    "eligible_backgrounds": "Engineering graduates; specifics unknown",
+    "eligible_nationalities": "Intra-Africa scheme rule: nationals of an African country who reside in Africa. A SPREE-specific list was not found.",
+    "nationality": {
+      "mode": "include",
+      "regions": [
+        "africa"
+      ]
+    },
+    "source": "https://uonresearch.uonbi.ac.ke/node/801",
+    "verified_on": "2026-10-25",
+    "confidence": "low",
+    "notes": "spreeafrica.com no longer resolves (DNS failure), so the project may have ended. Per University of Nairobi: 5 partners (East, Central, South, North, West Africa), with Ghent University (Belgium) as technical partner. Only 4 African partners are named; the Central African partner is unknown. Mobility types: Master degree-seeking at FUTA, UNZA and Moi; Master credit-seeking at Ain Shams; PhD degree-seeking at FUTA; staff mobility at all four. Moi University named Prof. Mwaisagi Igadwa as SPREE coordinator (Nov 2022 meeting), but the lead institution is not confirmed. No evidence of a 2026/27 call. Cities are the universities' main campuses."
+  }
+]

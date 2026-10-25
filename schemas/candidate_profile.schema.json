@@ -1,0 +1,577 @@
+{
+  "$defs": {
+    "DocumentRecord": {
+      "description": "One paper the candidate holds (or is working on). Stored in profile/documents.json.",
+      "properties": {
+        "doc_id": {
+          "title": "Doc Id",
+          "type": "string"
+        },
+        "status": {
+          "default": "missing",
+          "enum": [
+            "have",
+            "in_progress",
+            "missing",
+            "not_applicable"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "count_ready": {
+          "default": 0,
+          "description": "For countable papers (e.g. recommendation letters): how many are secured",
+          "title": "Count Ready",
+          "type": "integer"
+        },
+        "files": {
+          "description": "Paths relative to the workspace root",
+          "items": {
+            "type": "string"
+          },
+          "title": "Files",
+          "type": "array"
+        },
+        "issued": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Issued"
+        },
+        "expires": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expires"
+        },
+        "translated": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Translated"
+        },
+        "certified": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Certified"
+        },
+        "apostilled": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Apostilled"
+        },
+        "details": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Details"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "doc_id"
+      ],
+      "title": "DocumentRecord",
+      "type": "object"
+    },
+    "LanguageSkill": {
+      "properties": {
+        "language": {
+          "description": "Language name, e.g. German, French, Spanish",
+          "title": "Language",
+          "type": "string"
+        },
+        "level": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "CEFR level (A1-C2) or test score",
+          "title": "Level"
+        },
+        "certificate": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Certificate name if any (Goethe B1, DELF B2...)",
+          "title": "Certificate"
+        }
+      },
+      "required": [
+        "language"
+      ],
+      "title": "LanguageSkill",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "full_name": {
+      "description": "Candidate's full name",
+      "title": "Full Name",
+      "type": "string"
+    },
+    "nationality": {
+      "description": "Candidate's country of citizenship",
+      "title": "Nationality",
+      "type": "string"
+    },
+    "current_degree": {
+      "description": "Current educational attainment (e.g. High School, Bachelor's, Master's)",
+      "title": "Current Degree",
+      "type": "string"
+    },
+    "target_degree": {
+      "description": "Target degree level sought (Bachelor, Master, PhD, Postdoc)",
+      "enum": [
+        "Bachelor",
+        "Master",
+        "PhD",
+        "Postdoc"
+      ],
+      "title": "Target Degree",
+      "type": "string"
+    },
+    "field_of_study": {
+      "description": "Field of study or prospective major (e.g., Computer Science, Economics)",
+      "title": "Field Of Study",
+      "type": "string"
+    },
+    "gpa": {
+      "description": "Grade point average (0.0 to 4.0 scale or converted)",
+      "title": "Gpa",
+      "type": "number"
+    },
+    "gpa_scale": {
+      "default": 4.0,
+      "description": "Original GPA scale (e.g. 4.0, 5.0, 100%)",
+      "title": "Gpa Scale",
+      "type": "number"
+    },
+    "english_test": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Test name if taken (IELTS, TOEFL, Duolingo, etc.)",
+      "title": "English Test"
+    },
+    "english_score": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Score on English exam",
+      "title": "English Score"
+    },
+    "work_experience_years": {
+      "default": 0.0,
+      "description": "Full-time post-graduate professional work experience in years",
+      "title": "Work Experience Years",
+      "type": "number"
+    },
+    "research_publications": {
+      "default": 0,
+      "description": "Number of peer-reviewed publications or preprints",
+      "title": "Research Publications",
+      "type": "integer"
+    },
+    "target_funding": {
+      "default": "Full",
+      "description": "Target funding level: Full, Partial, or Any",
+      "enum": [
+        "Full",
+        "Partial",
+        "Any"
+      ],
+      "title": "Target Funding",
+      "type": "string"
+    },
+    "target_countries": {
+      "description": "Target countries or empty list for worldwide",
+      "items": {
+        "type": "string"
+      },
+      "title": "Target Countries",
+      "type": "array"
+    },
+    "target_intake_year": {
+      "default": 2027,
+      "description": "Target intake year (e.g., 2026, 2027)",
+      "title": "Target Intake Year",
+      "type": "integer"
+    },
+    "budget_for_applications": {
+      "default": "Moderate",
+      "description": "Application fee budget: Zero, Moderate, Flexible",
+      "title": "Budget For Applications",
+      "type": "string"
+    },
+    "has_leadership_experience": {
+      "default": true,
+      "description": "Whether candidate has extracurricular/community leadership",
+      "title": "Has Leadership Experience",
+      "type": "boolean"
+    },
+    "date_of_birth": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Date of birth (YYYY-MM-DD) for age limits",
+      "title": "Date Of Birth"
+    },
+    "country_of_residence": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Where the candidate lives now (defaults to nationality)",
+      "title": "Country Of Residence"
+    },
+    "email": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Contact email used in drafts",
+      "title": "Email"
+    },
+    "phone": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Contact phone used in drafts",
+      "title": "Phone"
+    },
+    "university": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "University of the most recent degree",
+      "title": "University"
+    },
+    "graduation_year": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Year the most recent degree was (or will be) completed",
+      "title": "Graduation Year"
+    },
+    "class_rank_percent": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Top X% of class, if known",
+      "title": "Class Rank Percent"
+    },
+    "thesis_title": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Graduation project / thesis title",
+      "title": "Thesis Title"
+    },
+    "field_keywords": {
+      "description": "Extra keywords describing the field (e.g. machine learning, embedded)",
+      "items": {
+        "type": "string"
+      },
+      "title": "Field Keywords",
+      "type": "array"
+    },
+    "english_test_date": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Date the English test was taken (results valid 2 years)",
+      "title": "English Test Date"
+    },
+    "english_min_band": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Lowest sub-score / band (IELTS scale or test's own scale)",
+      "title": "English Min Band"
+    },
+    "other_languages": {
+      "description": "Other languages and levels",
+      "items": {
+        "$ref": "#/$defs/LanguageSkill"
+      },
+      "title": "Other Languages",
+      "type": "array"
+    },
+    "current_job_title": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Current role",
+      "title": "Current Job Title"
+    },
+    "current_employer": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Current employer",
+      "title": "Current Employer"
+    },
+    "currently_employed": {
+      "default": false,
+      "description": "True if experience keeps accruing until the deadline",
+      "title": "Currently Employed",
+      "type": "boolean"
+    },
+    "leadership_examples": {
+      "description": "Short descriptions of leadership moments (STAR seeds)",
+      "items": {
+        "type": "string"
+      },
+      "title": "Leadership Examples",
+      "type": "array"
+    },
+    "awards": {
+      "description": "Awards, honours, competitions",
+      "items": {
+        "type": "string"
+      },
+      "title": "Awards",
+      "type": "array"
+    },
+    "volunteering": {
+      "description": "Volunteer and community work",
+      "items": {
+        "type": "string"
+      },
+      "title": "Volunteering",
+      "type": "array"
+    },
+    "publications": {
+      "description": "Titles of publications / preprints",
+      "items": {
+        "type": "string"
+      },
+      "title": "Publications",
+      "type": "array"
+    },
+    "skills": {
+      "description": "Technical and soft skills",
+      "items": {
+        "type": "string"
+      },
+      "title": "Skills",
+      "type": "array"
+    },
+    "career_goal": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Post-study career goal in one or two sentences",
+      "title": "Career Goal"
+    },
+    "home_country_problem": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Problem at home the candidate wants to solve",
+      "title": "Home Country Problem"
+    },
+    "willing_to_return_home": {
+      "default": true,
+      "description": "Accepts scholarships with a return-home obligation",
+      "title": "Willing To Return Home",
+      "type": "boolean"
+    },
+    "has_dependents": {
+      "default": false,
+      "description": "Travelling with spouse/children",
+      "title": "Has Dependents",
+      "type": "boolean"
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Anything else an agent should know",
+      "title": "Notes"
+    },
+    "documents": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/DocumentRecord"
+      },
+      "title": "Documents",
+      "type": "array"
+    }
+  },
+  "required": [
+    "full_name",
+    "nationality",
+    "current_degree",
+    "target_degree",
+    "field_of_study",
+    "gpa"
+  ],
+  "title": "CandidateProfileInput",
+  "type": "object"
+}
