@@ -1,0 +1,47 @@
+name: update contributors
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: contributors
+  cancel-in-progress: true
+
+jobs:
+  contributors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Refresh the contributors list in README.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/update_contributors.py
+      # main is protected, so the change goes through a pull request like every other change.
+      - name: Open a pull request if the list changed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet README.md; then echo "Contributors list is up to date."; exit 0; fi
+          branch=bot/update-contributors
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -C "$branch"
+          git commit -am "docs: update contributors list"
+          git push --force origin "$branch"
+          if [ "$(gh pr view "$branch" --json state --jq .state 2>/dev/null)" = "OPEN" ]; then
+            echo "Pull request already open; branch updated."; exit 0
+          fi
+          gh pr create --base main --head "$branch" --title "docs: update contributors list" \
+            --body "Automatic update of the contributors section in README.md (scripts/update_contributors.py)." \
+          || echo "::warning::Could not open the pull request. Enable Settings > Actions > General > 'Allow GitHub Actions to create and approve pull requests', or open one from the $branch branch."

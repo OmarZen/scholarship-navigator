@@ -3,7 +3,7 @@
 Copy the agent skills from skills/ (source of truth) to every place agents look for them:
 
   .claude/skills/<name>/      Claude Code
-  .agent/skills/<name>/       Antigravity
+  .agents/skills/<name>/      the shared folder read by Codex, GitHub Copilot, Cursor, Gemini CLI, Windsurf, Antigravity
   SKILL.md                    repository root copy of the main skill (reference links rewritten)
 
 Usage:  python scripts/sync_skills.py          write the copies
@@ -17,7 +17,7 @@ from typing import Dict
 
 REPO = Path(__file__).resolve().parent.parent
 SOURCE = REPO / "skills"
-TARGETS = [REPO / ".claude" / "skills", REPO / ".agent" / "skills"]
+TARGETS = [REPO / ".claude" / "skills", REPO / ".agents" / "skills"]
 MAIN_SKILL = "scholarship-finder-planner"
 ROOT_NOTE = ("<!-- Generated from skills/scholarship-finder-planner/SKILL.md by scripts/sync_skills.py. "
              "Edit the source, then run the script. -->\n")

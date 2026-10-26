@@ -112,6 +112,13 @@ Fill every `TODO` from the official pages. The field-by-field guide is in
   confirmed). Region ids come from `data/regions.json` (`africa`, `dac_oda`, `eu_eea_ch`, `europe`, `latin_america`).
 - **Numbers on a 4.0 scale**: `gpa_min` (hard minimum) and `gpa_competitive` (typical winner).
 - **Age**: `"under 35"` becomes `"age_under": {"Master": 35}`.
+- **Degrees**: any of `Diploma`, `Bachelor`, `Master`, `PhD`, `Postdoc`.
+- **Funding**: `Full`, `Partial`, or `Any` when the same scheme gives full *or* partial awards (e.g. 25-100% by
+  merit); `Any` is shown as "Full or partial".
+- **Women only**: `"gender": "female"` inside `eligibility.rules`.
+- **Where scholars study**: `host_countries` / `host_regions`. Add `study_location` only when those can't express
+  it: `"home"` (in-country or online from home), `"both"` (your own country or abroad), `"abroad"` (mobility
+  required). Candidates who can't travel rely on this, so get it right.
 - **Documents**: one entry per required paper, `doc` from `data/document_catalog.json`, `label` = program wording.
 - **Deadline**: `month`, `day`, `years_before_intake` (1 when the deadline falls the year before an autumn
   intake), plus `known_dates` like `{"2027": "2027-01-15"}` when officially published.

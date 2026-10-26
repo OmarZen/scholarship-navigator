@@ -216,6 +216,7 @@
           "description": "Only for these target degrees (empty = all)",
           "items": {
             "enum": [
+              "Diploma",
               "Bachelor",
               "Master",
               "PhD",
@@ -305,6 +306,23 @@
           "title": "Residence Strict",
           "type": "boolean"
         },
+        "gender": {
+          "anyOf": [
+            {
+              "enum": [
+                "female",
+                "male"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Award reserved for women or men",
+          "title": "Gender"
+        },
         "gpa_min": {
           "anyOf": [
             {
@@ -380,6 +398,7 @@
         "degree_age_applies_to": {
           "items": {
             "enum": [
+              "Diploma",
               "Bachelor",
               "Master",
               "PhD",
@@ -813,6 +832,7 @@
     "degrees": {
       "items": {
         "enum": [
+          "Diploma",
           "Bachelor",
           "Master",
           "PhD",
@@ -873,6 +893,24 @@
       },
       "title": "Host Regions",
       "type": "array"
+    },
+    "study_location": {
+      "anyOf": [
+        {
+          "enum": [
+            "home",
+            "abroad",
+            "both"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Where scholars study relative to their own country: 'home' (in-country or online from home), 'abroad' (mobility required) or 'both'. Empty = derived from host_countries / host_regions.",
+      "title": "Study Location"
     },
     "tier": {
       "default": "Target",

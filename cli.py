@@ -18,8 +18,8 @@ from rich.panel import Panel
 from rich.prompt import Prompt, Confirm, FloatPrompt, IntPrompt
 from rich import box
 
-from planner.models import CandidateProfile, ApplicationState, APPLICATION_STATUSES, DocumentRecord
-from planner.matcher import load_scholarships, match_profile_all
+from planner.models import CandidateProfile, ApplicationState, APPLICATION_STATUSES, DocumentRecord, STUDY_LOCATION_LABEL, FUNDING_LABEL
+from planner.matcher import load_scholarships, match_profile_all, location_label
 from planner.documents import DocumentInventory, inventory_from_dicts, derive_inventory, load_catalog
 from planner.roadmap import select_shortlist, build_action_plan
 from planner.xlsx_generator import generate_application_workbook
@@ -81,14 +81,19 @@ def load_context(args) -> Tuple[CandidateProfile, DocumentInventory, Dict[str, A
     ws = None if explicit_profile else wsp.find_workspace(getattr(args, "workspace", None))
     if getattr(args, "workspace", None) and ws is None:
         _fail(f"Workspace '{args.workspace}' not found.")
+    location = getattr(args, "location", None)
     if ws:
         profile = wsp.load_profile(ws)
+        if location:
+            profile = profile.model_copy(update={"study_location": location})
         return profile, derive_inventory(profile, wsp.load_inventory(ws)), wsp.load_states(ws), ws
     path = Path(explicit_profile) if explicit_profile else DEFAULT_PROFILE
     if not path.exists():
         _fail(f"Profile file '{path}' not found.")
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
+    if location:
+        data["study_location"] = location
     profile = CandidateProfile(**data)
     inv = derive_inventory(profile, inventory_from_dicts(data["documents"]) if data.get("documents") else None)
     return profile, inv, {}, None
@@ -113,14 +118,15 @@ def _deadline_text(m) -> str:
 
 def _summary_table(matches, title: str, limit: Optional[int] = None) -> Table:
     t = Table(title=title, box=box.ROUNDED)
-    for name, style in (("#", "bold yellow"), ("Scholarship", "bold cyan"), ("Eligibility", ""), ("Fit", "bold"),
+    for name, style in (("#", "bold yellow"), ("Scholarship", "bold cyan"), ("Where", ""), ("Eligibility", ""), ("Fit", "bold"),
                         ("Ready", "bold"), ("Deadline", "yellow"), ("Days", ""), ("Timeline", "")):
         t.add_column(name, style=style)
     for i, m in enumerate(matches[:limit] if limit else matches, 1):
         r = m.readiness
         c = STATUS_COLOR[m.eligibility_status]
         tl = r.timeline_status if r else "-"
-        t.add_row(str(i), m.scholarship.name, f"[{c}]{m.eligibility_status}[/{c}]", f"{m.fit_score:.0f}",
+        t.add_row(str(i), m.scholarship.name, location_label(m.study_at_home, m.study_abroad),
+                  f"[{c}]{m.eligibility_status}[/{c}]", f"{m.fit_score:.0f}",
                   f"{m.readiness_percent:.0f}%", _deadline_text(m),
                   str(r.days_left) if r and r.days_left is not None else "-",
                   f"[{TIMELINE_COLOR.get(tl, '')}]{tl}[/{TIMELINE_COLOR.get(tl, '')}]" if TIMELINE_COLOR.get(tl) else tl)
@@ -133,6 +139,9 @@ def _build_and_report(ws: Path, shortlist_size: int = 8, as_json: bool = False):
         _json(api._summary(res))
         return res
     console.print(_summary_table(res["shortlist"], f"[bold green]Shortlist for {res['profile'].full_name}[/bold green]"))
+    if not res["shortlist"] and res["profile"].study_location == "home":
+        console.print(f"[yellow]No open award in the database funds study in {res['profile'].residence} for you yet. "
+                      "Add a local one with `cli.py new-scholarship <id>`, or run `cli.py location both`.[/yellow]")
     urgent = [a for a in res["actions"] if a["bucket"] == "Start now"][:8]
     if urgent:
         console.print("[bold yellow]Start now:[/bold yellow]")
@@ -249,28 +258,36 @@ def cmd_sync(args):
     _build_and_report(ws)
 
 
+def cmd_location(args):
+    ws = resolve_workspace(args)
+    wsp.set_study_location(ws, args.where)
+    console.print(f"[green]Where to study → {STUDY_LOCATION_LABEL[args.where]}[/green] (saved in profile/profile.json)")
+    _build_and_report(ws)
+
+
 # ---------------------------------------------------------------------------
 # Matching & reports
 # ---------------------------------------------------------------------------
 
 def cmd_list(args):
+    try:
+        rows = api.list_scholarships(args.degree, args.country, args.funding, args.nationality, args.location)
+    except ValueError as e:
+        _fail(str(e))
     if args.json:
-        _json(api.list_scholarships(args.degree, args.country, args.funding))
+        _json(rows)
         return
-    scholarships = load_scholarships()
-    table = Table(title="[bold yellow]Global Prelisted Scholarships[/bold yellow]", box=box.SIMPLE_HEAVY)
-    for name, style in (("Scholarship Name", "bold cyan"), ("Country", "green"), ("Degrees", "magenta"),
+    title = "[bold yellow]Scholarships in the database[/bold yellow]"
+    if args.nationality:
+        title += f" [dim](open to {args.nationality} citizens" + (f", study {args.location}" if args.location else "") + ")[/dim]"
+    table = Table(title=title, box=box.SIMPLE_HEAVY)
+    for name, style in (("Scholarship Name", "bold cyan"), ("Where you study", "green"), ("Degrees", "magenta"),
                         ("Funding", "bold"), ("Typical Deadline", "yellow"), ("Status", ""), ("Official Portal", "dim")):
         table.add_column(name, style=style, no_wrap=False)
-    for s in scholarships:
-        if args.degree and args.degree not in s.degrees:
-            continue
-        if args.country and args.country.lower() not in s.country.lower():
-            continue
-        if args.funding and args.funding.lower() != s.funding_type.lower():
-            continue
-        table.add_row(s.name, s.country, ", ".join(s.degrees), s.funding_type, s.timeline.typical_deadline,
-                      s.program_status, s.official_portal)
+    for r in rows:
+        where = r["where_you_study"] + (f" · {r['study_location']}" if args.nationality else "")
+        table.add_row(r["name"] + (" [magenta](women)[/magenta]" if r["women_only"] else ""), where, ", ".join(r["degrees"]),
+                      FUNDING_LABEL[r["funding"]], r["typical_deadline"], r["program_status"], r["portal"])
     console.print(table)
     console.print(f"[dim]Total shown: {table.row_count} scholarships[/dim]")
 
@@ -281,7 +298,8 @@ def cmd_match(args):
     if args.json:
         _json([api.match_to_dict(m) for m in shown[:args.limit]])
         return
-    console.print(_summary_table(shown, f"[bold green]Matches for {profile.full_name}[/bold green]", args.limit))
+    console.print(_summary_table(shown, f"[bold green]Matches for {profile.full_name}[/bold green] "
+                                        f"[dim]({STUDY_LOCATION_LABEL[profile.study_location]})[/dim]", args.limit))
     for m in shown[:args.details]:
         r = m.readiness
         gates = "\n".join(f"  {'✅' if g.result == 'pass' else ('❌' if g.result == 'fail' else ('❓' if g.result == 'unknown' else '⚠️'))} "
@@ -689,10 +707,14 @@ def cmd_assess(args):
     dob = Prompt.ask("[bold]Date of birth (YYYY-MM-DD)[/bold] [dim](for age limits, blank to skip)[/dim]", default="")
     if dob:
         data["date_of_birth"] = dob
+    gender = Prompt.ask("[bold]Gender[/bold] [dim](only used for awards reserved for women or men)[/dim]",
+                        choices=["female", "male", "other", "skip"], default="skip")
+    if gender != "skip":
+        data["gender"] = gender
     data["current_degree"] = Prompt.ask("[bold]Highest completed degree[/bold]", default="Bachelor's Degree")
     data["university"] = Prompt.ask("[bold]University[/bold]", default="") or None
     data["graduation_year"] = IntPrompt.ask("[bold]Graduation year[/bold]", default=date.today().year - 1)
-    data["target_degree"] = Prompt.ask("[bold]Target degree[/bold]", choices=["Bachelor", "Master", "PhD", "Postdoc"], default="Master")
+    data["target_degree"] = Prompt.ask("[bold]Target degree[/bold]", choices=["Diploma", "Bachelor", "Master", "PhD", "Postdoc"], default="Master")
     data["field_of_study"] = Prompt.ask("[bold]Field of study / intended major[/bold]", default="Computer Science")
     data["gpa"] = FloatPrompt.ask("[bold]Cumulative GPA[/bold]", default=3.4)
     data["gpa_scale"] = FloatPrompt.ask("[bold]GPA scale (4.0, 5.0, 100...)[/bold]", default=4.0)
@@ -710,7 +732,13 @@ def cmd_assess(args):
     data["awards"] = _ask_list("Awards and honours")
     data["career_goal"] = Prompt.ask("[bold]Career goal after your studies[/bold]", default="") or None
     data["target_funding"] = Prompt.ask("[bold]Funding needed[/bold]", choices=["Full", "Partial", "Any"], default="Full")
-    data["target_countries"] = [c.strip() for c in Prompt.ask("[bold]Target countries (comma-separated, blank = worldwide)[/bold]", default="").split(",") if c.strip()]
+    data["study_location"] = Prompt.ask(
+        "[bold]Where do you want to study?[/bold] [dim](home = in your own country, no travel · abroad · both)[/dim]",
+        choices=["both", "home", "abroad"], default="both")
+    data["target_countries"] = []
+    if data["study_location"] != "home":
+        raw = Prompt.ask("[bold]Target countries (comma-separated, blank = worldwide)[/bold]", default="")
+        data["target_countries"] = [c.strip() for c in raw.split(",") if c.strip()]
     data["target_intake_year"] = IntPrompt.ask("[bold]Target intake year[/bold]", default=date.today().year + 1)
     data["willing_to_return_home"] = Confirm.ask("[bold]OK with scholarships that require returning home for 2 years?[/bold]", default=True)
 
@@ -739,6 +767,8 @@ def _ws_arg(p):
 def _profile_args(p):
     p.add_argument("--profile", help="Candidate profile JSON (alternative to --workspace)")
     _ws_arg(p)
+    p.add_argument("--location", choices=["home", "abroad", "both"],
+                   help="Try a study location without saving it: home (own country, no travel), abroad or both")
 
 
 def main():
@@ -791,6 +821,9 @@ def main():
     p.add_argument("--notes")
     p = sub.add_parser("sync", help="Import edits made in reports/scholarship_tracker.xlsx and rebuild")
     _ws_arg(p)
+    p = sub.add_parser("location", help="Choose where to study: home (own country, no travel), abroad, or both")
+    p.add_argument("where", choices=["home", "abroad", "both"])
+    _ws_arg(p)
     p = sub.add_parser("assess", help="Interactive interview that creates your workspace")
     p.add_argument("--out", default=str(wsp.DEFAULT_ROOT))
 
@@ -816,10 +849,13 @@ def main():
     p.add_argument("id", help="kebab-case id, e.g. heinrich-boll-foundation")
 
     # Matching & reports
-    p = sub.add_parser("list", help="List preloaded global scholarships")
-    p.add_argument("--degree", choices=["Bachelor", "Master", "PhD", "Postdoc"])
-    p.add_argument("--country")
+    p = sub.add_parser("list", help="List scholarships in the database (filter by degree, host country, who can apply)")
+    p.add_argument("--degree", choices=["Diploma", "Bachelor", "Master", "PhD", "Postdoc"])
+    p.add_argument("--country", help="Host country text, e.g. Germany")
     p.add_argument("--funding", choices=["Full", "Partial"])
+    p.add_argument("--nationality", help="Only awards open to citizens of this country, e.g. Egypt")
+    p.add_argument("--location", choices=["home", "abroad", "both"],
+                   help="With --nationality: study in that country (home) or outside it (abroad)")
     p.add_argument("--json", action="store_true")
     sub.add_parser("countries", help="Display country study & work guides")
     p = sub.add_parser("match", help="Eligibility, fit score breakdown and readiness for every scholarship")
@@ -902,7 +938,7 @@ def main():
 
     dispatch = {
         "init": cmd_init, "build": cmd_build, "docs": cmd_docs, "gaps": cmd_gaps, "deadline": cmd_deadline,
-        "status": cmd_status, "sync": cmd_sync, "assess": cmd_assess, "list": cmd_list, "countries": cmd_countries,
+        "status": cmd_status, "sync": cmd_sync, "location": cmd_location, "assess": cmd_assess, "list": cmd_list, "countries": cmd_countries,
         "match": cmd_match, "plan": cmd_plan, "calendar": cmd_calendar, "html-report": cmd_html_report,
         "init-folders": cmd_init_folders, "portfolio": cmd_portfolio, "review-essay": cmd_review_essay,
         "email-professor": cmd_email_professor, "finance": cmd_finance, "draft-lor": cmd_draft_lor,

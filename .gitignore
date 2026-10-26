@@ -36,3 +36,6 @@ dist/
 
 # Local agent settings (per developer)
 .claude/settings.local.json
+
+# Skill ZIPs built by scripts/install_skills.py --tool claude-app
+/dist/

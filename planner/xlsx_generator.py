@@ -21,9 +21,10 @@ from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.worksheet.worksheet import Worksheet
 
-from .models import APPLICATION_STATUSES, ApplicationState, CandidateProfile, MatchResult
+from .models import APPLICATION_STATUSES, ApplicationState, CandidateProfile, MatchResult, FUNDING_LABEL
 from .documents import DocumentInventory, catalog_doc, derive_inventory, load_catalog, load_categories
 from .roadmap import PHASES, build_action_plan, select_shortlist
+from .matcher import location_label
 
 FONT_NAME = "Arial"
 NAVY = "1F4E79"
@@ -62,7 +63,7 @@ SHEET_MATCH = "Ranked Matches"
 SHEET_PLAN = "Action Plan"
 
 # Column letters shared by the writer, the formulas and read_workbook_edits().
-MATCH_COLS = ["Rank", "ID", "Scholarship", "Country", "Degrees", "Funding", "Eligibility", "Match", "Fit (0-100)",
+MATCH_COLS = ["Rank", "ID", "Scholarship", "Country", "Where you study", "Degrees", "Funding", "Eligibility", "Match", "Fit (0-100)",
               "Academic", "Language", "Experience", "Field", "Leadership", "Research", "Preferences", "Readiness",
               "Deadline", "Deadline type", "Days left", "Timeline", "Tier", "Priority", "Application status",
               "Key gaps", "Portal"]
@@ -235,7 +236,8 @@ def _ranked_matches(wb: openpyxl.Workbook, matches: List[MatchResult], states: D
         gaps = [g.detail for g in m.gate_checks if g.result in ("fail", "unknown")]
         gaps += [f"Missing: {q.name}" for q in (r.missing if r else [])][:4]
         values = [
-            i - 1, s.id, s.name, s.country, ", ".join(s.degrees), s.funding_type, m.eligibility_status, m.match_status,
+            i - 1, s.id, s.name, s.country, location_label(m.study_at_home, m.study_abroad), ", ".join(s.degrees),
+            FUNDING_LABEL[s.funding_type], m.eligibility_status, m.match_status,
             m.fit_score,
             *[(comps[k].points / comps[k].weight if k in comps and comps[k].weight else None) for k in COMPONENT_KEYS],
             None, r.deadline if r and r.deadline else None, dtype, None, r.timeline_status if r else "-", m.tier,
@@ -278,8 +280,10 @@ def _ranked_matches(wb: openpyxl.Workbook, matches: List[MatchResult], states: D
     ws.conditional_formatting.add(f"{days}2:{days}{last}", FormulaRule(formula=[f'AND(ISNUMBER(${days}2),${days}2<0)'], fill=FILL["grey"]))
     ws.conditional_formatting.add(f"{days}2:{days}{last}", FormulaRule(formula=[f'AND(ISNUMBER(${days}2),${days}2>=0,${days}2<45)'], fill=FILL["red"]))
     ws.auto_filter.ref = f"A1:{get_column_letter(len(MATCH_COLS))}{last}"
-    widths = {"A": 6, "B": 20, "C": 34, "D": 18, "E": 16, "F": 9, "G": 12, "H": 15, "I": 9, "R": 12, "S": 12, "T": 9,
-              "U": 18, "V": 9, "W": 9, "X": 20, "Y": 48, "Z": 30}
+    named = {"Rank": 6, "ID": 20, "Scholarship": 34, "Country": 18, "Where you study": 16, "Degrees": 16, "Funding": 9,
+             "Eligibility": 12, "Match": 15, "Fit (0-100)": 9, "Deadline": 12, "Deadline type": 12, "Days left": 9,
+             "Timeline": 18, "Tier": 9, "Priority": 9, "Application status": 20, "Key gaps": 48, "Portal": 30}
+    widths = {col(MATCH_COLS, name): w for name, w in named.items()}
     widths.update({get_column_letter(MATCH_COLS.index("Academic") + 1 + k): 11 for k in range(8)})
     _widths(ws, widths)
     return rows
@@ -468,7 +472,7 @@ def _all_scholarships(wb: openpyxl.Workbook, matches: List[MatchResult]) -> None
     for i, m in enumerate(sorted(matches, key=lambda m: m.scholarship.name), start=2):
         s = m.scholarship
         c, e, t = s.coverage_details, s.eligibility, s.timeline
-        values = [s.id, s.name, s.organization, s.country, ", ".join(s.degrees), s.funding_type, yn(c.tuition_covered),
+        values = [s.id, s.name, s.organization, s.country, ", ".join(s.degrees), FUNDING_LABEL[s.funding_type], yn(c.tuition_covered),
                   c.monthly_stipend, yn(c.airfare_covered), yn(c.health_insurance), yn(c.accommodation_covered),
                   yn(c.visa_fees_covered), c.additional_allowances or "-", e.eligible_nationalities, e.gpa_requirement,
                   e.language_requirements,
@@ -559,7 +563,7 @@ def _detail_sheet(wb: openpyxl.Workbook, rank: int, m: MatchResult, match_row: i
     name = _sheet_name_for(rank, s.name, used)
     ws = wb.create_sheet(name)
     ws.sheet_view.showGridLines = False
-    row = _title(ws, s.name, 7, f"{s.organization} · {s.country} · {', '.join(s.degrees)} · {s.funding_type} funding")
+    row = _title(ws, s.name, 7, f"{s.organization} · {s.country} · {', '.join(s.degrees)} · {FUNDING_LABEL[s.funding_type]} funding")
     mq = _q(SHEET_MATCH)
 
     row = _section(ws, row, "At a glance", 7)

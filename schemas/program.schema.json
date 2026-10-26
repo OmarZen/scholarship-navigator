@@ -290,6 +290,7 @@
     "degrees": {
       "items": {
         "enum": [
+          "Diploma",
           "Bachelor",
           "Master",
           "PhD",

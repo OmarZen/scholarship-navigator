@@ -84,7 +84,8 @@ class TestScholarshipPlanner(unittest.TestCase):
         catalog = load_catalog()
         for s in load_scholarships():
             self.assertTrue(s.documents, f"{s.id} has no documents")
-            self.assertIsNotNone(s.timeline.deadline, f"{s.id} has no deadline pattern")
+            # Unknown stays unknown: no pattern is allowed only when the published text explains the deadline.
+            self.assertTrue(s.timeline.deadline or s.timeline.typical_deadline, f"{s.id} has no deadline information")
             for req in s.documents:
                 self.assertIn(req.doc, catalog, f"{s.id}: unknown doc id {req.doc}")
                 for alt in req.alternatives:
@@ -199,6 +200,98 @@ class TestScholarshipPlanner(unittest.TestCase):
         vanier = by_id(self.matches(phd), "vanier-cgs")
         self.assertEqual(vanier.eligibility_status, "Ineligible")
         self.assertTrue(any(g.name == "Program status" for g in vanier.gate_checks))
+
+    # -- study location (home / abroad / both), gender, diploma ---------------
+
+    def gate(self, m, name):
+        return next((g for g in m.gate_checks if g.name == name), None)
+
+    def test_study_location_home_and_abroad(self):
+        saudi = self.profile.model_copy(update={"nationality": "Saudi Arabia", "target_countries": []})
+        home = self.matches(saudi.model_copy(update={"study_location": "home"}))
+        kaust = by_id(home, "kaust-fellowship")
+        self.assertEqual(self.gate(kaust, "Study location").result, "pass")
+        self.assertTrue(kaust.study_at_home)
+        for sid in ("chevening", "erasmus-mundus", "mbzuai-ai"):
+            m = by_id(home, sid)
+            self.assertEqual(m.eligibility_status, "Ineligible", sid)
+            self.assertEqual(self.gate(m, "Study location").result, "fail", sid)
+
+        abroad = self.matches(saudi.model_copy(update={"study_location": "abroad"}))
+        self.assertEqual(self.gate(by_id(abroad, "kaust-fellowship"), "Study location").result, "fail")
+        self.assertEqual(self.gate(by_id(abroad, "mbzuai-ai"), "Study location").result, "pass")
+
+        both = self.matches(saudi)
+        self.assertEqual(saudi.study_location, "both")
+        self.assertIsNone(self.gate(by_id(both, "kaust-fellowship"), "Study location"))
+
+    def test_region_hosts_and_mobility_schemes(self):
+        kenyan = self.profile.model_copy(update={"nationality": "Kenya", "study_location": "home", "target_countries": []})
+        matches = self.matches(kenyan)
+        mastercard = by_id(matches, "mastercard-foundation")
+        self.assertEqual(self.gate(mastercard, "Study location").result, "unknown")
+        self.assertIsNone(mastercard.study_at_home)
+        self.assertEqual(self.gate(by_id(matches, "intra-africa-mobility"), "Study location").result, "fail")
+
+    def test_both_accepts_home_country_outside_targets(self):
+        saudi = self.profile.model_copy(update={"nationality": "Saudi Arabia", "target_countries": ["Germany"]})
+        prefs = {c.key: c for c in by_id(self.matches(saudi), "kaust-fellowship").score_breakdown}["preferences"]
+        self.assertIn("at home", prefs.detail)
+        abroad_only = saudi.model_copy(update={"study_location": "abroad"})
+        prefs = {c.key: c for c in by_id(self.matches(abroad_only), "kaust-fellowship").score_breakdown}["preferences"]
+        self.assertIn("outside your target countries", prefs.detail)
+
+    def test_gender_gate(self):
+        s = next(x for x in load_scholarships() if x.id == "erasmus-mundus")
+        rules = s.rules.model_copy(update={"gender": "female"})
+        women_only = s.model_copy(update={"eligibility": s.eligibility.model_copy(update={"rules": rules})})
+        results = {g: evaluate_scholarship_match(self.profile.model_copy(update={"gender": g}), women_only, today=TODAY)
+                   for g in ("female", "male", None)}
+        self.assertEqual(self.gate(results["female"], "Gender").result, "pass")
+        self.assertEqual(results["male"].eligibility_status, "Ineligible")
+        self.assertEqual(results[None].eligibility_status, "Needs Check")
+        self.assertIsNone(self.gate(evaluate_scholarship_match(self.profile, s, today=TODAY), "Gender"))
+
+    def test_diploma_degree_level(self):
+        s = next(x for x in load_scholarships() if x.id == "kaust-fellowship")
+        diploma_award = s.model_copy(update={"degrees": ["Diploma"]})
+        student = self.profile.model_copy(update={"target_degree": "Diploma", "work_experience_years": 0})
+        m = evaluate_scholarship_match(student, diploma_award, today=TODAY)
+        self.assertEqual(self.gate(m, "Degree level").result, "pass")
+        self.assertNotIn("experience", {c.key for c in m.score_breakdown})
+        self.assertEqual(evaluate_scholarship_match(student, s, today=TODAY).eligibility_status, "Ineligible")
+
+    def test_list_scholarships_by_nationality_and_location(self):
+        from planner import api
+        home = {r["id"]: r for r in api.list_scholarships(nationality="Saudi Arabia", study_location="home")}
+        self.assertIn("kaust-fellowship", home)
+        self.assertNotIn("chevening", home)
+        self.assertEqual(home["kaust-fellowship"]["study_location"], "Home country")
+        abroad = {r["id"] for r in api.list_scholarships(nationality="Saudi Arabia", study_location="abroad")}
+        self.assertNotIn("kaust-fellowship", abroad)
+        self.assertIn("mbzuai-ai", abroad)
+        self.assertNotIn("singa-singapore", {r["id"] for r in api.list_scholarships(nationality="Singapore")})
+        with self.assertRaises(ValueError):
+            api.list_scholarships(study_location="home")
+
+    def test_programs_respect_study_location(self):
+        from planner.programs import rank_programs
+        home = self.profile.model_copy(update={"study_location": "home"})
+        self.assertFalse(rank_programs(home, today=TODAY))
+        self.assertTrue(rank_programs(self.profile.model_copy(update={"study_location": "abroad"}), today=TODAY))
+
+    def test_set_study_location_in_workspace(self):
+        ws, _ = self._workspace()
+        wsp.set_study_location(ws, "home")
+        raw = json.loads(wsp.profile_path(ws).read_text(encoding="utf-8"))
+        self.assertEqual(raw["study_location"], "home")
+        self.assertIn("_help", raw)
+        res = wsp.build_workspace(ws, today=TODAY)
+        self.assertEqual(res["profile"].study_location, "home")
+        self.assertIn("Home country only", (ws / "PROFILE.md").read_text(encoding="utf-8"))
+        self.assertTrue(all(m.study_at_home is not False for m in res["shortlist"]))
+        with self.assertRaises(ValueError):
+            wsp.set_study_location(ws, "moon")
 
     # -- readiness & deadlines ------------------------------------------------
 
@@ -422,10 +515,41 @@ class TestScholarshipPlanner(unittest.TestCase):
         import asyncio
         names = {t.name for t in asyncio.run(mcp_server.mcp.list_tools())}
         for tool in ("match_scholarships", "find_programs", "create_workspace", "update_document",
-                     "confirm_deadline", "choose_program", "list_document_types"):
+                     "confirm_deadline", "choose_program", "list_document_types", "set_study_location"):
             self.assertIn(tool, names)
         result = mcp_server.find_programs(field="photonics", limit=5)
         self.assertTrue(result)
+
+    def test_install_skills_script(self):
+        script = str(ROOT / "scripts" / "install_skills.py")
+        out = subprocess.run([sys.executable, script, "--tool", "codex", "--dest", str(self.tmpdir / "skills")],
+                             capture_output=True, text=True)
+        self.assertEqual(out.returncode, 0, out.stderr)
+        self.assertIn("codex mcp add scholarship-navigator", out.stdout)
+        installed = self.tmpdir / "skills" / "scholarship-intake" / "SKILL.md"
+        text = installed.read_text(encoding="utf-8")
+        self.assertTrue(text.startswith("---\nname: scholarship-intake\n"))
+        self.assertIn("Installed copy", text)
+        out = subprocess.run([sys.executable, script, "--tool", "claude-app", "--dest", str(self.tmpdir / "zips")],
+                             capture_output=True, text=True)
+        self.assertEqual(out.returncode, 0, out.stderr)
+        import zipfile
+        with zipfile.ZipFile(self.tmpdir / "zips" / "scholarship-finder-planner.zip") as z:
+            self.assertIn("scholarship-finder-planner/SKILL.md", z.namelist())
+
+    def test_contributors_block(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("update_contributors", ROOT / "scripts" / "update_contributors.py")
+        uc = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(uc)
+        people = [{"login": "alice", "type": "User", "html_url": "https://github.com/alice",
+                   "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4", "contributions": 3},
+                  {"login": "dependabot[bot]", "type": "Bot", "html_url": "", "avatar_url": "", "contributions": 9}]
+        block = uc.render(people)
+        self.assertIn("@alice", block)
+        self.assertNotIn("dependabot", block)
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertIn(block, uc.replace_block(readme, block))
 
     def test_custom_scholarship_scaffold_validates(self):
         from planner.validation import scholarship_template, validate_data

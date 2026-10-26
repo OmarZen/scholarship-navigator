@@ -183,8 +183,9 @@
       "type": "string"
     },
     "target_degree": {
-      "description": "Target degree level sought (Bachelor, Master, PhD, Postdoc)",
+      "description": "Target degree level sought (Diploma, Bachelor, Master, PhD, Postdoc)",
       "enum": [
+        "Diploma",
         "Bachelor",
         "Master",
         "PhD",
@@ -266,6 +267,17 @@
       "title": "Target Countries",
       "type": "array"
     },
+    "study_location": {
+      "default": "both",
+      "description": "Where the candidate will study: 'home' (own country, no travel), 'abroad', or 'both'",
+      "enum": [
+        "home",
+        "abroad",
+        "both"
+      ],
+      "title": "Study Location",
+      "type": "string"
+    },
     "target_intake_year": {
       "default": 2027,
       "description": "Target intake year (e.g., 2026, 2027)",
@@ -297,6 +309,24 @@
       "default": null,
       "description": "Date of birth (YYYY-MM-DD) for age limits",
       "title": "Date Of Birth"
+    },
+    "gender": {
+      "anyOf": [
+        {
+          "enum": [
+            "female",
+            "male",
+            "other"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Only used for awards reserved for women or men",
+      "title": "Gender"
     },
     "country_of_residence": {
       "anyOf": [

@@ -73,9 +73,18 @@ def _cefr_rank(level: Optional[str]) -> int:
 # Step 1: eligibility gates
 # ---------------------------------------------------------------------------
 
+def nationality_open(nationality: str, s: Scholarship) -> Optional[bool]:
+    """True / False, or None when the country list is unconfirmed or the country is on a region border."""
+    return {"pass": True, "fail": False}.get(_nationality_check(nationality, s).result)
+
+
 def _nationality_gate(profile: CandidateProfile, s: Scholarship) -> GateCheck:
+    return _nationality_check(profile.nationality, s)
+
+
+def _nationality_check(nationality: str, s: Scholarship) -> GateCheck:
     rule = s.rules.nationality
-    nat = normalize_country(profile.nationality)
+    nat = normalize_country(nationality)
     name = "Nationality"
 
     excluded = in_list(nat, rule.exclude_countries) or any(in_group(nat, r) for r in rule.exclude_regions)
@@ -131,6 +140,82 @@ def _residence_gate(profile: CandidateProfile, s: Scholarship) -> Optional[GateC
     result = "fail" if s.rules.residence_strict else "warn"
     return GateCheck(name="Residence", result=result,
                      detail=f"Applicants are expected to live in {where}; you live in {residence}.")
+
+
+def _gender_gate(profile: CandidateProfile, s: Scholarship) -> Optional[GateCheck]:
+    need = s.rules.gender
+    if not need:
+        return None
+    who = "women" if need == "female" else "men"
+    if profile.gender == need:
+        return GateCheck(name="Gender", result="pass", detail=f"Reserved for {who}.")
+    if profile.gender is None:
+        return GateCheck(name="Gender", result="unknown", detail=f"Reserved for {who}.",
+                         fix="Add gender to profile.json (only used for awards reserved for women or men).")
+    if profile.gender == "other":
+        return GateCheck(name="Gender", result="unknown", detail=f"Reserved for {who}.",
+                         fix=f"Check how {s.official_portal} defines who can apply.")
+    return GateCheck(name="Gender", result="fail", detail=f"Reserved for {who}.")
+
+
+def study_options(s: Scholarship, home: str) -> Tuple[Optional[bool], bool]:
+    """(can study in `home`, can study abroad). The first is None when a host region may or may not include `home`."""
+    if s.study_location == "home":
+        return True, False
+    if s.study_location == "abroad":
+        return False, True
+    if s.study_location == "both" or not (s.host_countries or s.host_regions):
+        return True, True
+    abroad = bool(s.host_regions) or any(not same_country(h, home) for h in s.host_countries)
+    if in_list(home, s.host_countries):
+        return True, abroad
+    if any(in_group(home, r) is not False for r in s.host_regions):
+        return None, abroad
+    return False, abroad
+
+
+def where_you_study(s: Scholarship) -> str:
+    places = ", ".join(s.host_countries + [group_title(r) for r in s.host_regions])
+    if s.study_location == "home":
+        return "your own country"
+    if s.study_location == "both":
+        return "your own country or abroad" + (f" ({places})" if places else "")
+    return places or "any country"
+
+
+def location_label(at_home: Optional[bool], abroad: bool) -> str:
+    if at_home and abroad:
+        return "Home or abroad"
+    if at_home:
+        return "Home country"
+    if at_home is None:
+        return "Abroad (maybe home)"
+    return "Abroad"
+
+
+def _study_location_gate(profile: CandidateProfile, s: Scholarship) -> Optional[GateCheck]:
+    want = profile.study_location
+    if want == "both":
+        return None
+    home = normalize_country(profile.residence)
+    at_home, abroad = study_options(s, home)
+    where = where_you_study(s)
+    name = "Study location"
+    keep_both = 'Set "study_location": "both" in profile.json if you could also study abroad.'
+    if want == "home":
+        if at_home:
+            return GateCheck(name=name, result="pass", detail=f"You can study in {home}, without travelling.")
+        if at_home is None:
+            return GateCheck(name=name, result="unknown",
+                             detail=f"Host universities are spread across {where}; one may be in {home}.",
+                             fix=f"Check {s.official_portal} for a host university in {home}.")
+        return GateCheck(name=name, result="fail",
+                         detail=f"Means studying abroad ({where}); you want to study in {home}.", fix=keep_both)
+    if abroad:
+        return GateCheck(name=name, result="pass", detail=f"You would study abroad ({where}).")
+    return GateCheck(name=name, result="fail",
+                     detail=f"You would study in {home}, your own country; you want to study abroad.",
+                     fix='Set "study_location": "both" in profile.json to include study at home.')
 
 
 def _age_gate(profile: CandidateProfile, s: Scholarship, on: date) -> Optional[GateCheck]:
@@ -276,7 +361,8 @@ def run_gates(profile: CandidateProfile, s: Scholarship, on: date, today: date) 
 
     gates.append(_nationality_gate(profile, s))
     for gate in (
-        _residence_gate(profile, s), _age_gate(profile, s, on), _degree_age_gate(profile, s, on),
+        _residence_gate(profile, s), _gender_gate(profile, s), _study_location_gate(profile, s),
+        _age_gate(profile, s, on), _degree_age_gate(profile, s, on),
         _work_gate(profile, s, on, today), _return_gate(profile, s), _field_gate(profile, s)[0],
         _other_language_gate(profile, s),
     ):
@@ -398,18 +484,31 @@ def _research(profile: CandidateProfile) -> Tuple[float, str]:
     return frac, txt
 
 
+def _country_preference(profile: CandidateProfile, s: Scholarship) -> Tuple[bool, str]:
+    home = normalize_country(profile.residence)
+    at_home, _ = study_options(s, home)
+    if profile.study_location == "home":
+        if at_home:
+            return True, f"You can study at home in {home}."
+        if at_home is None:
+            return True, f"A host university may be in {home}."
+        return False, f"Means leaving {home}."
+    if not profile.target_countries:
+        return True, "Worldwide search: any host country is fine."
+    if not (s.host_countries or s.host_regions):
+        return True, "Any university worldwide, including your target countries."
+    hosts = s.host_countries or [s.country]
+    if any(in_list(t, hosts) or any(in_group(t, r) for r in s.host_regions) or t.lower() in s.country.lower()
+           for t in profile.target_countries):
+        return True, "In your target countries."
+    if at_home and profile.study_location == "both":
+        return True, f"You can study at home in {home} (you accept home or abroad)."
+    return False, f"{s.country} is outside your target countries."
+
+
 def _preferences(profile: CandidateProfile, s: Scholarship) -> Tuple[float, str, bool]:
-    country_ok = True
-    txt = []
-    if profile.target_countries:
-        hosts = s.host_countries or [s.country]
-        country_ok = any(
-            in_list(t, hosts) or any(in_group(t, r) for r in s.host_regions) or t.lower() in s.country.lower()
-            for t in profile.target_countries
-        )
-        txt.append("In your target countries." if country_ok else f"{s.country} is outside your target countries.")
-    else:
-        txt.append("Worldwide search: any host country is fine.")
+    country_ok, country_txt = _country_preference(profile, s)
+    txt = [country_txt]
     funding_ok = not (profile.target_funding == "Full" and s.funding_type == "Partial")
     if not funding_ok:
         txt.append("Partial funding only, but you want full funding.")
@@ -424,10 +523,11 @@ def score_fit(profile: CandidateProfile, s: Scholarship, inventory: DocumentInve
         research_weight = 15.0 if research_heavy else 10.0
     else:
         research_weight = 5.0 if research_heavy else 0.0
+    undergraduate = profile.target_degree in ("Diploma", "Bachelor")
     weights = {
         "academic": 25.0,
         "language": 20.0,
-        "experience": 15.0 if (profile.target_degree != "Bachelor" or rules.work_experience_years > 0) else 0.0,
+        "experience": 15.0 if (not undergraduate or rules.work_experience_years > 0) else 0.0,
         "field": 15.0,
         "profile": 20.0 if rules.leadership_weight == "high" else 12.0,
         "research": research_weight,
@@ -478,7 +578,7 @@ def status_from_fit(fit: float, eligibility: str) -> MatchStatus:
 def priority_from(fit: float, readiness: ReadinessReport, s: Scholarship, eligibility: str) -> float:
     if eligibility == "Ineligible":
         return 0.0
-    funding_value = 1.0 if s.funding_type == "Full" else 0.5
+    funding_value = {"Full": 1.0, "Any": 0.75}.get(s.funding_type, 0.5)
     score = 0.55 * fit + 0.20 * readiness.percent + 10.0 * funding_value + 15.0 * TIME_FACTOR[readiness.timeline_status]
     if eligibility == "Needs Check":
         score *= 0.9
@@ -529,6 +629,7 @@ def evaluate_scholarship_match(
     if readiness.missing:
         warnings.append(f"Missing papers: {', '.join(r.name for r in readiness.missing[:6])}"
                         + ("..." if len(readiness.missing) > 6 else ""))
+    at_home, abroad = study_options(scholarship, normalize_country(profile.residence))
 
     return MatchResult(
         scholarship=scholarship,
@@ -541,6 +642,8 @@ def evaluate_scholarship_match(
         readiness=readiness,
         priority_score=priority_from(fit, readiness, scholarship, eligibility),
         tier=scholarship.tier,
+        study_at_home=at_home,
+        study_abroad=abroad,
         reasons_eligible=reasons,
         gaps_and_warnings=warnings,
         strategic_recommendations=[scholarship.strategic_tips],

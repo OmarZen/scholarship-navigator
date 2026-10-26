@@ -2,7 +2,7 @@
 
 | File | Contents |
 |---|---|
-| `data/scholarships.json` | 35 scholarships: coverage, published eligibility text, structured `eligibility.rules`, `documents` (paper ids), `timeline.deadline` (pattern + `known_dates` + source), `host_countries`, `tier`, `program_status` |
+| `data/scholarships.json` | 103 scholarships (Diploma to PhD, abroad and in-country): coverage, published eligibility text, structured `eligibility.rules`, `documents` (paper ids), `timeline.deadline` (pattern + `known_dates` + source), `host_countries`, `tier`, `program_status` |
 | `data/programs/*.json` | individual programs per scheme (Erasmus Mundus masters, Intra-Africa projects): fields, host countries, universities, status, deadlines, English requirement |
 | `data/custom/*.json` | local scholarship additions (same schema as scholarships.json); drafts in `data/custom/drafts/` are not loaded |
 | `data/document_catalog.json` | every paper type: lead time, validity, how to get it, folder |

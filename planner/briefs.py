@@ -11,7 +11,9 @@ from datetime import date
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence
 
-from .models import CandidateProfile, MatchResult, RequirementStatus, ApplicationState, ProgramMatch, Program
+from .models import (CandidateProfile, MatchResult, RequirementStatus, ApplicationState, ProgramMatch, Program,
+                     STUDY_LOCATION_LABEL, FUNDING_LABEL)
+from .matcher import location_label, where_you_study
 from .documents import DocumentInventory, load_catalog, load_categories, catalog_doc
 
 TEMPLATES_PATH = Path(__file__).parent.parent / "data" / "document_templates.json"
@@ -140,23 +142,29 @@ def render_index(profile: CandidateProfile, matches: List[MatchResult], shortlis
     })
     out += f"# Scholarship workspace: {profile.full_name}\n\n"
     out += (f"**Target:** {profile.target_degree} in {profile.field_of_study}, intake {profile.target_intake_year} · "
-            f"**Nationality:** {profile.nationality} · **Updated:** {today.isoformat()}\n\n")
+            f"**Nationality:** {profile.nationality} · **Study:** {STUDY_LOCATION_LABEL[profile.study_location]} · "
+            f"**Updated:** {today.isoformat()}\n\n")
     out += ("> Agents: read `AGENTS.md` for the rules, then `PROFILE.md`. JSON files are the source of truth; "
             "Markdown files with `generated: true` are rebuilt by `cli.py build`.\n\n")
 
     out += "## Shortlist (ranked by priority)\n\n"
     out += ("Priority = 55% fit + 20% readiness + funding value + time left. "
             "**Fit** = how well you match. **Ready** = share of papers you already have.\n\n")
+    if not shortlist and profile.study_location == "home":
+        out += (f"> 🏠 No open award in the database funds study in {profile.residence} for your profile yet. "
+                "Check *Not eligible* below for awards that only need a fact from you, add a local scholarship with "
+                "`cli.py new-scholarship <id>`, or run `cli.py location both` to include study abroad.\n\n")
     rows = []
     for i, m in enumerate(shortlist, 1):
         r = m.readiness
         rows.append([
             i, f"[{m.scholarship.name}](scholarships/{m.scholarship.id}/SCHOLARSHIP.md)", m.scholarship.country,
+            location_label(m.study_at_home, m.study_abroad),
             f"{m.fit_score:.0f}", f"{m.readiness_percent:.0f}%", deadline_text(m), days_text(m),
             f"{TIMELINE_ICON.get(r.timeline_status, '')} {r.timeline_status}" if r else "-",
             m.eligibility_status, m.tier,
         ])
-    out += md_table(["#", "Scholarship", "Country", "Fit", "Ready", "Deadline", "Days", "Timeline", "Eligibility", "Tier"], rows)
+    out += md_table(["#", "Scholarship", "Country", "Where", "Fit", "Ready", "Deadline", "Days", "Timeline", "Eligibility", "Tier"], rows)
 
     out += "\n## Next actions\n\n"
     upcoming = [a for a in actions if a["bucket"] != "After submitting"][:15]
@@ -257,8 +265,11 @@ def render_profile(profile: CandidateProfile, inventory: DocumentInventory, toda
         ("Target", f"{p.target_degree} · {p.field_of_study} · intake {p.target_intake_year}"),
         ("Funding wanted", p.target_funding),
         ("Target countries", ", ".join(p.target_countries) or "Worldwide"),
+        ("Where to study", STUDY_LOCATION_LABEL[p.study_location]),
         ("Returns home after study", "Yes" if p.willing_to_return_home else "No"),
     ]
+    if p.gender:
+        facts.insert(3, ("Gender", p.gender))
     out += md_table(["", ""], facts)
 
     out += "\n## Education\n\n"
@@ -370,7 +381,7 @@ def render_scholarship(m: MatchResult, profile: CandidateProfile, state: Optiona
         "application_status": state.application_status if state else "Not Started",
     })
     out += f"# {s.name}\n\n"
-    out += f"{s.organization} · {s.country} · {', '.join(s.degrees)} · **{s.funding_type} funding** · tier: {m.tier}\n\n"
+    out += f"{s.organization} · {s.country} · {', '.join(s.degrees)} · **{FUNDING_LABEL[s.funding_type]} funding** · tier: {m.tier}\n\n"
     if s.program_status != "active":
         out += f"> ⚠️ Program status: **{s.program_status}**. {s.program_status_note or ''}\n\n"
 
@@ -378,6 +389,7 @@ def render_scholarship(m: MatchResult, profile: CandidateProfile, state: Optiona
     tl = r.timeline_status if r else "Deadline unknown"
     glance = [
         ("Eligibility", f"{m.eligibility_status}"),
+        ("Where you study", f"{where_you_study(s)} ({location_label(m.study_at_home, m.study_abroad).lower()} for you)"),
         ("Fit score", f"{m.fit_score:.0f} / 100 ({m.match_status})"),
         ("Readiness", f"{m.readiness_percent:.0f}% of papers ({r.have_count}/{r.total_count})" if r else "-"),
         ("Deadline", f"{deadline_text(m)} · {r.deadline_label}" if r else "Unknown"),

@@ -7,7 +7,7 @@ code:
       - any-glob-to-any-file: ["planner/**", "scraper/**", "cli.py", "mcp_server.py", "scripts/**"]
 skills:
   - changed-files:
-      - any-glob-to-any-file: ["skills/**", ".claude/**", ".agent/**", "AGENTS.md", "CLAUDE.md", "SKILL.md"]
+      - any-glob-to-any-file: ["skills/**", ".claude/**", ".agents/**", "AGENTS.md", "CLAUDE.md", "SKILL.md"]
 documentation:
   - changed-files:
       - any-glob-to-any-file: ["*.md", "docs/**"]
