@@ -16,16 +16,17 @@ from mcp.server.fastmcp import FastMCP
 
 from planner import api
 
-INSTRUCTIONS = """Scholarship Navigator: eligibility, fit scores, missing papers and dated plans for 35 major scholarships
-plus individual Erasmus Mundus / Intra-Africa programs.
+INSTRUCTIONS = """Scholarship Navigator: eligibility, fit scores, missing papers and dated plans for 103 scholarships
+(Diploma to PhD, abroad or in the candidate's own country) plus individual Erasmus Mundus / Intra-Africa programs.
 
 Typical flow:
 1. Interview the candidate (nationality, residence, date of birth, degree, GPA + scale, graduation year, English test +
    date, work years, field + keywords, leadership stories, target degree/countries/intake, papers they already hold).
+   Ask whether they can travel: study_location "home" (own country only), "abroad" or "both".
 2. create_workspace(profile) -> saves everything under output/<name>/ and returns shortlist, next actions, missing papers.
 3. Explain results: eligibility first, then fit (0-100) and readiness (% of papers held). Deadlines marked estimated
    must be verified on the official site, then recorded with confirm_deadline.
-4. Keep it current with update_document, set_application_status, choose_program.
+4. Keep it current with update_document, set_application_status, choose_program, set_study_location.
 Never invent grades, achievements or eligibility. Answer in the candidate's language."""
 
 mcp = FastMCP("scholarship-navigator", instructions=INSTRUCTIONS)
@@ -33,9 +34,12 @@ mcp = FastMCP("scholarship-navigator", instructions=INSTRUCTIONS)
 
 @mcp.tool()
 def list_scholarships(degree: Optional[str] = None, country: Optional[str] = None,
-                      funding: Optional[str] = None) -> List[Dict[str, Any]]:
-    """List scholarships in the database. Filters: degree (Bachelor|Master|PhD|Postdoc), country text, funding (Full|Partial)."""
-    return api.list_scholarships(degree, country, funding)
+                      funding: Optional[str] = None, nationality: Optional[str] = None,
+                      study_location: Optional[str] = None) -> List[Dict[str, Any]]:
+    """List scholarships in the database. Filters: degree (Diploma|Bachelor|Master|PhD|Postdoc), host country text,
+    funding (Full|Partial), nationality (only awards open to that citizenship) and study_location relative to that
+    nationality: "home" = study in your own country without travelling, "abroad", or "both"."""
+    return api.list_scholarships(degree, country, funding, nationality, study_location)
 
 
 @mcp.tool()
@@ -49,8 +53,8 @@ def match_scholarships(profile: Dict[str, Any], include_ineligible: bool = False
     """Score a candidate against every scholarship without creating files.
 
     profile: CandidateProfile fields (full_name, nationality, current_degree, target_degree, field_of_study, gpa,
-    gpa_scale, english_test, english_score, work_experience_years, target_countries, target_intake_year,
-    date_of_birth, graduation_year, ...) plus optional "documents": [{"doc_id": "passport", "status": "have"}, ...].
+    gpa_scale, english_test, english_score, work_experience_years, target_countries, study_location
+    ("home" | "abroad" | "both"), target_intake_year, date_of_birth, graduation_year, gender, ...) plus optional "documents": [{"doc_id": "passport", "status": "have"}, ...].
     Returns ranked results with eligibility checks, fit breakdown, readiness, missing papers and a dated plan."""
     return api.match(profile, include_ineligible=include_ineligible, limit=limit)
 
@@ -120,6 +124,13 @@ def set_application_status(scholarship_id: str, status: str, workspace: Optional
 
 
 @mcp.tool()
+def set_study_location(study_location: str, workspace: Optional[str] = None) -> Dict[str, Any]:
+    """Choose where the candidate studies: "home" (own country, no travel: e.g. family cannot let them travel),
+    "abroad", or "both". Saved in profile.json; awards that do not fit become Ineligible with the reason."""
+    return api.set_study_location(study_location, workspace)
+
+
+@mcp.tool()
 def choose_program(program_id: str, workspace: Optional[str] = None, remove: bool = False) -> Dict[str, Any]:
     """Choose (or un-choose) a program, e.g. one of up to 3 Erasmus Mundus masters. Creates a tailored
     motivation-letter draft and makes the scheme's deadline follow the chosen programs."""
@@ -154,11 +165,12 @@ def intake_interview(language: str = "English") -> str:
     return (
         f"Interview the candidate in {language}, a few questions at a time, then call create_workspace.\n"
         "Ask for: full name; nationality and country of residence; date of birth; highest degree, university, "
-        "graduation year; GPA and its scale (and class rank if known); target degree, field and 3-5 field keywords; "
-        "target countries (or worldwide) and intake year; funding needed (Full/Partial/Any); English test, score, "
+        "graduation year; GPA and its scale (and class rank if known); target degree (Diploma, Bachelor, Master, PhD), "
+        "field and 3-5 field keywords; where they can study (in their own country without travelling, abroad, or "
+        "both); target countries (or worldwide) and intake year; funding needed (Full/Partial/Any); English test, score, "
         "date and lowest band; other languages with CEFR level; years of full-time work and whether still employed; "
-        "publications; 2-3 leadership moments with numbers; awards; volunteering; career goal and the problem at home "
-        "they want to solve; whether they accept a 2-year return-home obligation; which papers they already hold "
+        "publications; gender only if they want awards reserved for women considered; 2-3 leadership moments with "
+        "numbers; awards; volunteering; career goal and the problem at home they want to solve; whether they accept a 2-year return-home obligation; which papers they already hold "
         "(passport + expiry, degree certificate, transcript, CV, recommendation letters and how many, employment "
         "letter, police clearance). Do not guess missing answers; leave them out."
     )

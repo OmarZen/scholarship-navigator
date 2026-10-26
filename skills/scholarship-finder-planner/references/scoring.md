@@ -3,9 +3,18 @@
 ## 1. Eligibility gates (pass / fail / unknown / warn)
 
 Checked in this order: degree level · program status (discontinued → fail) · nationality (official country lists,
-verified 2026-10) · residence · age (`age_under` hard limits, `age_under_preferred` soft) · degree recency · work
-experience (counts months until the deadline when `currently_employed`) · return obligation · restricted field ·
-teaching language (e.g. Spanish for Fundación Carolina).
+verified 2026-10) · residence · gender (awards reserved for women; unknown gender → Needs Check) · study location ·
+age (`age_under` hard limits, `age_under_preferred` soft) · degree recency · work experience (counts months until the
+deadline when `currently_employed`) · return obligation · restricted field · teaching language (e.g. Spanish for
+Fundación Carolina).
+
+**Study location.** The profile's `study_location` is `home` (study in the country they live in, no travel),
+`abroad`, or `both` (default, no gate). Where an award lets you study comes from the scholarship's `study_location`
+when set (`home`, `abroad` = mobility required, `both`), otherwise from `host_countries` / `host_regions`: the
+candidate's country in `host_countries` → home is possible (e.g. KAUST for a Saudi); a host region that contains it →
+"maybe" (`Needs Check` for a home-only candidate, e.g. Mastercard Foundation for a Kenyan); no hosts at all → home or
+abroad. `home` fails awards that mean leaving; `abroad` fails awards where you would stay at home. With `both`, an
+award at home also counts as "in your target countries" in the preferences score.
 
 - Any **fail** → `Ineligible` (score 0, reason shown).
 - Any **unknown** → `Needs Check`. Every unknown has a `fix` (usually a missing profile field). Never treat it as a pass.
@@ -19,11 +28,11 @@ Weighted parts, normalized over the parts that apply:
 |---|---|---|
 | Academic record | 25 | Normalized GPA vs the scholarship's `gpa_min` and `gpa_competitive` (full marks need competitive + 0.2; top-10% class rank adds a bonus) |
 | Language | 20 | IELTS-equivalent (TOEFL/Duolingo/PTE converted) vs `ielts_min`, sub-band rule, or the required other language |
-| Experience | 15 | Required years met, or a mild bonus when not required (not used for Bachelor targets) |
+| Experience | 15 | Required years met, or a mild bonus when not required (not used for Diploma and Bachelor targets) |
 | Field fit | 15 | Candidate field groups/keywords vs the scholarship's priority or restricted fields |
 | Leadership & profile | 12 (20 for leadership-heavy awards) | Leadership, documented STAR stories, awards, volunteering |
 | Research | 10-15 for PhD/Postdoc, 5 for research-heavy awards | Publications, thesis |
-| Preferences | 10 | Host country in target list (6) · funding level matches (4) |
+| Preferences | 10 | Host country in target list, or at home for `home` / `both` candidates (6) · funding level matches (4) |
 
 High match ≥ 80 · moderate ≥ 62 · below that: reach / low match.
 

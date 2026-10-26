@@ -516,6 +516,17 @@ def set_application_status(ws: Path, scholarship_id: str, status: str, notes: Op
     return state
 
 
+def set_study_location(ws: Path, study_location: str) -> CandidateProfile:
+    """Study at home (no travel), abroad, or both. Edits profile/profile.json in place and keeps its other keys."""
+    path = profile_path(ws)
+    with open(path, "r", encoding="utf-8") as f:
+        raw = json.load(f)
+    raw["study_location"] = study_location
+    profile = CandidateProfile(**raw)
+    _write_json(path, raw)
+    return profile
+
+
 def choose_program(ws: Path, program_id: str, remove: bool = False) -> ApplicationState:
     """Add (or remove) a program to its scheme's chosen_programs (e.g. up to 3 Erasmus Mundus masters)."""
     programs = {p.id: p for p in load_programs()}

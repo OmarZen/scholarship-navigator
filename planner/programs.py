@@ -17,7 +17,7 @@ from typing import Dict, Iterable, List, Optional
 from .models import ApplicationState, CandidateProfile, Program, ProgramMatch
 from .deadlines import DeadlineInfo, pattern_date
 from .fields import FIELD_GROUPS, groups_for
-from .regions import in_group, in_list, normalize_country
+from .regions import in_group, in_list, normalize_country, same_country
 from .language import to_ielts
 
 PROGRAMS_DIR = Path(__file__).parent.parent / "data" / "programs"
@@ -119,6 +119,20 @@ def _country_points(profile: CandidateProfile, program: Program) -> tuple:
     return 0.0, []
 
 
+def _location_warning(profile: CandidateProfile, program: Program) -> Optional[str]:
+    """Programs move students between host countries, so they only stay at home when every host is home."""
+    if profile.study_location == "both":
+        return None
+    home = normalize_country(profile.residence)
+    hosts = program.host_countries or [u.country for u in program.universities if u.country]
+    only_home = bool(hosts) and all(same_country(h, home) for h in hosts)
+    if profile.study_location == "home" and not only_home:
+        return f"Taught abroad ({', '.join(hosts) or 'several countries'}); you want to study in {home}."
+    if profile.study_location == "abroad" and only_home:
+        return f"Taught only in {home}, your own country; you want to study abroad."
+    return None
+
+
 def _language_points(profile: CandidateProfile, program: Program) -> tuple:
     ielts = to_ielts(profile.english_test, profile.english_score)
     if program.ielts_min is None:
@@ -165,6 +179,10 @@ def match_program(profile: CandidateProfile, program: Program, today: Optional[d
     if in_list(profile.nationality, nat.exclude_countries):
         eligible = False
         warnings.append(f"{normalize_country(profile.nationality)} citizens are excluded.")
+    location_warning = _location_warning(profile, program)
+    if location_warning:
+        eligible = False
+        warnings.append(location_warning)
 
     label, field_pts, terms = field_relevance(profile, program)
     if label == "strong":

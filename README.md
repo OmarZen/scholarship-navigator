@@ -11,7 +11,7 @@ Eligibility checks · match scores · missing papers · a dated plan · essay dr
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg?logo=python&logoColor=white)](pyproject.toml)
 [![Tests](https://github.com/OmarZen/scholarship-navigator/actions/workflows/tests.yml/badge.svg)](https://github.com/OmarZen/scholarship-navigator/actions/workflows/tests.yml)
 [![MCP ready](https://img.shields.io/badge/MCP-ready-8A2BE2.svg)](#-use-it-with-your-ai-assistant)
-[![Scholarships](https://img.shields.io/badge/scholarships-35-F59E0B.svg)](docs/SCHOLARSHIPS.md)
+[![Scholarships](https://img.shields.io/badge/scholarships-103-F59E0B.svg)](docs/SCHOLARSHIPS.md)
 [![Programs](https://img.shields.io/badge/Erasmus%20Mundus%20%26%20Intra--Africa%20programs-56-F59E0B.svg)](docs/PROGRAMS.md)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
@@ -49,7 +49,8 @@ match, lists exactly which papers you're missing, and builds a plan with real da
 > funded master's in AI or embedded systems in Europe, starting 2027.
 >
 > **Your AI assistant (using Scholarship Navigator):**
-> - ✅ You're eligible for **22 of 35** scholarships. ❌ 13 aren't open to you, and here's why (nationality list, age limit, field).
+> - ✅ You're eligible for **56 of 103** scholarships. ❌ 47 aren't open to you, and here's why (nationality list, age limit, field).
+> - 🏠 7 of them let you study **in Egypt** without travelling (AUC, Zewail City, E-JUST, ASRT...), if you'd rather stay home.
 > - 🥇 **Erasmus Mundus**: fit **98/100**, papers **56%** ready, deadline **15 Jan 2027** (estimated, verify). Start your motivation letter by **9 Dec**.
 > - 🧭 Programs that fit you: **DEAI** (Belgium · Spain · Austria · France · Italy), **EDISS** (Finland · Sweden · Italy · Spain), **EMINENT**. Pick up to 3.
 > - ⏰ **Chevening already closed** on 6 Oct 2026. Next round ≈ Oct 2027.
@@ -98,31 +99,64 @@ Open `output/<your-name>/INDEX.md` and `reports/scholarship_tracker.xlsx`. That'
 
 ## 🤖 Use it with your AI assistant
 
-Scholarship Navigator ships with **7 agent skills**, an **MCP server** with 15 tools, and an `AGENTS.md`, so any
-modern assistant knows how to use it.
+Scholarship Navigator ships with **7 agent skills**, an **MCP server** with 16 tools, and an `AGENTS.md`, so any
+modern assistant knows how to use it. **Step 0** for every tool: install the project (see [Quick start](#-quick-start)).
+Full guide with every menu and config file: **[docs/AI_TOOLS.md](docs/AI_TOOLS.md)**.
 
-| Assistant | Setup |
-|---|---|
-| **Claude Code** | open the folder: skills in `.claude/skills/` and the MCP server in `.mcp.json` load automatically |
-| **Claude Desktop · Cursor · Windsurf** | add the MCP server (below) |
-| **Codex · Gemini CLI · GitHub Copilot** | read `AGENTS.md` automatically |
-| **Antigravity** | skills in `.agent/skills/` |
+| Assistant | Open this folder and it just works | Install the skills for every folder |
+|---|---|---|
+| **Claude Code** | ✅ skills (`.claude/skills/`) + MCP server (`.mcp.json`) | `python scripts/install_skills.py --tool claude` |
+| **Claude app** (claude.ai · Desktop) | – | `--tool claude-app`, then upload the ZIPs in **Customize → Skills** |
+| **OpenAI Codex** | ✅ `AGENTS.md` + `.agents/skills/` | `--tool codex` |
+| **GitHub Copilot** (VS Code · CLI) | ✅ `AGENTS.md` + `.agents/skills/` | `--tool copilot` |
+| **Cursor** | ✅ `AGENTS.md` + `.agents/skills/` | `--tool cursor` |
+| **Gemini CLI** | ✅ `GEMINI.md` + `.agents/skills/` | `--tool gemini` |
+| **Windsurf** | ✅ `.agents/skills/` | `--tool windsurf` |
+| **Google Antigravity** | ✅ `.agents/skills/` | `--tool antigravity` |
 
-```json
-{
-  "mcpServers": {
-    "scholarship-navigator": {
-      "command": "/path/to/scholarship-navigator/.venv/bin/python",
-      "args": ["/path/to/scholarship-navigator/mcp_server.py"]
-    }
-  }
-}
-```
+The install script also prints the **MCP server settings for your tool** with your real paths filled in
+(`python scripts/install_skills.py --tool cursor --mcp-only`).
+
+<details><summary><b>Claude Code: step by step</b></summary>
+
+1. `cd scholarship-navigator && claude`
+2. Approve the `scholarship-navigator` MCP server when asked (`/mcp` shows it). The skills load by themselves.
+3. Ask: *"Help me find a fully funded master's scholarship. Interview me first."*
+4. Want it in every folder? `python scripts/install_skills.py --tool claude`, then
+   `claude mcp add --scope user scholarship-navigator -- /path/to/scholarship-navigator/.venv/bin/python /path/to/scholarship-navigator/mcp_server.py`
+</details>
+
+<details><summary><b>Claude app (claude.ai, Claude Desktop): step by step</b></summary>
+
+1. `python scripts/install_skills.py --tool claude-app` → ZIP files in `dist/claude-skills/`.
+2. In Claude: **Customize → Skills** (older versions: Settings → Capabilities), turn on code execution,
+   **Upload skill**, and upload each ZIP.
+3. Claude Desktop only: Settings → Developer → **Edit Config** and paste the MCP block printed by the script
+   (`--tool claude-app --mcp-only`), then restart Claude Desktop.
+</details>
+
+<details><summary><b>OpenAI Codex (CLI, IDE extension, app): step by step</b></summary>
+
+1. `cd scholarship-navigator && codex`: Codex reads `AGENTS.md` and `.agents/skills/` (type `/skills`, or `$scholarship-finder-planner`).
+2. Every folder: `python scripts/install_skills.py --tool codex` (installs to `~/.agents/skills`).
+3. MCP server: `codex mcp add scholarship-navigator -- /path/to/scholarship-navigator/.venv/bin/python /path/to/scholarship-navigator/mcp_server.py`
+</details>
+
+<details><summary><b>GitHub Copilot, Cursor, Gemini CLI, Windsurf, Antigravity: step by step</b></summary>
+
+1. Open the folder in the tool (VS Code: switch Copilot Chat to **Agent** mode). The skills in `.agents/skills/`
+   load automatically.
+2. Every folder: `python scripts/install_skills.py --tool copilot` (or `cursor`, `gemini`, `windsurf`, `antigravity`).
+3. MCP server: run the same command with `--mcp-only` and paste the block it prints into the file it names
+   (`.vscode/mcp.json`, `~/.cursor/mcp.json`, `~/.gemini/settings.json`, `~/.codeium/windsurf/mcp_config.json`,
+   `~/.gemini/config/mcp_config.json`).
+</details>
 
 Then just ask, in any language:
 
 ```text
 "Help me find a fully funded master's scholarship. Interview me first."
+"I can't travel abroad. Which scholarships let me study in Egypt?"
 "Which Erasmus Mundus programs fit a civil engineer who wants Spain or Portugal?"
 "What should I do this week for my applications?"
 "Write my Chevening leadership essay from my story bank."
@@ -145,7 +179,8 @@ Then just ask, in any language:
 
 | | |
 |---|---|
-| ✅ **Eligibility engine** | nationality (official lists, OECD DAC list), residence, age, degree level, degree recency, work experience, restricted fields, return-home obligations, teaching language. Missing info → *Needs Check* with the exact fix. |
+| ✅ **Eligibility engine** | nationality (official lists, OECD DAC list), residence, age, degree level (Diploma to Postdoc), degree recency, work experience, restricted fields, return-home obligations, teaching language, awards reserved for women. Missing info → *Needs Check* with the exact fix. |
+| 🏠 **Study at home or abroad** | can't travel, or your family prefers you study locally? Choose `home` and you only get awards that fund study **in your own country** (domestic and in-country scholarships). Choose `abroad`, or `both` (the default). |
 | 📊 **Fit score 0-100** | academic record vs each scholarship's minimum *and* competitive level, language (TOEFL / Duolingo / PTE converted), experience, field, leadership, research, your preferences. Every point is explained. |
 | 📄 **Missing papers** | what you have, what's missing, how long each paper takes, when to start, and expiry checks (e.g. an IELTS that expires before the deadline). |
 | 🗓️ **Dated action plan** | scheduled backwards from deadlines; shared papers become one task; overdue items flagged. |
@@ -202,12 +237,22 @@ Full details: [scoring reference](skills/scholarship-finder-planner/references/s
 
 ## 📚 What's covered
 
-**35 scholarships** in 28 countries plus multi-country schemes ([full table](docs/SCHOLARSHIPS.md)):
-Chevening · Gates Cambridge · Rhodes · Erasmus Mundus · DAAD EPOS · DAAD Helmut-Schmidt · Eiffel ·
-Stipendium Hungaricum · Swedish Institute · Danish Government · Finland · Italy MAECI & DSU · Ireland GOI-IES ·
-NL Scholarship · VLIR-UOS · Master Mind · Ernst Mach · Czech Government · NAWA Banach · Fundación Carolina ·
-Swiss Excellence · Fulbright · Vanier · Australia Awards · Manaaki NZ · MEXT · GKS · CSC · Taiwan ICDF ·
-Türkiye Burslari · MBZUAI · KAUST · SINGA · Mastercard Foundation · Intra-Africa Mobility.
+**103 scholarships** from **Diploma to PhD** ([full table](docs/SCHOLARSHIPS.md)), including:
+
+- **Study abroad:** Chevening · Commonwealth · Gates Cambridge · Clarendon · Rhodes · Knight-Hennessy · Fulbright ·
+  Erasmus Mundus · DAAD (EPOS, Helmut-Schmidt, doctoral) · Heinrich Böll · Deutschlandstipendium · Eiffel ·
+  Stipendium Hungaricum · Swedish Institute · Romania · Russia · Schwarzman · Yenching · MEXT · GKS · CSC ·
+  Türkiye Burslari · KAUST · MBZUAI · HBKU · Khalifa · ICCR India · KNB Indonesia · Malaysia · Brunei · ADB-Japan ·
+  JJ/WBGSP · JISP · Mexico AMEXCID · Australia Awards · Manaaki NZ, and more.
+- **Study in your own country (no travel):** 🇪🇬 منحة علماء المستقبل (Future Scholars) · Zewail City · AUC · Nile
+  University · Sawiris · E-JUST · ASRT · ITI · DEPI · 🇹🇷 TÜBİTAK 2210/2211 · 🇮🇩 LPDP · 🇲🇽 SECIHTI · 🇳🇬 PTDF ·
+  DAAD In-Country/In-Region (Africa) · Pan African University · AIMS.
+- **Diploma level:** MEXT College of Technology / Specialized Training College · GKS Associate · ICTP
+  Postgraduate Diploma · ITI 9-month program · Brunei · AMCI Morocco.
+- **For women:** AAUW International Fellowships · IAEA Marie Skłodowska-Curie Fellowship · British Council Women
+  in STEM.
+- **National programs to go abroad:** Egyptian missions · Bolashak · Becas Chile · Saudi Custodian · PTDF
+  Overseas · Onsi Sawiris (Amideast).
 
 **56 programs** taught in **37 host countries** ([full table](docs/PROGRAMS.md)): Erasmus Mundus Joint Masters in
 engineering, energy, AI & data, cybersecurity, robotics, photonics, quantum, materials, nuclear, agriculture,
@@ -241,6 +286,7 @@ output/<your-name>/
 | Command | Purpose |
 |---|---|
 | `assess` · `init --profile F` · `build` | create or refresh your workspace |
+| `location home` · `location abroad` · `location both` | where you will study: your own country (no travel), abroad, or either |
 | `match [--details N] [--json]` | eligibility, fit breakdown and readiness for every scholarship |
 | `programs [--field robotics] [--country Spain,France] [--choose ID]` | Erasmus Mundus / Intra-Africa program finder |
 | `gaps` · `docs list` · `docs set <paper> --status have` | missing papers; record what you have |
@@ -249,7 +295,8 @@ output/<your-name>/
 | `sync` | import edits you made in the Excel tracker |
 | `plan` · `html-report` · `calendar` · `portfolio` | individual reports |
 | `review-essay` · `email-professor` · `draft-lor --brag-sheet` · `fee-waivers --email` | writing helpers |
-| `finance` · `credentials` · `interview` · `visa-guide` · `countries` · `list` | guides and calculators |
+| `list [--degree Diploma] [--nationality Egypt --location home]` | browse the database: by degree, who can apply, study at home or abroad |
+| `finance` · `credentials` · `interview` · `visa-guide` · `countries` | guides and calculators |
 | `validate` · `export-schema` · `new-scholarship` | data maintenance |
 | `scrape` · `discover` · `verify` | live web checks (`pip install -e ".[scrape]"`) |
 
@@ -265,7 +312,8 @@ commands accept `--json`.
 - [x] Eligibility engine, fit scores, readiness, dated plans
 - [x] Erasmus Mundus & Intra-Africa program finder
 - [x] Agent skills, MCP server, `AGENTS.md`
-- [ ] More scholarships: Asia-Pacific, US and Canadian university fellowships, foundation awards
+- [x] Study at home or abroad, Diploma level, awards for women, 103 scholarships
+- [ ] More scholarships: national programs for more countries, US and Canadian university fellowships
 - [ ] Funded PhD positions finder
 - [ ] Automatic deadline monitoring (alert when an official page changes)
 - [ ] Web app for people without an AI assistant
@@ -293,10 +341,20 @@ automatically → it is labelled by area → a maintainer reviews it (every pull
 
 ### 💛 Contributors
 
-Every merged pull request puts your profile here.
+Every merged pull request puts your GitHub account here. The table is refreshed automatically after each merge
+(`scripts/update_contributors.py`); the picture below updates by itself.
+
+<!-- CONTRIBUTORS:START -->
+<table>
+  <tr>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/OmarZen"><img src="https://avatars.githubusercontent.com/u/93471291?v=4&s=100" width="80" alt="@OmarZen" /><br /><sub><b>@OmarZen</b></sub></a><br /><sub>2 commits</sub></td>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/hansi2007"><img src="https://avatars.githubusercontent.com/u/194238768?v=4&s=100" width="80" alt="@hansi2007" /><br /><sub><b>@hansi2007</b></sub></a><br /><sub>1 commit</sub></td>
+  </tr>
+</table>
+<!-- CONTRIBUTORS:END -->
 
 <a href="https://github.com/OmarZen/scholarship-navigator/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=OmarZen/scholarship-navigator" alt="Contributors to Scholarship Navigator" />
+  <img src="https://contrib.rocks/image?repo=OmarZen/scholarship-navigator&max=100&columns=12" alt="Contributors to Scholarship Navigator" />
 </a>
 
 ---
@@ -305,6 +363,13 @@ Every merged pull request puts your profile here.
 
 <details><summary><b>Is it free?</b></summary>
 Yes. MIT-licensed, no accounts, no ads, no paid tier.
+</details>
+
+<details><summary><b>I can't travel. Can it find scholarships in my own country?</b></summary>
+Yes. Set <code>"study_location": "home"</code> in your profile (or run <code>cli.py location home</code>, or just tell
+your AI assistant). You then only see awards that fund study in your own country, such as national postgraduate
+scholarships and in-country programs, and every other award says why it doesn't fit. <code>both</code> shows home and
+abroad together. Browse without a profile: <code>cli.py list --nationality Egypt --location home</code>.
 </details>
 
 <details><summary><b>Does it apply for me?</b></summary>
@@ -345,6 +410,8 @@ everything.
 - 📄 بتقولك الورق الناقص، وتبدأ تجهز كل ورقة امتى.
 - 🗓️ بتعملك خطة بمواعيد حقيقية، محسوبة من آخر ميعاد لكل منحة.
 - 🧭 بتختارلك برامج إيراسموس موندوس المناسبة لتخصصك والدول اللي بتحبها.
+- 🏠 مش هتقدر تسافر؟ اختار «الدراسة في بلدك» وهتطلعلك بس المنح اللي بتمول الدراسة جوه بلدك، أو اختار «الاتنين» عشان تشوف منح الداخل والخارج مع بعض.
+- 🎓 بتغطي دبلومة وبكالوريوس وماجستير ودكتوراه، ومنح مخصصة للبنات.
 - 📁 بتعملك مجلد لكل منحة، فيه مسودات المقالات وخطابات النية وملف Excel ونتيجة تقويم.
 
 تقدر تستخدمها مع Claude أو Cursor أو أي مساعد ذكاء اصطناعي، وتكلمه بالعربي عادي.
@@ -366,8 +433,14 @@ If it helped you (or could help someone you know):
 - **share it** in your university, student and scholarship groups;
 - **add one scholarship** from your country.
 
-<a href="https://star-history.com/#OmarZen/scholarship-navigator&Date">
-  <img src="https://api.star-history.com/svg?repos=OmarZen/scholarship-navigator&type=Date" alt="Star history" width="600" />
+### Star history
+
+<a href="https://www.star-history.com/#omarzen/scholarship-navigator&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=omarzen/scholarship-navigator&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=omarzen/scholarship-navigator&type=Date" />
+    <img alt="Star history of Scholarship Navigator" src="https://api.star-history.com/svg?repos=omarzen/scholarship-navigator&type=Date" width="600" />
+  </picture>
 </a>
 
 ## License

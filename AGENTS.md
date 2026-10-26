@@ -5,14 +5,16 @@ working in this repository.
 
 ## What this repository is
 
-An open-source scholarship navigator. Given a person's profile it checks eligibility for 35 major scholarships and
-individual Erasmus Mundus / Intra-Africa programs, scores fit (0-100), measures readiness from the papers they hold,
+An open-source scholarship navigator. Given a person's profile it checks eligibility for 103 scholarships (Diploma
+to PhD; abroad or in the person's own country, see `study_location`) and individual Erasmus Mundus / Intra-Africa
+programs, scores fit (0-100), measures readiness from the papers they hold,
 plans every task backwards from real deadlines, and writes a personal workspace (`output/<name>/`) with one folder
 per scholarship, drafts, an Excel tracker, an HTML report and a calendar.
 
 ## If you are helping someone find scholarships
 
-Use the skills in `skills/` (mirrored in `.claude/skills/` and `.agent/skills/`). Start with
+Use the skills in `skills/` (mirrored in `.claude/skills/` and `.agents/skills/`; setup per assistant in
+`docs/AI_TOOLS.md`). Start with
 `skills/scholarship-finder-planner/SKILL.md`; it routes to:
 
 | Skill | For |
@@ -29,7 +31,8 @@ server (`mcp_server.py`, configured in `.mcp.json`).
 
 Rules: read the person's `output/<name>/AGENTS.md`, `INDEX.md` and `PROFILE.md` before answering; store facts in the
 JSON sources of truth, never in generated files; never invent grades, achievements or eligibility; treat `(est.)`
-deadlines as unverified; answer in the person's language.
+deadlines as unverified; answer in the person's language; ask whether they can travel (`study_location`: home,
+abroad or both) and never push someone to study abroad.
 
 ## If you are changing the code or data
 

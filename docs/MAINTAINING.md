@@ -67,7 +67,22 @@ python scripts/build_catalog_docs.py && .venv/bin/python scripts/make_readme_ass
 ```
 Open a "good first issue" for each batch of unverified records: they are the best entry point for new contributors.
 
-## 6. Releases
+## 6. Contributors list in the README
+
+The avatar picture (contrib.rocks) updates by itself. The table of accounts between `<!-- CONTRIBUTORS:START -->`
+and `<!-- CONTRIBUTORS:END -->` is rebuilt by `scripts/update_contributors.py`, which the `update contributors`
+workflow runs after every merge and weekly. Because `main` is protected, the workflow opens a pull request
+(`bot/update-contributors`) instead of pushing:
+
+- one-time setting so it can open that pull request: **Settings → Actions → General → Workflow permissions →
+  Allow GitHub Actions to create and approve pull requests**;
+- pull requests opened by the workflow token don't trigger CI, so merge them with your admin bypass (the change
+  only touches the README table).
+
+Without the setting, the workflow still pushes the branch and leaves a warning; you can also run the script
+yourself (`GITHUB_TOKEN=$(gh auth token) python scripts/update_contributors.py`) in any pull request.
+
+## 7. Releases
 
 1. Update `CHANGELOG.md` and the version in `pyproject.toml` (in a PR).
 2. After merging: `gh release create v2.1.0 --generate-notes`.

@@ -20,11 +20,13 @@ Goal: a complete `profile.json` (schema: `schemas/candidate_profile.schema.json`
 
 ## Ask in small groups (3-5 questions at a time), in the user's language
 
-1. **Identity**: full name · nationality (citizenship) · country of residence · date of birth (age limits matter).
+1. **Identity**: full name · nationality (citizenship) · country of residence · date of birth (age limits matter) ·
+   gender only if they are happy to share it (it is used only for awards reserved for women).
 2. **Education**: highest degree and university · graduation year · GPA **and its scale** (e.g. 3.4/4, 82/100,
    "Very good") · class rank if known · thesis/project title.
-3. **Target**: degree (Bachelor / Master / PhD / Postdoc) · field + 3-5 keywords (e.g. "embedded systems, machine
-   learning") · target countries or worldwide · intake year · funding needed (Full / Partial / Any).
+3. **Target**: degree (Diploma / Bachelor / Master / PhD / Postdoc) · field + 3-5 keywords (e.g. "embedded systems,
+   machine learning") · **can they travel?** study in their own country only, abroad only, or both · target
+   countries or worldwide · intake year · funding needed (Full / Partial / Any).
 4. **Languages**: English test, overall score, test date, lowest band · other languages with CEFR level.
 5. **Experience**: years of full-time work after graduating · still employed? · job title / employer ·
    publications.
@@ -38,6 +40,11 @@ Goal: a complete `profile.json` (schema: `schemas/candidate_profile.schema.json`
 - GPA: keep the original number and scale (`gpa`, `gpa_scale`); the tool normalizes. For letter grades, ask for
   the numeric equivalent on the transcript.
 - Work experience: count full-time months after the first degree, as years (e.g. 2.5).
+- Where to study → `study_location`: `"home"` if they cannot or will not leave the country they live in (for
+  example family reasons), `"abroad"` if they only want to go abroad, `"both"` (default) otherwise. With `"home"`,
+  leave `target_countries` empty. Ask this gently and never push someone to travel.
+- `gender`: `"female"`, `"male"` or `"other"`; leave it out if they prefer not to say (women-only awards then show
+  as Needs Check).
 - Papers go in `"documents": [{"doc_id": "passport", "status": "have", "expires": "2030-05-01"}, ...]` using ids from
   `data/document_catalog.json` (`cli.py docs list` after the first build). Recommendation letters use
   `"count_ready"`.

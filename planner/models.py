@@ -7,8 +7,12 @@ from datetime import date
 from typing import List, Optional, Dict, Any, Literal
 from pydantic import BaseModel, Field, model_validator
 
-DegreeLevel = Literal["Bachelor", "Master", "PhD", "Postdoc"]
+DegreeLevel = Literal["Diploma", "Bachelor", "Master", "PhD", "Postdoc"]
 FundingPreference = Literal["Full", "Partial", "Any"]
+StudyLocation = Literal["home", "abroad", "both"]
+# Scholarship funding_type "Any" = mixed awards (e.g. 25-100% by merit), shown as "Full or partial".
+FUNDING_LABEL = {"Full": "Full", "Partial": "Partial", "Any": "Full or partial"}
+STUDY_LOCATION_LABEL = {"home": "Home country only (no travel)", "abroad": "Abroad only", "both": "Home country or abroad"}
 MatchStatus = Literal["High Match", "Moderate Match", "Reach / Low Match", "Ineligible"]
 EligibilityStatus = Literal["Eligible", "Needs Check", "Ineligible"]
 CheckResult = Literal["pass", "fail", "unknown", "warn"]
@@ -39,7 +43,7 @@ class CandidateProfile(BaseModel):
     full_name: str = Field(..., description="Candidate's full name")
     nationality: str = Field(..., description="Candidate's country of citizenship")
     current_degree: str = Field(..., description="Current educational attainment (e.g. High School, Bachelor's, Master's)")
-    target_degree: DegreeLevel = Field(..., description="Target degree level sought (Bachelor, Master, PhD, Postdoc)")
+    target_degree: DegreeLevel = Field(..., description="Target degree level sought (Diploma, Bachelor, Master, PhD, Postdoc)")
     field_of_study: str = Field(..., description="Field of study or prospective major (e.g., Computer Science, Economics)")
     gpa: float = Field(..., description="Grade point average (0.0 to 4.0 scale or converted)")
     gpa_scale: float = Field(default=4.0, description="Original GPA scale (e.g. 4.0, 5.0, 100%)")
@@ -49,12 +53,18 @@ class CandidateProfile(BaseModel):
     research_publications: int = Field(default=0, description="Number of peer-reviewed publications or preprints")
     target_funding: FundingPreference = Field(default="Full", description="Target funding level: Full, Partial, or Any")
     target_countries: List[str] = Field(default_factory=list, description="Target countries or empty list for worldwide")
+    study_location: StudyLocation = Field(
+        default="both",
+        description="Where the candidate will study: 'home' (own country, no travel), 'abroad', or 'both'",
+    )
     target_intake_year: int = Field(default=2027, description="Target intake year (e.g., 2026, 2027)")
     budget_for_applications: str = Field(default="Moderate", description="Application fee budget: Zero, Moderate, Flexible")
     has_leadership_experience: bool = Field(default=True, description="Whether candidate has extracurricular/community leadership")
 
     # Personal details used by eligibility gates
     date_of_birth: Optional[date] = Field(default=None, description="Date of birth (YYYY-MM-DD) for age limits")
+    gender: Optional[Literal["female", "male", "other"]] = Field(
+        default=None, description="Only used for awards reserved for women or men")
     country_of_residence: Optional[str] = Field(default=None, description="Where the candidate lives now (defaults to nationality)")
     email: Optional[str] = Field(default=None, description="Contact email used in drafts")
     phone: Optional[str] = Field(default=None, description="Contact phone used in drafts")
@@ -211,6 +221,7 @@ class EligibilityRules(BaseModel):
     nationality: NationalityRule = Field(default_factory=NationalityRule)
     residence: Optional[str] = Field(default=None, description="'home_country' or a region id such as 'africa'")
     residence_strict: bool = False
+    gender: Optional[Literal["female", "male"]] = Field(default=None, description="Award reserved for women or men")
     gpa_min: Optional[float] = None
     gpa_competitive: Optional[float] = None
     language: LanguageRule = Field(default_factory=LanguageRule)
@@ -283,6 +294,11 @@ class Scholarship(BaseModel):
     strategic_tips: str
     host_countries: List[str] = Field(default_factory=list)
     host_regions: List[str] = Field(default_factory=list)
+    study_location: Optional[StudyLocation] = Field(
+        default=None,
+        description="Where scholars study relative to their own country: 'home' (in-country or online from home), "
+                    "'abroad' (mobility required) or 'both'. Empty = derived from host_countries / host_regions.",
+    )
     tier: Tier = "Target"
     program_status: Literal["active", "discontinued", "changed", "unknown"] = "active"
     program_status_note: Optional[str] = None
@@ -459,6 +475,8 @@ class MatchResult(BaseModel):
     readiness: Optional[ReadinessReport] = None
     priority_score: float = 0.0
     tier: Tier = "Target"
+    study_at_home: Optional[bool] = Field(default=None, description="Can study in the candidate's own country (None = maybe)")
+    study_abroad: bool = True
     reasons_eligible: List[str] = Field(default_factory=list)
     gaps_and_warnings: List[str] = Field(default_factory=list)
     strategic_recommendations: List[str] = Field(default_factory=list)

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "scholarship-navigator"
-version = "2.0.0"
+version = "2.1.0"
 description = "Open-source scholarship finder for people and AI agents: eligibility, fit scores, missing papers, dated plans, Erasmus Mundus program finder, MCP server."
 readme = "README.md"
 license = "MIT"

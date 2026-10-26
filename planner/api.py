@@ -13,7 +13,9 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from .models import CandidateProfile, MatchResult, ProgramMatch
-from .matcher import load_scholarships, match_profile_all
+from .matcher import (load_scholarships, match_profile_all, nationality_open, study_options, where_you_study,
+                      location_label)
+from .regions import normalize_country
 from .documents import derive_inventory, inventory_from_dicts, load_catalog, load_categories
 from .programs import load_programs, rank_programs
 from .roadmap import select_shortlist, build_action_plan
@@ -55,6 +57,7 @@ def match_to_dict(m: MatchResult, detail: bool = True) -> Dict[str, Any]:
     s, r = m.scholarship, m.readiness
     out: Dict[str, Any] = {
         "id": s.id, "name": s.name, "country": s.country, "funding": s.funding_type, "tier": m.tier,
+        "study_location": location_label(m.study_at_home, m.study_abroad), "where_you_study": where_you_study(s),
         "eligibility": m.eligibility_status, "match_status": m.match_status, "fit": m.fit_score,
         "readiness_percent": m.readiness_percent, "priority": m.priority_score,
         "deadline": r.deadline.isoformat() if r and r.deadline else None,
@@ -104,19 +107,40 @@ def _action_to_dict(a: Dict[str, Any]) -> Dict[str, Any]:
 # ---------------------------------------------------------------------------
 
 def list_scholarships(degree: Optional[str] = None, country: Optional[str] = None,
-                      funding: Optional[str] = None) -> List[Dict[str, Any]]:
+                      funding: Optional[str] = None, nationality: Optional[str] = None,
+                      study_location: Optional[str] = None) -> List[Dict[str, Any]]:
+    """Catalog filter. `nationality` keeps awards open to that citizenship; `study_location` (home | abroad | both)
+    is relative to the nationality's country, e.g. nationality=Egypt, study_location=home → study in Egypt."""
+    if study_location and study_location not in ("home", "abroad", "both"):
+        raise ValueError("study_location must be home, abroad or both")
+    if study_location in ("home", "abroad") and not nationality:
+        raise ValueError("study_location needs nationality (the country you live in)")
+    home = normalize_country(nationality) if nationality else ""
     out = []
     for s in load_scholarships():
-        if degree and degree not in s.degrees:
+        if not _catalog_filter(s, degree, country, funding, nationality):
             continue
-        if country and country.lower() not in (s.country + " " + " ".join(s.host_countries)).lower():
-            continue
-        if funding and funding.lower() != s.funding_type.lower():
+        at_home, abroad = study_options(s, home)
+        if (study_location == "home" and at_home is False) or (study_location == "abroad" and not abroad):
             continue
         out.append({"id": s.id, "name": s.name, "country": s.country, "degrees": s.degrees, "funding": s.funding_type,
+                    "where_you_study": where_you_study(s),
+                    "study_location": location_label(at_home, abroad) if nationality else s.study_location,
+                    "women_only": s.rules.gender == "female",
                     "tier": s.tier, "program_status": s.program_status, "typical_deadline": s.timeline.typical_deadline,
                     "portal": s.official_portal})
     return out
+
+
+def _catalog_filter(s, degree: Optional[str], country: Optional[str], funding: Optional[str],
+                    nationality: Optional[str]) -> bool:
+    if degree and degree not in s.degrees:
+        return False
+    if country and country.lower() not in (s.country + " " + " ".join(s.host_countries)).lower():
+        return False
+    if funding and s.funding_type not in (funding.title(), "Any"):
+        return False
+    return not (nationality and nationality_open(nationality, s) is False)
 
 
 def get_scholarship(scholarship_id: str) -> Dict[str, Any]:
@@ -239,6 +263,12 @@ def set_application_status(scholarship_id: str, status: str, workspace: Optional
         raise ValueError(f"status must be one of {APPLICATION_STATUSES}")
     ws = _resolve_ws(workspace)
     wsp.set_application_status(ws, scholarship_id, status, notes)
+    return _summary(wsp.build_workspace(ws))
+
+
+def set_study_location(study_location: str, workspace: Optional[str] = None) -> Dict[str, Any]:
+    ws = _resolve_ws(workspace)
+    wsp.set_study_location(ws, study_location)
     return _summary(wsp.build_workspace(ws))
 
 

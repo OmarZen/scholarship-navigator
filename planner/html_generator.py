@@ -10,7 +10,8 @@ from html import escape
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from .models import CandidateProfile, MatchResult
+from .models import CandidateProfile, MatchResult, STUDY_LOCATION_LABEL, FUNDING_LABEL
+from .matcher import location_label
 from .documents import DocumentInventory
 from .roadmap import select_shortlist, build_action_plan, PHASES
 
@@ -63,7 +64,7 @@ def _card(m: MatchResult, rank: Optional[int]) -> str:
   <div class="s-top">
     <div>
       <div class="s-title">{f'<span class="rank">#{rank}</span> ' if rank else ''}{_e(s.name)}</div>
-      <div class="s-sub">{_e(s.country)} · {_e(', '.join(s.degrees))} · {_e(s.funding_type)} funding · {_e(m.tier)}</div>
+      <div class="s-sub">{_e(s.country)} · {_e(location_label(m.study_at_home, m.study_abroad))} · {_e(', '.join(s.degrees))} · {_e(FUNDING_LABEL[s.funding_type])} funding · {_e(m.tier)}</div>
     </div>
     <div class="badges"><span class="badge {elig_cls}">{_e(m.eligibility_status)}</span>
       <span class="badge tl">{_e(tl)}</span></div>
@@ -224,6 +225,7 @@ def generate_html_report(profile: CandidateProfile, matches: List[MatchResult], 
       <div><span>English</span>{_e(profile.english_test or 'none')} {_e(profile.english_score if profile.english_score is not None else '')}</div>
       <div><span>Work</span>{profile.work_experience_years:g} years</div>
       <div><span>Target countries</span>{_e(', '.join(profile.target_countries) or 'Worldwide')}</div>
+      <div><span>Where to study</span>{_e(STUDY_LOCATION_LABEL[profile.study_location])}</div>
       <div><span>Funding</span>{_e(profile.target_funding)}</div></div></div>
     <div class="card"><h2>📊 Overview</h2><div class="kpis">{kpi_html}</div>
       <p class="note" style="margin-top:10px">Fit = how well you match (0-100). Ready = share of required papers you already have. Deadlines marked (est.) are estimates: verify them.</p></div>

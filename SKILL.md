@@ -3,9 +3,10 @@ name: scholarship-finder-planner
 description: >-
   Main entry point for finding and planning scholarships. Use whenever someone asks which scholarships they can get,
   whether they are eligible, how well they match (score), which papers they are missing, what to prepare and by when,
-  or wants a tracker, plan, calendar or report. Covers 35 major awards (Chevening, Erasmus Mundus, DAAD, Stipendium
-  Hungaricum, Swedish Institute, Fulbright, MEXT, GKS, CSC, Türkiye Burslari, MBZUAI, KAUST, Australia Awards, Gates,
-  Eiffel...) and individual Erasmus Mundus / Intra-Africa programs. Builds a personal workspace folder with one
+  or wants a tracker, plan, calendar or report. Covers 103 awards from Diploma to PhD (Chevening, Erasmus Mundus,
+  DAAD, Stipendium Hungaricum, Fulbright, MEXT, GKS, CSC, Türkiye Burslari, KAUST, Commonwealth...), scholarships to
+  study in your own country without travelling (Egypt, Turkey, Indonesia, Mexico, Nigeria, Africa in-country...),
+  awards for women, and individual Erasmus Mundus / Intra-Africa programs. Builds a personal workspace folder with one
   sub-folder per scholarship. Routes to the intake, program-finder, essay-writer, deadline-verifier, progress-coach
   and data-maintainer skills.
 ---
@@ -59,6 +60,8 @@ If this skill is installed outside the repository, set `SCHOLARSHIP_HOME` to the
    awards are not eligible, and programs that fit. Explain eligibility → fit → readiness → timeline
    (see `skills/scholarship-finder-planner/references/scoring.md`).
 3. **Close Needs Check gaps**: each one has a fix (e.g. add `date_of_birth`). Update the JSON, `cli.py build`.
+   If the person cannot travel, run `cli.py location home` (MCP: `set_study_location`): only awards that fund study
+   in their own country stay eligible; `both` shows home and abroad together.
 4. **Papers**: `cli.py gaps`, then `cli.py docs set <id> --status have --file profile/<category>/<file>.pdf`.
 5. **Drafts**: hand over to `scholarship-essay-writer`.
 6. **Deliver**: `reports/scholarship_tracker.xlsx` (live readiness), `reports/scholarship_report.html`,

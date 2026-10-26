@@ -23,10 +23,16 @@ eligibility you could not confirm.
      or `regions` from `data/regions.json`), `gpa_min` / `gpa_competitive` on a 4.0 scale, `language.ielts_min`,
      `age_under` per degree ("under 35" → 35), `work_experience_years`, `field` (`any` / `priority` / `restricted`
      with groups: computing, engineering, natural_sciences, health, agriculture, environment, economics_business,
-     social_sciences, humanities), `return_obligation_years`;
+     social_sciences, humanities), `return_obligation_years`, `gender: "female"` for awards reserved for women;
    - `documents`: one entry per required paper, `doc` = id from `data/document_catalog.json`, `label` = the program's
      own wording, plus `count`, `words`, `items` (essay prompts), `degrees`, `stage: later`, `optional`,
      `alternatives`, `requires` (certified, translated, apostille, signed, template);
+   - where scholars study: `host_countries` / `host_regions`, and `study_location` only when those lists can't say
+     it: `"home"` (in-country or online from home), `"both"` (your own country or abroad, e.g. LPDP), `"abroad"`
+     (mobility required, e.g. Erasmus Mundus, Intra-Africa). Leave it out for single-country awards: a host country
+     whose citizens may apply is automatically "home" for them (KAUST for Saudis);
+   - `degrees` from Diploma, Bachelor, Master, PhD, Postdoc (Diploma = technical/vocational or postgraduate diplomas);
+     `funding_type` Full, Partial, or Any (the scheme gives full or partial awards, e.g. 25-100% by merit);
    - `timeline.deadline`: `month`, `day`, `years_before_intake` (1 when the deadline falls the year before an autumn
      intake), `precision`, `label`, `source`, `verified_on`, `known_dates {"2027": "YYYY-MM-DD"}`.
 3. `cli.py validate --file data/custom/drafts/<id>.json --warnings` until there are no errors.
