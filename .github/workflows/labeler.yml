@@ -13,6 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Safe with pull_request_target: this job never checks out or runs the pull request's code.
-      - uses: actions/labeler@v5
+      - uses: actions/labeler@v7
         with:
           sync-labels: true
