@@ -3,6 +3,17 @@
 All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Fixed
+- **Erasmus Mundus application limit.** The tool, skills and docs said candidates may apply to at most 3 Erasmus
+  Mundus programs per year. That cap belonged to the old EMJMD rules and was dropped from the 2019 project generation;
+  the Erasmus Mundus Joint Masters section of the current Erasmus+ Programme Guide sets no limit on the number of
+  applications (its rule is that a student who already received an EMJM scholarship cannot get another one).
+  `cli.py programs --choose` no longer warns after a 3rd choice, and the CLI help, MCP tool description, workspace
+  briefs, HTML/Excel reports, `docs/PROGRAMS.md`, README, skills and the `erasmus-mundus` tip now say there is no
+  EU limit but each application needs its own tailored letter.
+
 ## [2.1.0] - 2026-10-26
 
 ### Added

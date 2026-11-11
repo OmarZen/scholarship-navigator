@@ -212,7 +212,7 @@ def _how_to_use(wb: openpyxl.Workbook, profile: CandidateProfile, today: date) -
     row += 1
     _cell(ws, row, 1, "Sheets", F_BOLD, "ice")
     ws.merge_cells(start_row=row, start_column=2, end_row=row, end_column=4)
-    _cell(ws, row, 2, "Dashboard → Ranked Matches → one sheet per shortlisted scholarship → Requirements → My Documents → Action Plan → Timeline → Programs (Erasmus Mundus masters etc.: mark up to 3 as Chosen) → All Scholarships → Country Guides.")
+    _cell(ws, row, 2, "Dashboard → Ranked Matches → one sheet per shortlisted scholarship → Requirements → My Documents → Action Plan → Timeline → Programs (Erasmus Mundus masters etc.: mark the ones you apply to as Chosen) → All Scholarships → Country Guides.")
     _widths(ws, {"A": 22, "B": 40, "C": 40, "D": 40})
 
 

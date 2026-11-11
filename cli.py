@@ -620,8 +620,6 @@ def cmd_programs(args):
             state = wsp.choose_program(ws, pid, remove=bool(args.unchoose))
         except ValueError as e:
             _fail(str(e))
-        if state.scholarship_id == "erasmus-mundus" and len(state.chosen_programs) > 3:
-            console.print("[yellow]Erasmus Mundus allows at most 3 applications per year: un-choose one.[/yellow]")
         console.print(f"[green]Chosen for {state.scholarship_id}:[/green] {', '.join(state.chosen_programs) or 'none'}")
         _build_and_report(ws)
         return
@@ -647,7 +645,7 @@ def cmd_programs(args):
         t.add_row(p.id, f"[bold]{p.acronym}[/bold] {p.name}", f"{pm.score:.0f}", pm.field_match,
                   ", ".join(p.host_countries), deadline, p.status.replace("_", " ") + ("" if pm.eligible else " · not eligible"))
     console.print(t)
-    console.print("[dim]Choose up to 3 Erasmus Mundus programs: cli.py programs --choose <id> · details: --json[/dim]")
+    console.print("[dim]Choose the Erasmus Mundus programs you will apply to: cli.py programs --choose <id> · details: --json[/dim]")
 
 
 # ---------------------------------------------------------------------------
@@ -828,7 +826,7 @@ def main():
     p.add_argument("--out", default=str(wsp.DEFAULT_ROOT))
 
     # Programs & data maintenance
-    p = sub.add_parser("programs", help="Find Erasmus Mundus masters / Intra-Africa programs; choose up to 3")
+    p = sub.add_parser("programs", help="Find Erasmus Mundus masters / Intra-Africa programs; choose the ones you apply to")
     _profile_args(p)
     p.add_argument("--field", help="Filter by field text, e.g. robotics, data, energy")
     p.add_argument("--country", help="Host countries, comma-separated, e.g. Germany,France")

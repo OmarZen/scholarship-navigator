@@ -132,7 +132,7 @@ def set_study_location(study_location: str, workspace: Optional[str] = None) -> 
 
 @mcp.tool()
 def choose_program(program_id: str, workspace: Optional[str] = None, remove: bool = False) -> Dict[str, Any]:
-    """Choose (or un-choose) a program, e.g. one of up to 3 Erasmus Mundus masters. Creates a tailored
+    """Choose (or un-choose) a program, e.g. an Erasmus Mundus master the candidate applies to. Creates a tailored
     motivation-letter draft and makes the scheme's deadline follow the chosen programs."""
     return api.choose_program(program_id, workspace, remove)
 

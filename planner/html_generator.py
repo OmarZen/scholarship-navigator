@@ -250,7 +250,7 @@ def generate_html_report(profile: CandidateProfile, matches: List[MatchResult], 
     <div class="card" style="margin-top:14px"><h2>Why not eligible</h2><div class="table-wrap"><table><tr><th>Scholarship</th><th>Reason</th></tr>{inel_rows}</table></div></div>
   </section>
   <section id="pane-programs" class="pane"><div class="card"><h2>Programs inside scholarship schemes (Erasmus Mundus masters, Intra-Africa projects)</h2>
-    <p class="note">Score = field match 50 + host country 20 + language 15 + funding status 15. You can apply to up to 3 Erasmus Mundus programs per year.</p>
+    <p class="note">Score = field match 50 + host country 20 + language 15 + funding status 15. There is no EU limit on how many Erasmus Mundus programs you apply to; apply where you fit best.</p>
     <div class="search"><input id="pq" type="search" placeholder="Filter by field, country or name (e.g. robotics, Germany)"></div>
     <div class="table-wrap"><table><tr><th>Program</th><th>Score</th><th>Field</th><th>Where you study</th><th>Deadline</th><th>Status</th><th>Link</th></tr>{program_rows}</table></div></div></section>
   <section id="pane-deadlines" class="pane"><div class="card"><h2>Deadlines (eligible scholarships)</h2><div class="table-wrap">

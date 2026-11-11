@@ -42,5 +42,5 @@ Every Markdown file starts with YAML front matter.
 | Per-application paper | `cli.py docs set motivation_letter --scholarship <id> --status in_progress` |
 | Verified deadline | `cli.py deadline --scholarship <id> --date YYYY-MM-DD --source <url>` |
 | Application status / track or skip | `cli.py status --scholarship <id> --set "Submitted"` (or `Skipped`) |
-| Choose an Erasmus program | `cli.py programs --choose <program-id>` (max 3) |
+| Choose an Erasmus program | `cli.py programs --choose <program-id>` (once per program) |
 | User edited the Excel file | `cli.py sync` |

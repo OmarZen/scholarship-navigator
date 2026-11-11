@@ -117,7 +117,7 @@ This is the scholarship workspace of **{profile.full_name}**. Follow these rules
 - Save drafts only inside the scholarship folder (`essays/`, `letters/`, `recommendations/`, `forms/`). Keep the front matter and set `status: draft | review | final`.
 - Store scanned papers under `profile/<category>/` and record the path in `documents.json`.
 - Treat deadlines marked **(est.)** as unverified: check the official site and record the date with `cli.py deadline --scholarship <id> --date YYYY-MM-DD --source <url>`.
-- For Erasmus Mundus, help the candidate pick up to 3 programs (`cli.py programs`, then `cli.py programs --choose <id>`); each choice gets its own motivation-letter draft.
+- For Erasmus Mundus, help the candidate pick the programs they fit best (`cli.py programs`, then `cli.py programs --choose <id>`); each choice gets its own motivation-letter draft. There is no EU limit on the number of applications (the old cap of 3 was dropped in 2019), but each one needs a tailored letter.
 - Answer the candidate in their own language; keep files and commands in English.
 - Run `cli.py review-essay --file <essay>` on essays before calling them final.
 
@@ -413,7 +413,7 @@ def render_scholarship(m: MatchResult, profile: CandidateProfile, state: Optiona
         chosen = state.chosen_programs if state else []
         out += "\n## Programs that fit you\n\n"
         out += ("Ranked by field match, host country, language and funding. "
-                + ("You can apply to **up to 3** Erasmus Mundus programs per year. " if s.id == "erasmus-mundus" else "")
+                + ("There is no EU limit on how many Erasmus Mundus programs you apply to, but each needs its own tailored letter, so choose the ones you fit best. " if s.id == "erasmus-mundus" else "")
                 + "Choose with `cli.py programs --choose <id>`; your deadline then follows your chosen programs.\n\n")
         out += render_programs_table(programs, chosen)
         if chosen:

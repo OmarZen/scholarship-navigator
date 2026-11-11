@@ -25,7 +25,7 @@ Commands that need a candidate accept `--workspace <folder>` (default: the only 
 |---|---|
 | `match [--limit 20] [--details 3] [--all] [--location home\|abroad\|both] [--json]` | eligibility, fit breakdown, readiness for every scholarship (`--location` tries a study location without saving it) |
 | `programs [--field robotics] [--country Germany,France] [--scheme erasmus-mundus] [--all] [--json]` | rank Erasmus Mundus / Intra-Africa programs |
-| `programs --choose ID` / `--unchoose ID` | choose up to 3 Erasmus Mundus programs |
+| `programs --choose ID` / `--unchoose ID` | choose the Erasmus Mundus programs you apply to |
 | `list [--degree Diploma\|Bachelor\|Master\|PhD] [--country X] [--funding Full] [--nationality N [--location home\|abroad\|both]] [--json]` | browse scholarships; `--nationality` keeps awards open to that citizenship, `--location home` keeps those that fund study in that country |
 | `portfolio` | Reach / Target / Safety with a rough win estimate |
 | `plan`, `html-report`, `calendar` | regenerate one report |
