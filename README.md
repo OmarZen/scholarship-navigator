@@ -52,7 +52,7 @@ match, lists exactly which papers you're missing, and builds a plan with real da
 > - ✅ You're eligible for **56 of 103** scholarships. ❌ 47 aren't open to you, and here's why (nationality list, age limit, field).
 > - 🏠 7 of them let you study **in Egypt** without travelling (AUC, Zewail City, E-JUST, ASRT...), if you'd rather stay home.
 > - 🥇 **Erasmus Mundus**: fit **98/100**, papers **56%** ready, deadline **15 Jan 2027** (estimated, verify). Start your motivation letter by **9 Dec**.
-> - 🧭 Programs that fit you: **DEAI** (Belgium · Spain · Austria · France · Italy), **EDISS** (Finland · Sweden · Italy · Spain), **EMINENT**. Pick up to 3.
+> - 🧭 Programs that fit you: **DEAI** (Belgium · Spain · Austria · France · Italy), **EDISS** (Finland · Sweden · Italy · Spain), **EMINENT**. Pick the ones you fit best.
 > - ⏰ **Chevening already closed** on 6 Oct 2026. Next round ≈ Oct 2027.
 > - 📄 Missing papers: 2nd academic reference, Europass CV, proof of residence, medical certificate.
 > - 📁 Everything is saved in `output/ahmed-mansour/`: one folder per scholarship, essay drafts, an Excel tracker and a calendar.

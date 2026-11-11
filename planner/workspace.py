@@ -528,7 +528,7 @@ def set_study_location(ws: Path, study_location: str) -> CandidateProfile:
 
 
 def choose_program(ws: Path, program_id: str, remove: bool = False) -> ApplicationState:
-    """Add (or remove) a program to its scheme's chosen_programs (e.g. up to 3 Erasmus Mundus masters)."""
+    """Add (or remove) a program to its scheme's chosen_programs (e.g. the Erasmus Mundus masters the candidate applies to)."""
     programs = {p.id: p for p in load_programs()}
     if program_id not in programs:
         raise ValueError(f"Unknown program id '{program_id}'")

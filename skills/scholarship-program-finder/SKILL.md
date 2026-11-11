@@ -11,7 +11,9 @@ description: >-
 # Program finder (Erasmus Mundus & Intra-Africa)
 
 Erasmus Mundus is one scholarship scheme made of many separate joint masters. Each consortium has its own
-universities, countries, deadline and requirements. Candidates may apply to **at most 3 programs per year**.
+universities, countries, deadline and requirements. There is **no EU limit** on how many programs a candidate applies to (the old cap of 3 was dropped in 2019; the
+Erasmus+ Programme Guide sets none), but each needs its own tailored letter and some consortia ask applicants to
+keep the list short. Someone who already received an EMJM scholarship cannot get another one.
 Data: `data/programs/*.json` (host countries, universities, status, deadlines, verified dates and sources).
 
 ## Find programs
@@ -28,7 +30,7 @@ Score = field match 50 + host country 20 + language 15 + funding status 15 (see 
 `references/scoring.md`). Not eligible: discontinued programs, wrong degree level, or nationality rules
 (Intra-Africa projects are for African nationals).
 
-## Help the user choose (max 3)
+## Help the user choose
 
 Present 5-8 options as a short table: program, where you study (countries + universities), field match, deadline,
 status. Then discuss:
@@ -36,6 +38,8 @@ status. Then discuss:
 2. **Countries**: the mobility path (e.g. semester 1 in Spain, 2 in France, thesis in Italy) vs their preferences.
 3. **Timing**: deadlines are usually December to February. Earlier deadlines need earlier documents.
 4. **Status**: prefer "open" or "upcoming" with scholarships available. "self_funded_only" means no Erasmus grant.
+5. **How many**: there is no official cap, so the limit is the time to write a strong, tailored letter for each.
+   Recommend the programs where the candidate is a genuine fit (often 3-5) over a long list of weak applications.
 
 Record choices: `cli.py programs --choose <id>` (or MCP `choose_program`). This:
 - makes the Erasmus Mundus deadline follow the earliest chosen program,
