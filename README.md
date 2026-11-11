@@ -347,7 +347,7 @@ Every merged pull request puts your GitHub account here. The table is refreshed 
 <!-- CONTRIBUTORS:START -->
 <table>
   <tr>
-    <td align="center" valign="top" width="14%"><a href="https://github.com/OmarZen"><img src="https://avatars.githubusercontent.com/u/93471291?v=4&s=100" width="80" alt="@OmarZen" /><br /><sub><b>@OmarZen</b></sub></a><br /><sub>2 commits</sub></td>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/OmarZen"><img src="https://avatars.githubusercontent.com/u/93471291?v=4&s=100" width="80" alt="@OmarZen" /><br /><sub><b>@OmarZen</b></sub></a><br /><sub>3 commits</sub></td>
     <td align="center" valign="top" width="14%"><a href="https://github.com/hansi2007"><img src="https://avatars.githubusercontent.com/u/194238768?v=4&s=100" width="80" alt="@hansi2007" /><br /><sub><b>@hansi2007</b></sub></a><br /><sub>1 commit</sub></td>
   </tr>
 </table>
